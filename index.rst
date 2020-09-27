@@ -248,7 +248,7 @@ Input and example data
 
 .. |CyVerse Workspace GitHub|  raw:: html
  
-   <a href=" " target="blank">CyVerse Workspace GitHub</a>
+   <a href="https://github.com/tyson-swetnam/workspace" target="blank">CyVerse Workspace GitHub</a>
   
 .. |rstudio-geospatial-3.6.3| image:: https://de.cyverse.org/Powered-By-CyVerse-blue.svg
 .. _rstudio-geospatial-3.6.3: https://de.cyverse.org/de/?type=quick-launch&quick-launch-id=e7383172-dafd-42a2-b539-a67a9b65425e&app-id=6943b4f2-b663-11ea-92c5-008cfa5ae621
@@ -260,7 +260,7 @@ Input and example data
   
 .. |CyVerse JupyterLab GitHub|  raw:: html
 
-   <a href=" " target="blank">CyVerse JupyterLab GitHub</a>
+   <a href="https://github.com/cyverse-vice/jupyterlab-datascience" target="blank">CyVerse JupyterLab GitHub</a>
 
 .. |jupyterlab-geospatial| image:: https://de.cyverse.org/Powered-By-CyVerse-blue.svg
 .. _jupyterlab-geospatial: https://de.cyverse.org/de/?type=quick-launch&quick-launch-id=63afd24c-9acc-4a8c-85ef-58b634a2ebc2&app-id=c940912c-fcea-11ea-b07f-008cfa5ae621
