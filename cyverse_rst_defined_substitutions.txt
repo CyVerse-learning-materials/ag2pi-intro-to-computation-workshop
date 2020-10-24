@@ -2,6 +2,10 @@
 .. Comment: URLS
 
 
+.. |VICE| raw:: html
+ 
+   <a href="https://learning.cyverse.org/projects/vice/en/latest/" target="blank">VICE</a>
+
 .. |Atmosphere| raw:: html
 
    <a href="https://atmo.cyverse.org" target="blank">Atmosphere</a>
@@ -90,7 +94,6 @@
 .. |Tapis TACC API| raw:: html
 
    <a href="https://www.tacc.utexas.edu/tapis" target="blank">Tapis TACC API</a>
-
 
 
 .. Comment: Deprecated links  - these may appear in our documentation but

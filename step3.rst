@@ -117,6 +117,9 @@ We are going to run the Shiny app as a background process. This will keep the R 
 
 **Description of output and results**
 
+**IMPORTANT:** These data are currently running in a virtual machine, which will soon be going away, either when it times out, or you turn it off. You need to make sure that your data are moved to a data repository, like the CyVerse Data Store, or downloaded to your localhost, before you turn this analysis off.
+
+Any data which are in the working directory of the instance (likely the ``/home/rstudio/`` directory will be preserved in the ``/iplant/home/<username>/analyses/<the-app-name>_analysis1-<DATE-TIME-of-job-starting>`` directory). Any data which are in other paths will not be preserved
 
 ----
 

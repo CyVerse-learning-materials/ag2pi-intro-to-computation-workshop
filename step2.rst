@@ -7,12 +7,14 @@
 `Learning Center Home <http://learning.cyverse.org/>`_
 
 
-Your Workspace
+Your Workbench
 --------------
 
 **Description:**
 
-We have already integrated a couple of Docker Containers into the CyVerse Discovery Environment, and made them "Public" for everyone to use.
+We have integrated several Docker containers into the CyVerse Discovery Environment workbench |VICE| platform, and made them "Public" for anyone with a CyVerse account to use.
+
+We have also copied some of the NEON example data sets to the CyVerse Data Store, along with the completed ``.ipynb`` and ``.Rmd`` notebooks and ``.r`` scripts
 
 We're going to walk through the steps of starting an interactive analysis, using it, and shutting it down.
 
@@ -43,13 +45,26 @@ We're going to walk through the steps of starting an interactive analysis, using
 
 **3.** In the App Window you have a few options.
 
-   **i.** ``Analysis Name`` - you can change the name of the analysis if you like, the default name is typically ``<the-app-name>_analysis1``
+  **i.**   ``Analysis Name`` - you can change the name of the analysis if you like, the default name is typically ``<the-app-name>_analysis1``
 
    Your analysis will run, and when it completes, it will write any data that you have in the WORKING DIRECTORY of the container back to the Data Store in your Analyses folder, e.g. ``/iplant/home/<username>/analyses/<the-app-name>_analysis1-<DATE-TIME-of-job-starting>``
 
-   **ii.** The second section is ``Input Data`` and has options for adding (1) a folder, (2) a single file, or (3) multiple files. 
+  **ii.** The second section is ``Input Data`` and has options for adding (1) a folder, (2) a single file, or (3) multiple files. 
 
-   For our use case, you do not need to add any data before launching the app. 
+   For our use case today, we're going to add a folder from the data store.
+
+  |add_data_window2|
+
+   Add the path: ``/iplant/home/shared/NEON_workshop/`` 
+
+  |add_data_window1|
+
+
+    .. admonition:: Input Data (not required)
+
+     When you launch a new VICE app, you can add data to it before it is launched. If you do this, it will slow down the launch, as the service must copy the data from the data store into your new instance before it becomes available. 
+     
+     A faster option is to start the container without the data, and then copy the data into the running container later using WebDav, iCommands, or a file system mount.
 
    **iii.** The third section is ``Resource Requirements``, again you can leave the default settings, or you can modify them.
 
@@ -133,20 +148,14 @@ We're going to walk through the steps of starting an interactive analysis, using
 **7.** When the Analysis completes, you will now have the option to Delete the finished job. 
 
 
-   .. admonition:: Input Data (not required)
-
-     When you launch a new VICE app, you can add data to it before it is launched. If you do this, it will slow down the launch, as the service must copy the data from the data store into your new instance before it becomes available. 
-     
-     A faster option is to start the container without the data, and then copy the data into the running container later using WebDav, iCommands, or a file system mount.
-
-     In the next section, we'll cover working with data in your running instance.
-
-
 
 ----
 
 **Description of output and results**
 
+**IMPORTANT:** These data are currently running in a virtual machine, which will soon be going away, either when it times out, or you turn it off. You need to make sure that your data are moved to a data repository, like the CyVerse Data Store, or downloaded to your localhost, before you turn this analysis off.
+
+Any data which are in the working directory of ``/iplant/home/<username>/analyses/<the-app-name>_analysis1-<DATE-TIME-of-job-starting>`` directory). Any data which are in other paths will not be preserved
 
 ----
 
@@ -212,6 +221,12 @@ We're going to walk through the steps of starting an interactive analysis, using
 
 .. |analyses_options| image:: ./img/de/analyses_options.png
     :width: 150
+
+.. |add_data_window1| image:: ./img/de/add_data_window1.png
+    :width: 400
+
+.. |add_data_window2| image:: ./img/de/add_data_window2.png
+    :width: 400
 
 .. |workspace-geospatial-latest| image:: https://de.cyverse.org/Powered-By-CyVerse-blue.svg
 .. _workspace-geospatial-latest: https://de.cyverse.org/de/?type=quick-launch&quick-launch-id=66f5a2d6-04c3-4346-8804-fab350e2f9b8&app-id=55f4f8b0-f552-11ea-80fa-008cfa5ae621

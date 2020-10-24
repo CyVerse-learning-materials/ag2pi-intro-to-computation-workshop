@@ -69,10 +69,11 @@ Who to contact if this guide needs fixing. You can also email
 	Home <self>
   Agenda <agenda.rst>
   Discovery Environment <step1.rst>
-  Your Workspace <step2.rst>
+  Your Workbench <step2.rst>
   Version Control with GitHub <step5.rst>
   NEON Shiny App <step3.rst>
   Manage your cloud data <step4.rst>
+  Jupyter Lab <step6.rst>
   
 ..
 	#### Comment:This tutorial can have multiple pages. The table of contents assumes
