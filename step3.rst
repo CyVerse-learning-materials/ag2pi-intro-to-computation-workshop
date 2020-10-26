@@ -7,12 +7,12 @@
 `Learning Center Home <http://learning.cyverse.org/>`_
 
 
-NEON Shiny App
---------------
+Using the NEON Shiny App in RStudio-Server
+------------------------------------------
 
 **Description:**
 
-The `Download and Explore NEON Data API <https://www.neonscience.org/download-explore-neon-data>`_ covered the basics of downloading data directy in R from the ``neonUtilities`` R package.  
+The `Download and Explore NEON Data API <https://www.neonscience.org/download-explore-neon-data>`_ tutorial covers the basics of downloading data directy into R and RStudio via the ``neonUtilities`` R package.  
 
 Our team created a NEON Shiny App for interfacing with the NEON API in R Studio in a graphical manner.
 
@@ -21,6 +21,14 @@ The Shiny app can be launched using `Docker <https://hub.docker.com/r/cyversevic
 When started the Shiny app will create a new folder called ``~/NEON_Downloads`` in the home working directory. For the R Studio instance on CyVerse, this is set as ``/home/rstudio/NEON_Downloads``.
 
 Data that are selected and downloaded go into this folder and are organized using the same ontology as the NEON Data API. 
+
+
+*Prerequisite*
+~~~~~~~~~~~~~
+
+In the previous section, you should have started a RStudio Server in the Discovery Environment `https://de.cyverse.org <https://de.cyverse.org>`_
+
+If you have not, do so again |rstudio-geospatial-3.6.3|_
 
 
 *Download the Shiny App*
@@ -42,22 +50,18 @@ Data that are selected and downloaded go into this folder and are organized usin
 
 **5.** Set the working directory to the ``neon-shiny-browser`` directory
 
-*Starting the Shiny App*
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-We are going to run the Shiny app as a background process. This will keep the R Console active and allow us to continue work in the R Studio while the App is running. 
-
 |background_job|
 
-**6.** Select the ``Jobs`` option in the Console
+*Start the Shiny App*
+~~~~~~~~~~~~~~~~~~~~~
 
-**7.** Set the working directory as ``neon-shiny-browser`` and select the ``background.R`` script.
+RStudio-Server has a feature called "**Jobs**"" which can run the Shiny app as a background process. This will keep the R Console active and allow us to continue work in the R Studio while the App is running at the same time. 
 
-**8.** Start the Job
+**6.** Select the ``Jobs`` option in the Console.
 
-   The job should start as a background process.
+**7.** Set the working directory as ``~/neon-shiny-browser`` and select the ``background.R`` script.
 
-   By using the Job function, you keep Shiny as a background task which leaves your R Console still available.
+**8.** Start the Job as a background process.
 
 **9.** This particular App will likely need to install a few missing dependencies before it starts running. Don't worry, it will do this automatically. After it has installed the missing package dependencies, it should begin to echo out logs and then start to run on the ``localhost`` address number ``127.0.0.1`` using a randomly assigned PORT number:
 
@@ -171,6 +175,8 @@ Any data which are in the working directory of the instance (likely the ``/home/
 .. |neon-shiny| image:: https://data.cyverse.org/dav-anon/iplant/home/tswetnam/vice_screencaps/neon-shiny.gif
     :width: 800
 
+.. |rstudio-geospatial-3.6.3| image:: https://de.cyverse.org/Powered-By-CyVerse-blue.svg
+.. _rstudio-geospatial-3.6.3: https://de.cyverse.org/de/?type=quick-launch&quick-launch-id=e7383172-dafd-42a2-b539-a67a9b65425e&app-id=6943b4f2-b663-11ea-92c5-008cfa5ae621
 
 .. |Github Repo Link|  raw:: html
 

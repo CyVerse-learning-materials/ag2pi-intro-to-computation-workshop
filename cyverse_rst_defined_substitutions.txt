@@ -60,7 +60,7 @@
 
 .. |Discovery Environment Guide| raw:: html
 
-   <a href="http://learning.cyverse.org/projects/cyverse-discovery-environment-guide/" target="blank">Discovery Environment Guide</a>
+   <a href="https://learning.cyverse.org/projects/discovery-environment-guide/en/latest/index.html" target="blank">Discovery Environment Guide</a>
 
 .. |DNA Subway| raw:: html
 
@@ -137,3 +137,8 @@
 .. |Intercom| image:: ./img/intercom.png
     :width: 25
     :height: 25
+
+.. |CyVerse_globe| image:: ./img/cyverse_globe_cmyk.png
+    :width: 50
+
+.. _CyVerse_globe: https://user.cyverse.org

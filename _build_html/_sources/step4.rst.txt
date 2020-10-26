@@ -18,6 +18,8 @@ Its important to accept that many of these public data repositories are stable a
 
 This means that you **should not create copies of original data** unless you are in a situation where the data are very large and downloading them again is prohibitive of your time.
 
+|connect_de|
+
 
 ..
 	#### Comment: short text description goes here ####
@@ -83,9 +85,9 @@ First, we need to initiate a connection to the CyVerse iRODS.
 
       rstudio@a4bdcc31:~$ ils
   
-      /iplant/home/tswetnam:
-      C- /iplant/home/tswetnam/analyses
-      C- /iplant/home/tswetnam/NEON_Downloads
+      /iplant/home/username:
+      C- /iplant/home/username/analyses
+      C- /iplant/home/username/NEON_Downloads
 
   You should now see the contents of your personal Data Store
 
@@ -95,9 +97,9 @@ First, we need to initiate a connection to the CyVerse iRODS.
   
   .. code ::
 
-     iput -KPvf /home/rstudio/neon-shiny-browser/background.R /iplant/home/tswetnam/NEON_Downloads/
+     iput -KPvf /home/rstudio/neon-shiny-browser/background.R /iplant/home/username/NEON_Downloads/
 
-This command will take a single file ``background.R`` and copy it from the container to the Data Store folder ``/iplant/home/tswetnam/NEON_Downloads/``
+This command will take a single file ``background.R`` and copy it from the container to the Data Store folder ``/iplant/home/username/NEON_Downloads/``
 
 The flags ``K``, ``P``, ``v``, and ``f`` are described in the help file.
 
@@ -150,13 +152,13 @@ It is also likely that you're going to download data from the Data Store into yo
 
   .. code ::
 
-     ils /iplant/home/tswetnam/NEON_Downloads
+     ils /iplant/home/username/NEON_Downloads
 
 **10.** Download a file using ``iget``
 
   .. code ::
      
-     iget -KPvf /iplant/home/tswetnam/NEON_Downloads/benchmarking.rmd
+     iget -KPvf /iplant/home/username/NEON_Downloads/benchmarking.rmd
 
   This should download an Rmd file into your local instance (whatever current working directory you're in in terminal)
 
@@ -164,7 +166,7 @@ It is also likely that you're going to download data from the Data Store into yo
 
   .. code ::
 
-     time iget -KPbvrf /iplant/home/tswetnam/NEON_Downloads/NEON_HARV_DP1.30003.001_2019/
+     time iget -KPbvrf /iplant/home/username/NEON_Downloads/NEON_HARV_DP1.30003.001_2019/
 
   Here we're using the ``time`` flag to tell us how long the download takes   
 
@@ -172,7 +174,7 @@ It is also likely that you're going to download data from the Data Store into yo
 *Downloading with WebDav*
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-CyVerse Data Store also uses WebDav, an https based protocol for read-only data downloads from the Data Store. 
+CyVerse Data Store also uses `WebDav <https://cyverse.atlassian.net/wiki/spaces/DS/pages/241869825/Using+WebDAV>`_, an https based protocol for read-only data downloads from the Data Store. 
 
 We can use ``wget`` or ``curl`` commands in the terminal to download files this way.
 
@@ -180,7 +182,7 @@ We can use ``wget`` or ``curl`` commands in the terminal to download files this 
 
    .. code ::
 
-      time wget -r -nH --cut-dirs=5 --no-parent -l8 --reject="index.html*" https://data.cyverse.org/dav-anon/iplant/home/tswetnam/NEON_Downloads/NEON_HARV_DP1.30003.001_2017/
+      time wget -r -nH --cut-dirs=5 --no-parent -l8 --reject="index.html*" https://data.cyverse.org/dav-anon/iplant/home/username/NEON_Downloads/NEON_HARV_DP1.30003.001_2017/
 
 
   again, we're using the ``time`` function to monitor the download speeds.
@@ -254,3 +256,6 @@ We can download these using their Point Cloud Bulk Data Download option:
 .. |Github Repo Link|  raw:: html
 
    <a href="https://github.com/CyVerse-learning-materials/2020-neon-aop-workshop" target="blank">Github Repo Link</a>
+
+.. |connect_de| image:: ./img/de/connect_cyverse.svg
+    :width: 700

@@ -7,12 +7,16 @@
 `Learning Center Home <http://learning.cyverse.org/>`_
 
 
-Jupyter Lab
------------
+Jupyter Lab, Desktop Environments, and Text Editors
+---------------------------------------------------
 
 **Description:**
 
 Earlier in the workshop you launched a VICE image with RStudio. Follow the same process again using our Jupyter Lab Geospatial container instead. 
+
+We have integrated Project Jupyter's Data Science Jupyter Lab images with geospatial packages.
+
+We have also integrated an all-in-one container which supports a desktop environment, Jupyter, VS Code (or your favorite text editors), and even RStudio. This container represents a 'Workspace' where you can do almost all of your daily data science tasks.  
 
 ..
 	#### Comment: short text description goes here ####
@@ -27,10 +31,11 @@ Earlier in the workshop you launched a VICE image with RStudio. Follow the same 
 **2.** Click one of our quick launch buttons:
 
    - Jupyter Lab Geospatial: |jupyterlab-geospatial|_
+   - Workspace: |workspace-geospatial-latest|_
    
    Or, search using the |apps_button| 'Apps' search bar.
 
-   query "jupyter lab geospatial" and see what comes up.
+   query "jupyter lab geospatial" or "workspace geospatial" and see what comes up.
 
    Or, click the App button and a new window should open.
 
@@ -162,7 +167,7 @@ Note, there are pre-completed ``.ipynb`` notebooks in the ``/tutorials`` folder 
     :width: 400
 
 .. |workspace-geospatial-latest| image:: https://de.cyverse.org/Powered-By-CyVerse-blue.svg
-.. _workspace-geospatial-latest: https://de.cyverse.org/de/?type=quick-launch&quick-launch-id=66f5a2d6-04c3-4346-8804-fab350e2f9b8&app-id=55f4f8b0-f552-11ea-80fa-008cfa5ae621
+.. _workspace-geospatial-latest: https://de.cyverse.org/de/?type=quick-launch&quick-launch-id=b19b3b00-0b6f-4c28-9d0f-23c965264309&app-id=580bbc6e-161e-11eb-880c-008cfa5ae621
 
 .. |jupyterlab-geospatial| image:: https://de.cyverse.org/Powered-By-CyVerse-blue.svg
 .. _jupyterlab-geospatial: https://de.cyverse.org/de/?type=quick-launch&quick-launch-id=63afd24c-9acc-4a8c-85ef-58b634a2ebc2&app-id=c940912c-fcea-11ea-b07f-008cfa5ae621

@@ -18,6 +18,10 @@ We have also copied some of the NEON example data sets to the CyVerse Data Store
 
 We're going to walk through the steps of starting an interactive analysis, using it, and shutting it down.
 
+|Discovery Environment Guide|
+
+
+
 ..
 	#### Comment: short text description goes here ####
 

@@ -42,8 +42,8 @@
   <link rel="stylesheet" href="_static/question-answer.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Jupyter Lab" href="step6.html" />
-    <link rel="prev" title="NEON Shiny App" href="step3.html" /> 
+    <link rel="next" title="Jupyter Lab, Desktop Environments, and Text Editors" href="step6.html" />
+    <link rel="prev" title="Using the NEON Shiny App in RStudio-Server" href="step3.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -93,12 +93,13 @@
             
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="index.html">      Home</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code_of_conduct.html">Code of Conduct</a></li>
 <li class="toctree-l1"><a class="reference internal" href="agenda.html">Agenda</a></li>
-<li class="toctree-l1"><a class="reference internal" href="step1.html">Discovery Environment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="step2.html">Your Workbench</a></li>
+<li class="toctree-l1"><a class="reference internal" href="step1.html">Discovery Environment Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="step2.html">Visual Interactive Computing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="step5.html">Version Control with GitHub</a></li>
-<li class="toctree-l1"><a class="reference internal" href="step3.html">NEON Shiny App</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Manage your cloud data</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="step3.html">RStudio &amp; Shiny Apps</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Managing data in the cloud</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#setting-up-icommands"><em>Setting up iCommands</em></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#uploading-with-icommands"><em>Uploading with iCommands</em></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#downloading-with-icommands"><em>Downloading with iCommands</em></a></li>
@@ -106,7 +107,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#other-services-downloading-with-s3"><em>Other Services: Downloading with S3</em></a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="step6.html">Jupyter Lab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="step6.html">Data Science Workspaces</a></li>
 </ul>
 
             
@@ -180,6 +181,7 @@
 <p>After you’ve become familiar with downloading data from NEON Data API, or from other resources on the internet, into your cloud instances, you’re going to be in a situation where you need to move them and store them somewhere more permanently.</p>
 <p>Its important to accept that many of these public data repositories are stable and that data will be available from them in the future.</p>
 <p>This means that you <strong>should not create copies of original data</strong> unless you are in a situation where the data are very large and downloading them again is prohibitive of your time.</p>
+<p><a class="reference internal" href="_images/connect_cyverse.svg"><img alt="connect_de" src="_images/connect_cyverse.svg" width="700" /></a></p>
 <hr class="docutils" />
 <div class="section" id="setting-up-icommands">
 <h2><em>Setting up iCommands</em><a class="headerlink" href="#setting-up-icommands" title="Permalink to this headline">¶</a></h2>
@@ -229,9 +231,9 @@
 <div><blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>rstudio@a4bdcc31:~$ ils
 
-/iplant/home/tswetnam:
-C- /iplant/home/tswetnam/analyses
-C- /iplant/home/tswetnam/NEON_Downloads
+/iplant/home/username:
+C- /iplant/home/username/analyses
+C- /iplant/home/username/NEON_Downloads
 </pre></div>
 </div>
 </div></blockquote>
@@ -240,11 +242,11 @@ C- /iplant/home/tswetnam/NEON_Downloads
 <p><strong>5.</strong> Upload a single file to the Data Store using <code class="docutils literal notranslate"><span class="pre">iput</span></code></p>
 <blockquote>
 <div><p>You need to select the file you want to copy, and the location in the Data Store you want to copy it to.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">iput</span> <span class="o">-</span><span class="n">KPvf</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">rstudio</span><span class="o">/</span><span class="n">neon</span><span class="o">-</span><span class="n">shiny</span><span class="o">-</span><span class="n">browser</span><span class="o">/</span><span class="n">background</span><span class="o">.</span><span class="n">R</span> <span class="o">/</span><span class="n">iplant</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">tswetnam</span><span class="o">/</span><span class="n">NEON_Downloads</span><span class="o">/</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">iput</span> <span class="o">-</span><span class="n">KPvf</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">rstudio</span><span class="o">/</span><span class="n">neon</span><span class="o">-</span><span class="n">shiny</span><span class="o">-</span><span class="n">browser</span><span class="o">/</span><span class="n">background</span><span class="o">.</span><span class="n">R</span> <span class="o">/</span><span class="n">iplant</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">username</span><span class="o">/</span><span class="n">NEON_Downloads</span><span class="o">/</span>
 </pre></div>
 </div>
 </div></blockquote>
-<p>This command will take a single file <code class="docutils literal notranslate"><span class="pre">background.R</span></code> and copy it from the container to the Data Store folder <code class="docutils literal notranslate"><span class="pre">/iplant/home/tswetnam/NEON_Downloads/</span></code></p>
+<p>This command will take a single file <code class="docutils literal notranslate"><span class="pre">background.R</span></code> and copy it from the container to the Data Store folder <code class="docutils literal notranslate"><span class="pre">/iplant/home/username/NEON_Downloads/</span></code></p>
 <p>The flags <code class="docutils literal notranslate"><span class="pre">K</span></code>, <code class="docutils literal notranslate"><span class="pre">P</span></code>, <code class="docutils literal notranslate"><span class="pre">v</span></code>, and <code class="docutils literal notranslate"><span class="pre">f</span></code> are described in the help file.</p>
 <p><strong>6.</strong> Upload a folder with recursive sub-folders and files</p>
 <blockquote>
@@ -288,20 +290,20 @@ C- /iplant/home/tswetnam/NEON_Downloads
 <p>It is also likely that you’re going to download data from the Data Store into your running Apps</p>
 <p><strong>9.</strong> Use the <code class="docutils literal notranslate"><span class="pre">ils</span></code> command to look for some shared data in the Data Store</p>
 <blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ils</span> <span class="o">/</span><span class="n">iplant</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">tswetnam</span><span class="o">/</span><span class="n">NEON_Downloads</span>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ils</span> <span class="o">/</span><span class="n">iplant</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">username</span><span class="o">/</span><span class="n">NEON_Downloads</span>
 </pre></div>
 </div>
 </div></blockquote>
 <p><strong>10.</strong> Download a file using <code class="docutils literal notranslate"><span class="pre">iget</span></code></p>
 <blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">iget</span> <span class="o">-</span><span class="n">KPvf</span> <span class="o">/</span><span class="n">iplant</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">tswetnam</span><span class="o">/</span><span class="n">NEON_Downloads</span><span class="o">/</span><span class="n">benchmarking</span><span class="o">.</span><span class="n">rmd</span>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">iget</span> <span class="o">-</span><span class="n">KPvf</span> <span class="o">/</span><span class="n">iplant</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">username</span><span class="o">/</span><span class="n">NEON_Downloads</span><span class="o">/</span><span class="n">benchmarking</span><span class="o">.</span><span class="n">rmd</span>
 </pre></div>
 </div>
 <p>This should download an Rmd file into your local instance (whatever current working directory you’re in in terminal)</p>
 </div></blockquote>
 <p><strong>11.</strong> Download a directory using <code class="docutils literal notranslate"><span class="pre">iget</span></code></p>
 <blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">time</span> <span class="n">iget</span> <span class="o">-</span><span class="n">KPbvrf</span> <span class="o">/</span><span class="n">iplant</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">tswetnam</span><span class="o">/</span><span class="n">NEON_Downloads</span><span class="o">/</span><span class="n">NEON_HARV_DP1</span><span class="o">.</span><span class="mf">30003.001_2019</span><span class="o">/</span>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">time</span> <span class="n">iget</span> <span class="o">-</span><span class="n">KPbvrf</span> <span class="o">/</span><span class="n">iplant</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">username</span><span class="o">/</span><span class="n">NEON_Downloads</span><span class="o">/</span><span class="n">NEON_HARV_DP1</span><span class="o">.</span><span class="mf">30003.001_2019</span><span class="o">/</span>
 </pre></div>
 </div>
 <p>Here we’re using the <code class="docutils literal notranslate"><span class="pre">time</span></code> flag to tell us how long the download takes</p>
@@ -309,12 +311,12 @@ C- /iplant/home/tswetnam/NEON_Downloads
 </div>
 <div class="section" id="downloading-with-webdav">
 <h2><em>Downloading with WebDav</em><a class="headerlink" href="#downloading-with-webdav" title="Permalink to this headline">¶</a></h2>
-<p>CyVerse Data Store also uses WebDav, an https based protocol for read-only data downloads from the Data Store.</p>
+<p>CyVerse Data Store also uses <a class="reference external" href="https://cyverse.atlassian.net/wiki/spaces/DS/pages/241869825/Using+WebDAV">WebDav</a>, an https based protocol for read-only data downloads from the Data Store.</p>
 <p>We can use <code class="docutils literal notranslate"><span class="pre">wget</span></code> or <code class="docutils literal notranslate"><span class="pre">curl</span></code> commands in the terminal to download files this way.</p>
 <p><strong>12.</strong> Download a directory using <code class="docutils literal notranslate"><span class="pre">wget</span></code></p>
 <blockquote>
 <div><blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">time</span> <span class="n">wget</span> <span class="o">-</span><span class="n">r</span> <span class="o">-</span><span class="n">nH</span> <span class="o">--</span><span class="n">cut</span><span class="o">-</span><span class="n">dirs</span><span class="o">=</span><span class="mi">5</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">parent</span> <span class="o">-</span><span class="n">l8</span> <span class="o">--</span><span class="n">reject</span><span class="o">=</span><span class="s2">&quot;index.html*&quot;</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">data</span><span class="o">.</span><span class="n">cyverse</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">dav</span><span class="o">-</span><span class="n">anon</span><span class="o">/</span><span class="n">iplant</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">tswetnam</span><span class="o">/</span><span class="n">NEON_Downloads</span><span class="o">/</span><span class="n">NEON_HARV_DP1</span><span class="o">.</span><span class="mf">30003.001_2017</span><span class="o">/</span>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">time</span> <span class="n">wget</span> <span class="o">-</span><span class="n">r</span> <span class="o">-</span><span class="n">nH</span> <span class="o">--</span><span class="n">cut</span><span class="o">-</span><span class="n">dirs</span><span class="o">=</span><span class="mi">5</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">parent</span> <span class="o">-</span><span class="n">l8</span> <span class="o">--</span><span class="n">reject</span><span class="o">=</span><span class="s2">&quot;index.html*&quot;</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">data</span><span class="o">.</span><span class="n">cyverse</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">dav</span><span class="o">-</span><span class="n">anon</span><span class="o">/</span><span class="n">iplant</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">username</span><span class="o">/</span><span class="n">NEON_Downloads</span><span class="o">/</span><span class="n">NEON_HARV_DP1</span><span class="o">.</span><span class="mf">30003.001_2017</span><span class="o">/</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -359,10 +361,10 @@ click <a class="reference internal" href="_images/intercom.png"><img alt="Interc
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="step6.html" class="btn btn-neutral float-right" title="Jupyter Lab" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="step6.html" class="btn btn-neutral float-right" title="Jupyter Lab, Desktop Environments, and Text Editors" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="step3.html" class="btn btn-neutral float-left" title="NEON Shiny App" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="step3.html" class="btn btn-neutral float-left" title="Using the NEON Shiny App in RStudio-Server" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>NEON Shiny App &mdash; 2020-neon-aop-workshop 2.0 documentation</title>
+  <title>Using the NEON Shiny App in RStudio-Server &mdash; 2020-neon-aop-workshop 2.0 documentation</title>
   
 
   
@@ -93,18 +93,20 @@
             
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="index.html">      Home</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code_of_conduct.html">Code of Conduct</a></li>
 <li class="toctree-l1"><a class="reference internal" href="agenda.html">Agenda</a></li>
-<li class="toctree-l1"><a class="reference internal" href="step1.html">Discovery Environment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="step2.html">Your Workbench</a></li>
+<li class="toctree-l1"><a class="reference internal" href="step1.html">Discovery Environment Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="step2.html">Visual Interactive Computing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="step5.html">Version Control with GitHub</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">NEON Shiny App</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">RStudio &amp; Shiny Apps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#prerequisite"><em>Prerequisite</em></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#download-the-shiny-app"><em>Download the Shiny App</em></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#starting-the-shiny-app"><em>Starting the Shiny App</em></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#start-the-shiny-app"><em>Start the Shiny App</em></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#downloading-data-via-the-neon-api"><em>Downloading Data via the NEON API</em></a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="step4.html">Manage your cloud data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="step6.html">Jupyter Lab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="step4.html">Managing data in the cloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="step6.html">Data Science Workspaces</a></li>
 </ul>
 
             
@@ -150,7 +152,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>NEON Shiny App</li>
+      <li>Using the NEON Shiny App in RStudio-Server</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -172,14 +174,19 @@
   <p><a class="reference external" href="http://learning.cyverse.org/"><img alt="CyVerse_logo" src="_images/cyverse_learning.png" style="width: 500px;" /></a></p>
 <p><a class="reference external" href="http://learning.cyverse.org/"><img alt="Home_Icon" src="_images/homeicon.png" style="width: 25px; height: 25px;" /></a>
 <a class="reference external" href="http://learning.cyverse.org/">Learning Center Home</a></p>
-<div class="section" id="neon-shiny-app">
-<h1>NEON Shiny App<a class="headerlink" href="#neon-shiny-app" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="using-the-neon-shiny-app-in-rstudio-server">
+<h1>Using the NEON Shiny App in RStudio-Server<a class="headerlink" href="#using-the-neon-shiny-app-in-rstudio-server" title="Permalink to this headline">¶</a></h1>
 <p><strong>Description:</strong></p>
-<p>The <a class="reference external" href="https://www.neonscience.org/download-explore-neon-data">Download and Explore NEON Data API</a> covered the basics of downloading data directy in R from the <code class="docutils literal notranslate"><span class="pre">neonUtilities</span></code> R package.</p>
+<p>The <a class="reference external" href="https://www.neonscience.org/download-explore-neon-data">Download and Explore NEON Data API</a> tutorial covers the basics of downloading data directy into R and RStudio via the <code class="docutils literal notranslate"><span class="pre">neonUtilities</span></code> R package.</p>
 <p>Our team created a NEON Shiny App for interfacing with the NEON API in R Studio in a graphical manner.</p>
 <p>The Shiny app can be launched using <a class="reference external" href="https://hub.docker.com/r/cyversevice/shiny-geospatial/neon-shiny-browser">Docker</a>, in RStudio or an RStudio-Server.</p>
 <p>When started the Shiny app will create a new folder called <code class="docutils literal notranslate"><span class="pre">~/NEON_Downloads</span></code> in the home working directory. For the R Studio instance on CyVerse, this is set as <code class="docutils literal notranslate"><span class="pre">/home/rstudio/NEON_Downloads</span></code>.</p>
 <p>Data that are selected and downloaded go into this folder and are organized using the same ontology as the NEON Data API.</p>
+<div class="section" id="prerequisite">
+<h2><em>Prerequisite</em><a class="headerlink" href="#prerequisite" title="Permalink to this headline">¶</a></h2>
+<p>In the previous section, you should have started a RStudio Server in the Discovery Environment <a class="reference external" href="https://de.cyverse.org">https://de.cyverse.org</a></p>
+<p>If you have not, do so again <a class="reference external" href="https://de.cyverse.org/de/?type=quick-launch&amp;quick-launch-id=e7383172-dafd-42a2-b539-a67a9b65425e&amp;app-id=6943b4f2-b663-11ea-92c5-008cfa5ae621"><img alt="rstudio-geospatial-3.6.3" src="https://de.cyverse.org/Powered-By-CyVerse-blue.svg" /></a></p>
+</div>
 <div class="section" id="download-the-shiny-app">
 <h2><em>Download the Shiny App</em><a class="headerlink" href="#download-the-shiny-app" title="Permalink to this headline">¶</a></h2>
 <p><strong>1.</strong> Have an instance of RStudio-Server in VICE already started, see <a class="reference external" href="./step2.html">Your Workspace</a> for details.</p>
@@ -192,18 +199,14 @@
 </div></blockquote>
 <p><strong>4.</strong> The contents of the Git Repository should now be in your workspace files in the lower right of RStudio</p>
 <p><strong>5.</strong> Set the working directory to the <code class="docutils literal notranslate"><span class="pre">neon-shiny-browser</span></code> directory</p>
-</div>
-<div class="section" id="starting-the-shiny-app">
-<h2><em>Starting the Shiny App</em><a class="headerlink" href="#starting-the-shiny-app" title="Permalink to this headline">¶</a></h2>
-<p>We are going to run the Shiny app as a background process. This will keep the R Console active and allow us to continue work in the R Studio while the App is running.</p>
 <p><a class="reference internal" href="_images/background_job.gif"><img alt="background_job" src="_images/background_job.gif" style="width: 800px;" /></a></p>
-<p><strong>6.</strong> Select the <code class="docutils literal notranslate"><span class="pre">Jobs</span></code> option in the Console</p>
-<p><strong>7.</strong> Set the working directory as <code class="docutils literal notranslate"><span class="pre">neon-shiny-browser</span></code> and select the <code class="docutils literal notranslate"><span class="pre">background.R</span></code> script.</p>
-<p><strong>8.</strong> Start the Job</p>
-<blockquote>
-<div><p>The job should start as a background process.</p>
-<p>By using the Job function, you keep Shiny as a background task which leaves your R Console still available.</p>
-</div></blockquote>
+</div>
+<div class="section" id="start-the-shiny-app">
+<h2><em>Start the Shiny App</em><a class="headerlink" href="#start-the-shiny-app" title="Permalink to this headline">¶</a></h2>
+<p>RStudio-Server has a feature called “<strong>Jobs</strong>”” which can run the Shiny app as a background process. This will keep the R Console active and allow us to continue work in the R Studio while the App is running at the same time.</p>
+<p><strong>6.</strong> Select the <code class="docutils literal notranslate"><span class="pre">Jobs</span></code> option in the Console.</p>
+<p><strong>7.</strong> Set the working directory as <code class="docutils literal notranslate"><span class="pre">~/neon-shiny-browser</span></code> and select the <code class="docutils literal notranslate"><span class="pre">background.R</span></code> script.</p>
+<p><strong>8.</strong> Start the Job as a background process.</p>
 <p><strong>9.</strong> This particular App will likely need to install a few missing dependencies before it starts running. Don’t worry, it will do this automatically. After it has installed the missing package dependencies, it should begin to echo out logs and then start to run on the <code class="docutils literal notranslate"><span class="pre">localhost</span></code> address number <code class="docutils literal notranslate"><span class="pre">127.0.0.1</span></code> using a randomly assigned PORT number:</p>
 <blockquote>
 <div><blockquote>

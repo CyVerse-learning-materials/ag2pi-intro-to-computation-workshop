@@ -14,19 +14,56 @@ Discovery Environment
 
 After you have created your CyVerse account and been granted access to the visual interactive computing environment (VICE) portion of the Discovery Environment data science workbench, you'll be able to start a GUI based app.
 
+|de_architecture|
+
+**Figure:** The Discovery Enviornment architecture -- more than you wanted to know.
+
+|Discovery Environment Guide|
+
 ..
 	#### Comment: short text description goes here ####
 
 ----
 
+
 *The Data Store*
 ~~~~~~~~~~~~~~~~
 
+The CyVerse Data Store uses `iRODS <https://irods.org>`_ as a cloud storage system. When you see the data in the browser, it looks like a conventional file tree with folders and filenames. 
+
+The CyVerse project started out with the name "iPlant Collaborative", and our data store retains the ``iplant`` zone name in iRODS.
+
+
+   .. admonition:: Windows vs Linux
+
+      If you're a Windows user, you're used to your file path looking something like this:
+
+         ::
+
+           C:\Documents\Folder Name\File Name.pdf
+      
+      The volume or drive is assigned a letter, e.g. ``C:\`` and there are spaces in the folders and file names.
+
+      In Linux, the paths use a forward slash ``/`` , and do not add a letter to the volume name. Spaces in folders and file names are highly discouraged and are unusable on the command line as a space is a special character which seperates arguments.   
+
+         ::
+
+           /home/username/documents/folder_name/file_name.pdf
+      
+      Using special case `styles <https://medium.com/better-programming/string-case-styles-camel-pascal-snake-and-kebab-case-981407998841>`_ like ``camelCase``, ``snake_case``, ``PascalCase``, or ``kebab-case`` helps to differentiate between words in folder and filenames.
+
+
 |Data Store Guide|
 
-**1.** Click the |data_button| icon labeled **Data**  
+*Walkthrough*
+============
 
-**2.** Open your personal user name space in the file browser
+
+**1.** Log into the Discovery Environment: `https://de.cyverse.org <https://de.cyverse.org>`_
+
+**2.** Click the |data_button| icon labeled "**Data**"  
+
+**3.** This opens a file explorer, in your personal username space
 
   |data_window|
    
@@ -36,11 +73,15 @@ After you have created your CyVerse account and been granted access to the visua
      
      /iplant/home/username
    
-   This is your personal space, it is private to you. You can create new folders and upload or download files.
-   
-**3.** Create a new folder called ``NEON_Downloads``
+   This is your personal space, it is private to you. 
 
-   The new folder is located at:
+   You can create new folders and upload or download files. 
+
+   You can change the permissions of these files and folders to share them with your collaborators or the public.
+   
+**4.** Create a new folder called ``NEON_Downloads``
+
+   The new folder should be located:
    
    .. code ::
    
@@ -48,7 +89,7 @@ After you have created your CyVerse account and been granted access to the visua
       
    This folder is private, only you can see it.   
 
-**4.** Share the folder with somone or with the rest of the CyVerse community
+**5.** Sharing a folder
 
    Click on the 'Share' tab and 'Share with Collaborators' option.
    
@@ -62,11 +103,11 @@ After you have created your CyVerse account and been granted access to the visua
    
    * ``own`` permissions allows the user to modify the file and folder **and the ability to create and delete**
    
-   Type in 'Public User' -- adding this user will share the directory with all other CyVerse users.
+   Type in 'Public User' -- adding this user will share the directory with all other CyVerse users when they are authenticated.
    
    Type in 'Anonymous User' -- adding this user will share the directory with the open internet (it will become visible on the internet via `https://data.cyverse.org/dav-anon/ <https://data.cyverse.org/dav-anon/>`_
 
-**5.** Look into the Community Data folder
+**6.** Look into the Community Data folder
 
    These are public folders that have been 'shared' with all CyVerse users or with the open internet (via the Anonymous User group): 
    
@@ -84,11 +125,13 @@ After you have created your CyVerse account and been granted access to the visua
    
    There are many more Community Data folders in CyVerse that you cannot see -- that's because they have not been shared with the 'Public' or 'Anonymous' user groups.
 
-**6.** Look into the 'Shared with Me' folder
+   You do not have ``write`` or ``own`` permission on any Community folders, so you cannot change them.
+
+**7.** Look into the 'Shared with Me' folder
 
    These folders are private user accounts that have public data in them or have been shared with you personally. 
 
-**7.** Access the Data Store from Cyberduck (Windows and Mac OS X only)
+**8.** Access the Data Store from Cyberduck (Windows and Mac OS X only)
    
    Download |Cyberduck| program onto your local computer.
    
@@ -96,7 +139,7 @@ After you have created your CyVerse account and been granted access to the visua
    
    View the contents of your Data Store. Drag and drop files and Cyberduck will upload / download them for you.
    
-**8.** Access the Data Store from WebDav (browser based)
+**9.** Access the Data Store from WebDav (browser based)
 
    In your browser, navigate to `https://data.cyverse.org <https://data.cyverse.org>`_
    
@@ -110,13 +153,15 @@ After you have created your CyVerse account and been granted access to the visua
 
      When you download data from the internet to your local computer they're isolated. How do you share them back with your team?
 
-     Many of us use services like Box or Google Drive to hold our files. These services are incredibly useful. 
+     Many of us use services like `Box <https://box.com>`_ or `Google Drive <https://drive.google.com>`_ to hold our files. `CyberDuck <https://cyberduck.io>`_ and its command line client `duck.sh <https://duck.sh>`_ also access these platforms. 
 
-     However, these file sharing platforms were not designed for machine readability and fast access of many (i.e. thousands to millions) of requests by anonymous users or even by trusted users. (`Google Drive vs Google Cloud <https://suitebriar.com/blog/google-cloud-vs-google-drive>`_)
+     These services are incredibly useful. 
+
+     However, file storage and sharing platforms like Box and Drive were not designed for machine readability and rapid requests for many (i.e. thousands to millions) of requests by anonymous users or even by trusted users. (see `Google Drive vs Google Cloud <https://suitebriar.com/blog/google-cloud-vs-google-drive>`_ for an explanation)
      
-     Conventional file services like FTP (file transfer protocol), function over HTTP and HTTPS. The same is true for Amazon Web Services 'S3' storage object buckets. (`S3 explained <https://dzone.com/articles/confused-by-aws-storage-options-s3-ebs-amp-efs-explained>`_)
+     Conventional file services like ``ftp://`` (file transfer protocol), function over HTTP and HTTPS. The same is true for Amazon Web Services ``s3`` storage object buckets. (`S3 explained <https://dzone.com/articles/confused-by-aws-storage-options-s3-ebs-amp-efs-explained>`_)
      
-   .. admonition:: How to work with your data in CyVerse? 
+   .. admonition:: How to work with your data in CyVerse 
    
      Downloading data from commercial cloud storage providors directly into CyVerse Data Store requires you have a running instance (virtual machine, or container in Discovery Environment) where the data can be staged before moving them onto the Data Store.
      
@@ -126,18 +171,17 @@ After you have created your CyVerse account and been granted access to the visua
 *The App Catalog*
 ~~~~~~~~~~~~~~~~~
 
-|Apps and Tool Guide|
 
 If you signed up for the workshop, you will have already been added to the NEON Community group.  We have added a couple of apps that have all of the tools needed for the workshop.
 
-These Apps are yours to use! You can install new packages and software into them, but if that becomes too time consuming, consider learning about how to integrate your own Tools and Apps using the Guide link given above. 
+These Apps are yours to use! You can install new packages and software into them, but if that becomes too time consuming, consider learning about how to integrate your own Tools and Apps using the |Apps and Tool Guide|.
 
 *TERMINOLOGY*
 +++++++++++++
 
-**App** -- a graphical interface for starting a "Tool" here in the Discovery Environment. The App window can be customized to use any set of conditionals, parameters, resource requirements, input data, or output folders needed to do your analysis.
+**App** -- a graphical interface for starting a "Tool" here in the Discovery Environment. The App window can be customized to use any set of conditionals, parameters, resource requirements, input data, or output folders needed to do your analysis. An App can be "**interactive**" like the RStudio or Jupyter Lab, "**executable**" like a command line script, or "**OSG**" for high throughput parallel computing on the Open Science Grid.
 
-**Tool** -- a "Tool" is a Docker container which has been added to the Discovery Environment tool manager. It should be public on the Docker Hub or another Docker Registry (e.g. quay.io, NVIDIA NGC, etc.). After a tool has been added to the Discovery Environment using the "Manage Tools" feature in the Apps window, a DE App can be created for it. 
+**Tool** -- a "Tool" is a Docker container which has been added to the Discovery Environment tool manager. It must be public on the Docker Hub or another Docker Registry (e.g. quay.io, NVIDIA NGC, etc.). After the tool manager template has been completed, the container will be added to the Discovery Environment. Click the "Manage Tools" with the wrench icon in the Apps window, to add your containers. After the Tool is integrated a private App can be created. 
 
 
 **9.** Click the |apps_button| icon labeled **Apps** 
@@ -150,7 +194,20 @@ These Apps are yours to use! You can install new packages and software into them
 
   In the next section, we're going to go over starting one of these apps, and beginning an Analysis, which you can view using the |analyses_button| icon labeled 'Analyses'
 
+*Analyses*
+~~~~~~~~~~
 
+**12.** In the next section, we'll cover running your own Analysis. When you start an "App" the running analysis will appear in the |analyses_button|
+
+----
+
+**Description of output and results**
+
+You should now understand the basics of the Classic Discovery Environment Interface.
+
+   - Data Store
+   - Apps
+   - Analyses
 
 ----
 
@@ -212,6 +269,9 @@ These Apps are yours to use! You can install new packages and software into them
     :width: 25
     :height: 25
 
+.. |de_architecture| image:: ./img/de_architecture.png
+    :width: 700
+
 .. |data_window| image:: ./img/de/data_window.png
     :width: 400
 
@@ -232,7 +292,7 @@ These Apps are yours to use! You can install new packages and software into them
    <a href="https://learning.cyverse.org/en/latest/tools_and_apps.html" target="blank">Apps and Tool Guide</a>
 
 .. |workspace-geospatial-latest| image:: https://de.cyverse.org/Powered-By-CyVerse-blue.svg
-.. _workspace-geospatial-latest: 
+.. _workspace-geospatial-latest: https://de.cyverse.org/de/?type=quick-launch&quick-launch-id=b19b3b00-0b6f-4c28-9d0f-23c965264309&app-id=580bbc6e-161e-11eb-880c-008cfa5ae621
 
 .. |rstudio-geospatial-3.6.3| image:: https://de.cyverse.org/Powered-By-CyVerse-blue.svg
 .. _rstudio-geospatial-3.6.3: https://de.cyverse.org/de/?type=quick-launch&quick-launch-id=e7383172-dafd-42a2-b539-a67a9b65425e&app-id=6943b4f2-b663-11ea-92c5-008cfa5ae621

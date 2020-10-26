@@ -10,6 +10,10 @@
 Agenda
 ------
 
+We will attempt to cover each of these Content pages during the workshop.
+
+As we run out of time for each section, you may need to complete the material self-paced as homework after the in-person sessions end each day.
+
 ..
 	#### Comment: short text description goes here ####
 
@@ -35,26 +39,26 @@ Agenda
     - Activity
     - Lead Personnel
     - Content
-    - Links
+    - Additional Links
   * - 0900-0910
     - Briefing
     - Tyson
     - Overview of course materials
     - This website
   * - 0910-0930
-    - Discovery Environment
+    - Discovery Environment walkthrough
     - Tyson
-    - `Data Apps Analyses <./step1.html>`_
+    - `Data, Apps, & Analyses <./step1.html>`_
     - `https://de.cyverse.org <https://de.cyverse.org>`_
   * - 0930-0935
-    - Launch your workbench
+    - Launch an application
     - Tyson
-    - `Workspace <./step2.html>`_
+    - `Visual Interactive Computing <./step2.html>`_
     - 
   * - 0935-1000
     - Managing your code for reproducibility
     -
-    - `Using GitHub for your projects <./step5.html>`_
+    - `GitHub for R projects <./step5.html>`_
     - 
   * - 1000-1010
     - Break
@@ -71,12 +75,7 @@ Agenda
     -
     -
     -
-  * - 1200-1230
-    - RStudio Activity
-    - Tyson
-    - `Download data using NEON Shiny App <./step3.html>`_
-    - `GitHub Download <https://github.com/cyverse-gis/neon-shiny-browser>`_
-  * - 1230-1250
+  * - 1200-1250
     - RStudio Activity
     - Donal
     - Accessing and working with NEON geolocation data
@@ -88,9 +87,9 @@ Agenda
     -
   * - 1300-1330
     - RStudio Activity (cont.)
-    - Donal
-    -
-    -
+    - Tyson
+    - `Download data using NEON Shiny App <./step3.html>`_
+    - `GitHub Download <https://github.com/cyverse-gis/neon-shiny-browser>`_
   * - 1330-1350
     - Data Management
     - Tyson
@@ -177,10 +176,10 @@ Agenda
     - Overview of course materials
     - This website
   * - 0910-1000
-    - Jupyter Lab
-    - Donal
-    - NEON data API in Python 
-    - `Introduction to NEON Data API in Python <https://www.neonscience.org/neon-api-01-introduction-requests>`_
+    - Jupyter Lab, Workspace
+    - Tyson
+    - More VICE apps in Discovery Environment 
+    - 
   * - 1000-1010
     - Break
     - 
@@ -188,9 +187,9 @@ Agenda
     -
   * - 1010-1100
     - Jupyter Lab
-    - Tyson
-    - Cloud Optimized Geotiff (COG) processing with GDAL
-    -
+    - Donal
+    - NEON data API in Python 
+    - `Introduction to NEON Data API in Python <https://www.neonscience.org/neon-api-01-introduction-requests>`_
   * - 1100-1200
     - Brunch, Early-, Regular-, Late- Lunch Break
     -
@@ -207,7 +206,7 @@ Agenda
     -
     -
   * - 1300-1350
-    - Cloud Native Data
+    - Batch processing lidar
     - Tyson
     - Working with PDAL and Entwine Point Tiles
     - 

@@ -30,11 +30,10 @@ Please use your institutional email address, and if you don't have an |ORCID ID|
 Goal
 ----
 
-The ultimate goal of our workshop is to allow users to leave with an understanding of the NEON Data API and working with NEON AOP data in their preferred Integrated Development Environment (IDE) in the cloud.
+The goals of the workshop are to allow you as new data scientists to leave with an understanding of the NEON Data API and working with NEON AOP data and to introduce CyVerse as a platform for conducting data intensive scientific research. 
 
-Other goals include using CyVerse to manage large and very large analyses
+You will have opportunities to work in your preferred Integrated Development Environment (IDE) in the public research cyberinfrastructure. CyVerse enables us to work with large and very large analyses. You will be able to work with NEON AOP data across many sites and many years worth of data without ever having to "download" anything over your local internet service provider.
 
-Demonstrating that they are capable of doing so requires that we provide examples of (1) containers for running geospatial software environments, (2) notebook examples of geospatial data analyses  & (3) documentation for self-paced asynchonous learning and in-person live coding.
 
 ..
     #### Comment: Avoid covering upstream and downstream steps that are not explicitly and
@@ -46,8 +45,7 @@ Demonstrating that they are capable of doing so requires that we provide example
 Tutorial Maintainer(s)
 ------------------------
 
-Who to contact if this guide needs fixing. You can also email
-`learning@CyVerse.org <learning@CyVerse.org>`_
+Who to contact if this guide needs fixing. 
 
 .. list-table::
     :header-rows: 1
@@ -55,25 +53,34 @@ Who to contact if this guide needs fixing. You can also email
     * - Maintainer
       - Institution
       - GitHub Username
-    * - Tyson Lee Swetnam
+    * - Tyson Swetnam
       - CyVerse / University of Arizona
-      - tyson-swetnam
+      - ``tyson-swetnam``
+    * - Bridget Hass
+      - NEON / Battelle Inc
+      - ``bridgethass``  
     * - Donal O'Leary
       - NEON / Battelle Inc
-      - donal-at-NEON
+      - ``donal-at-NEON``
 ----
+
+Content Links
+-------------
+
+Use the table of contents on the left side of the page to navigate
 
 .. toctree::
 	:maxdepth: 2
 
 	Home <self>
+  Code of Conduct <code_of_conduct.rst>
   Agenda <agenda.rst>
-  Discovery Environment <step1.rst>
-  Your Workbench <step2.rst>
+  Discovery Environment Overview <step1.rst>
+  Visual Interactive Computing <step2.rst>
   Version Control with GitHub <step5.rst>
-  NEON Shiny App <step3.rst>
-  Manage your cloud data <step4.rst>
-  Jupyter Lab <step6.rst>
+  RStudio & Shiny Apps <step3.rst>
+  Managing data in the cloud <step4.rst>
+  Data Science Workspaces <step6.rst>
   
 ..
 	#### Comment:This tutorial can have multiple pages. The table of contents assumes
@@ -98,15 +105,23 @@ Downloads, access, and services
     * - Prerequisite
       - Preparation/Notes
       - Link/Download
-    * - CyVerse account
-      - You will need a CyVerse account to complete this exercise
+    * - |CyVerse_globe|_
+      - You will need a CyVerse account to use our tools
       - |CyVerse User Portal|
-    * - Cyberduck
-      - Standalone software for upload/download to Data Store
+    * - |cyberduck|_
+      - CyberDuck File manager (Windows and Mac OS X only)
       - |Download Cyberduck|
+    * - |github|_
+      - GitHub allows you to create your own version controlled repositories
+      - |GitHub|
+    * - |gee|_
+      - Google Earth Engine (GEE) code editor account
+      - |GEE|  
 
 Platform(s)
 ~~~~~~~~~~~
+
+We provide ready-to-use examples of (1) Docker containers with pre-configured geospatial software environments, (2) Notebook examples of NEON AOP geospatial data analyses,  & (3) ReadTheDocs style documentation that will allow for self-paced asynchonous learning as well as opportunities for in-person live coding.
 
 *We will use the following CyVerse platform(s):*
 
@@ -128,6 +143,10 @@ Platform(s)
       - Web/Point-and-click
       - |Discovery Environment|
       - |Discovery Environment Guide|
+    * - Learning Center
+      - ReadTheDocs
+      - This website
+      - |CyVerse Learning Center|  
     
 Application(s) used
 ~~~~~~~~~~~~~~~~~~~
@@ -146,7 +165,7 @@ Application(s) used
       - GitHub repositories
     * - Workspace 
       - ``latest``
-      - All the Things Geospatial
+      - |all-the-things|
       -	|workspace-geospatial-latest|_
       - |CyVerse Workspace GitHub|
     * - RStudio 
@@ -159,6 +178,11 @@ Application(s) used
       - Jupyter Lab Data Science Notebook with Geospatial applications pre-installed
       - |jupyterlab-geospatial|_
       - |CyVerse JupyterLab GitHub|
+    * - GIS Desktop
+      - ``latest``
+      - Ubuntu Desktop with QGIS, GRASS-GIS, SAGA-GIS, PDAL, & GDAL tools
+      - |QGIS-Xpra|_
+      - |QGIS Xpra GitHub|  
 
 Input and example data
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -179,6 +203,10 @@ Input and example data
       - various
       - Use in browser or R Studio Shiny App
       - |NEON Shiny Browser|
+    * - Sample Datasets
+      - various
+      - Example datasets cached on the CyVerse Data Store
+      - |WebDav|  
 
 ----
 
@@ -245,7 +273,7 @@ Input and example data
    <a href="https://orcid.org/" target="blank">ORCID ID</a>
 
 .. |workspace-geospatial-latest| image:: https://de.cyverse.org/Powered-By-CyVerse-blue.svg
-.. _workspace-geospatial-latest: https://de.cyverse.org/de/?type=quick-launch&quick-launch-id=66f5a2d6-04c3-4346-8804-fab350e2f9b8&app-id=55f4f8b0-f552-11ea-80fa-008cfa5ae621
+.. _workspace-geospatial-latest: https://de.cyverse.org/de/?type=quick-launch&quick-launch-id=b19b3b00-0b6f-4c28-9d0f-23c965264309&app-id=580bbc6e-161e-11eb-880c-008cfa5ae621
 
 .. |CyVerse Workspace GitHub|  raw:: html
  
@@ -266,6 +294,13 @@ Input and example data
 .. |jupyterlab-geospatial| image:: https://de.cyverse.org/Powered-By-CyVerse-blue.svg
 .. _jupyterlab-geospatial: https://de.cyverse.org/de/?type=quick-launch&quick-launch-id=63afd24c-9acc-4a8c-85ef-58b634a2ebc2&app-id=c940912c-fcea-11ea-b07f-008cfa5ae621
 
+.. |QGIS-Xpra| image:: https://de.cyverse.org/Powered-By-CyVerse-blue.svg
+.. _QGIS-Xpra: https://de.cyverse.org/de/?type=quick-launch&quick-launch-id=80e972aa-c2ce-4e62-a4ba-3b8e320940b3&app-id=a847402e-ff2a-11e9-815d-008cfa5ae621
+
+.. |QGIS Xpra GitHub| raw:: html
+   
+   <a href="https://github.com/tyson-swetnam/qgis-xpra" target="blank">QGIS Xpra GitHub</a>
+
 .. |NEON API|  raw:: html
 
    <a href="https://data.neonscience.org/data-products/explore" target="blank">NEON API</a>
@@ -281,3 +316,33 @@ Input and example data
 .. |Github Repo Link|  raw:: html
 
    <a href="https://github.com/CyVerse-learning-materials/2020-neon-aop-workshop" target="blank">Github Repo Link</a>
+
+.. |all-the-things| image:: ./img/all-the-things.png
+    :width: 400
+
+.. |cyberduck| image:: ./img/cyberduck.png
+    :width: 50
+
+.. _cyberduck: https://cyberduck.io
+
+.. |github| image:: ./img/github.png
+    :width: 50
+
+.. _github: https://github.com
+
+.. |gee| image:: ./img/gee.png
+    :width: 50
+
+.. _gee: https://earthengine.google.com
+
+.. |GitHub| raw:: html
+
+   <a href="https://github.com" target="blank">GitHub</a>
+
+.. |GEE| raw:: html
+
+   <a href="https://earthengine.google.com/" target="blank">GEE</a>   
+
+.. |WebDav| raw:: html
+
+   <a href="https://data.cyverse.org/dav-anon/iplant/projects/NEON_workshop" target="blank">WebDav</a>
