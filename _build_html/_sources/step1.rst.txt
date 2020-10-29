@@ -16,7 +16,7 @@ After you have created your CyVerse account and been granted access to the visua
 
 |de_architecture|
 
-**Figure:** The Discovery Enviornment architecture -- more than you wanted to know.
+**Figure:** More than you wanted to know about how this stuff works.
 
 |Discovery Environment Guide|
 
@@ -31,7 +31,7 @@ After you have created your CyVerse account and been granted access to the visua
 
 The CyVerse Data Store uses `iRODS <https://irods.org>`_ as a cloud storage system. When you see the data in the browser, it looks like a conventional file tree with folders and filenames. 
 
-The CyVerse project started out with the name "iPlant Collaborative", and our data store retains the ``iplant`` zone name in iRODS.
+CyVerse started out with the project name "iPlant Collaborative", and our data store still retains the ``iplant`` zone name in iRODS.
 
 
    .. admonition:: Windows vs Linux
@@ -42,9 +42,9 @@ The CyVerse project started out with the name "iPlant Collaborative", and our da
 
            C:\Documents\Folder Name\File Name.pdf
       
-      The volume or drive is assigned a letter, e.g. ``C:\`` and there are spaces in the folders and file names.
+      The volume or drive is assigned a letter, e.g. ``C:\``, and there may be spaces in the folders and file names.
 
-      In Linux, the paths use a forward slash ``/`` , and do not add a letter to the volume name. Spaces in folders and file names are highly discouraged and are unusable on the command line as a space is a special character which seperates arguments.   
+      In Linux, the folder paths use a forward slash ``/`` , and do not add a letter to the root volume name. Spaces in folders and file names are highly discouraged and are unusable on the command line as a space is a special character which separates arguments.   
 
          ::
 
@@ -183,6 +183,8 @@ These Apps are yours to use! You can install new packages and software into them
 
 **Tool** -- a "Tool" is a Docker container which has been added to the Discovery Environment tool manager. It must be public on the Docker Hub or another Docker Registry (e.g. quay.io, NVIDIA NGC, etc.). After the tool manager template has been completed, the container will be added to the Discovery Environment. Click the "Manage Tools" with the wrench icon in the Apps window, to add your containers. After the Tool is integrated a private App can be created. 
 
+*Walkthrough*
+============
 
 **9.** Click the |apps_button| icon labeled **Apps** 
 
@@ -197,7 +199,12 @@ These Apps are yours to use! You can install new packages and software into them
 *Analyses*
 ~~~~~~~~~~
 
-**12.** In the next section, we'll cover running your own Analysis. When you start an "App" the running analysis will appear in the |analyses_button|
+*Walkthrough*
+============
+
+**12.** Click the |analyses_button| icon labeled **Analyses**
+
+**13.** In the next section, we'll cover running your own Analysis. When you start an "App" the running analysis will appear in the |analyses_button|
 
 ----
 
@@ -295,7 +302,7 @@ You should now understand the basics of the Classic Discovery Environment Interf
 .. _workspace-geospatial-latest: https://de.cyverse.org/de/?type=quick-launch&quick-launch-id=b19b3b00-0b6f-4c28-9d0f-23c965264309&app-id=580bbc6e-161e-11eb-880c-008cfa5ae621
 
 .. |rstudio-geospatial-3.6.3| image:: https://de.cyverse.org/Powered-By-CyVerse-blue.svg
-.. _rstudio-geospatial-3.6.3: https://de.cyverse.org/de/?type=quick-launch&quick-launch-id=e7383172-dafd-42a2-b539-a67a9b65425e&app-id=6943b4f2-b663-11ea-92c5-008cfa5ae621
+.. _rstudio-geospatial-3.6.3: https://de.cyverse.org/de/?type=quick-launch&quick-launch-id=abce1ed0-8fb4-4cc5-bef3-3a9530446dc6&app-id=1903c788-1947-11eb-8f3e-008cfa5ae621
 
 .. |Github Repo Link|  raw:: html
 

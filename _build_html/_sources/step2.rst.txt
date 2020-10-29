@@ -16,11 +16,9 @@ We have integrated several Docker containers into the CyVerse Discovery Environm
 
 We have also copied some of the NEON example data sets to the CyVerse Data Store, along with the completed ``.ipynb`` and ``.Rmd`` notebooks and ``.r`` scripts
 
-We're going to walk through the steps of starting an interactive analysis, using it, and shutting it down.
+In this section, we're going to walk through the required steps of starting an interactive analysis, and shutting it down when you're done.
 
 |Discovery Environment Guide|
-
-
 
 ..
 	#### Comment: short text description goes here ####
@@ -33,21 +31,21 @@ We're going to walk through the steps of starting an interactive analysis, using
 
 **1.** Log into the Discovery Environment `https://de.cyverse.org <https://de.cyverse.org>`_
 
-**2.** Click one of our quick launch buttons:
+ Or click this quick launch button to be taken directly to the app:
 
    - RStudio: |rstudio-geospatial-3.6.3|_
-   
-   Or, search using the |apps_button| 'Apps' search bar.
 
-   query "rstudio geospatial" and see what comes up.
+**2.** Click the |apps_button| 'Apps' button and a new window should open. 
+
+   Search using the query "rstudio geospatial" and see what comes up.
   
    |apps_search|
 
-   Or, click the App button and a new window should open.
+   Also, under the "My Apps" tab click on the "My Communities" section and "NEON" Group should appear.
 
-   Under "My Apps" section click on the "My Communities" section and "NEON" Group should appear
+   Click on the Hyperlinked name and a new window should open. 
 
-**3.** In the App Window you have a few options.
+**3.** In the pop-up for the particular App you have a few options.
 
   **i.**   ``Analysis Name`` - you can change the name of the analysis if you like, the default name is typically ``<the-app-name>_analysis1``
 
@@ -84,21 +82,21 @@ We're going to walk through the steps of starting an interactive analysis, using
 
 **4.** Open the |analyses_button| icon labeled "Analyses" to view your running analysis.
 
-    Look for your App Name. See the square icon with an arrow pointed up to the right? Click on that icon and a new tab will open.
+    Look for your App by Name. 
+
+    See the square icon with an arrow pointed up to the right? Click on that icon and a new browser tab will open.
 
     |analyses_window|
 
-    Alternately, click the Bell icon in the upper right to see your notifications, you should see 'Access your running analysis here.' as an option. Click on that link and a new tab will open.
+    Alternately, click the Bell icon in the upper right to see your notifications, you should see 'Access your running analysis here.' as an option. Click on that link and a new browser tab will open.
 
 **5.** Having clicked on either of the hyperlinked icons in Step 4 should result in a new tab opening in your browser.
 
-   Your Discovery Environment Browser tab should still be open.
+   Your Discovery Environment Browser tab should still be open at ``https://de.cyverse.org/de/`` 
 
-   The new URL for the instance has changed from ``https://de.cyverse.org/de/`` to something like ``https://af7664685.cyverse.run/``.
+   The new URL for the App should be something like ``https://af7664685.cyverse.run/``.
 
-   This is a new instance is running a Virtual Machine for you on CyVerse cloud.
-
-   You can now begin working in your running instance. 
+   Your app is now ready for you to begin work. 
 
 **6.** Return to your Discovery Environment Browser tab.
 
@@ -233,11 +231,10 @@ Any data which are in the working directory of ``/iplant/home/<username>/analyse
     :width: 400
 
 .. |workspace-geospatial-latest| image:: https://de.cyverse.org/Powered-By-CyVerse-blue.svg
-.. _workspace-geospatial-latest: https://de.cyverse.org/de/?type=quick-launch&quick-launch-id=66f5a2d6-04c3-4346-8804-fab350e2f9b8&app-id=55f4f8b0-f552-11ea-80fa-008cfa5ae621
+.. _workspace-geospatial-latest: https://de.cyverse.org/de/?type=quick-launch&quick-launch-id=b19b3b00-0b6f-4c28-9d0f-23c965264309&app-id=580bbc6e-161e-11eb-880c-008cfa5ae621
 
 .. |rstudio-geospatial-3.6.3| image:: https://de.cyverse.org/Powered-By-CyVerse-blue.svg
-.. _rstudio-geospatial-3.6.3: https://de.cyverse.org/de/?type=quick-launch&quick-launch-id=e7383172-dafd-42a2-b539-a67a9b65425e&app-id=6943b4f2-b663-11ea-92c5-008cfa5ae621
-
+.. _rstudio-geospatial-3.6.3: https://de.cyverse.org/de/?type=quick-launch&quick-launch-id=abce1ed0-8fb4-4cc5-bef3-3a9530446dc6&app-id=1903c788-1947-11eb-8f3e-008cfa5ae621
 
 .. |Github Repo Link|  raw:: html
 

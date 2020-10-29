@@ -14,7 +14,7 @@ Version Control with GitHub
 
 We want to keep track of our work in a place that we can also share it with our collaborators, and eventually with the public.
 
-GitHub is a version control system which tracks changes to code and shares it across teams. While it is predominantly used by software engineers, it is increasingly used by researchers in open science, for the same reasons.
+`GitHub <https://github.com>`_ is a version control system which tracks changes to code and shares it across teams. While it is predominantly used by software engineers, it is increasingly used by researchers in open science, for the same reasons.
 
 
 
@@ -50,37 +50,38 @@ GitHub is a version control system which tracks changes to code and shares it ac
 
       `choosealicense.com <https://choosealicense.com/>`_ offers support and answers questions about selecting the right license.     
 
+**7.** You're ready to go back to your CyVerse RStudio browser tab. 
 
-*Clone your Repository into RStudio*
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*Clone your Repository into RStudio Server running in CyVerse*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-RStudio can create a R Project using Version Control with ``git``.
+RStudio can create a R Project using Version Control with ``git`` or ``svn`` (another version control platform).
 
-Creating a project with Version Control will allow you to sync changes back up to GitHub while you're working and when you're finished.
+Creating a R project with Version Control will allow you to sync changes back up to GitHub while you're working and when you're finished.
 
-``Git`` also allows you to pull other GitHub repositories and work with existing code and analysis notebooks, thus enabling repeatability.
+``git`` also allows you to pull other GitHub repositories and work with existing code and analysis notebooks, thus enabling repeatability.
 
-**7.** In RStudio, select 'File' then 'New Project' and then 'Version Control'
+**8.** In RStudio, select 'File' then 'New Project' and then 'Version Control'
 
 |rstudio_git|
 
-**8.** The repository will be copied onto your instance and you'll be in a directory with a new R project file.
+**9.** The repository will be copied onto your instance and you'll be in a directory with a new R project file.
 
   This is a local copy of the ``git`` repository from GitHub.
 
   Any changes thare are made locally on this machine will not affect the GitHub repository from which you got this.
 
-**9.** Adding new files to the repository. 
+**10.** Adding new files to the repository. 
 
-  ``git`` is useful for tracking code -- but it is not intended to track your data files.
+  Now that there is a copy of the repo on your instance, you're ready to start making changes and adding new scripts.
 
-**10.** Updating a ``.gitignore`` file
+**11.** Updating a ``.gitignore`` file
 
   ``git`` is useful for tracking code -- but it is not intended to track your data files.
 
   The best practice is to NOT keep your data in the same directory as the ``git`` repository. 
 
-  However, you can add a ``.gitignore`` file and update it with the various types of files you want ``git`` to not track or to submit back to GitHub.
+  However, you can add a ``.gitignore`` file and update it with the various types of files you want ``git`` to not track or to submit back to GitHub when you commit your changes.
 
   When you use R Studio to create a Version Control project, it will generate a ``.gitignore`` file for you. The default files that it will ignore are related to your local R Studio environment:
 
@@ -130,13 +131,13 @@ Creating a project with Version Control will allow you to sync changes back up t
 *Add your code to the Repository*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**11.** Copy the contents of our other NEON exercises into the new directory. 
+**12.** Copy the contents of our other NEON exercises into the new directory. 
 
    These new files are not yet added to the ``git`` module tracking.
 
-**12.** Configure ``git`` for the first time
+**13.** Configure ``git`` for the first time
 
-   Because we're working on a remote instance, the ``git``configuration has not been set. 
+   Because we're working on a remote instance, the ``git`` configuration has not been set. 
 
    To configure ``git`` for sending requests to GitHub, set the email address and a name for your remote:
 
@@ -145,7 +146,7 @@ Creating a project with Version Control will allow you to sync changes back up t
       git config --global user.name "Your Name"
       git config --global user.email "Your@email.address"
 
-**13.** Create a new "Branch" 
+**14.** Create a new "Branch" 
 
    The repository has a version called ``master``
 
@@ -157,22 +158,22 @@ Creating a project with Version Control will allow you to sync changes back up t
    
       git checkout -b main
 
-**14.** Add tracking for the new files in the repository and create a "commit" message
+**15.** Add tracking for the new files in the repository and create a "commit" message
 
    RStudio's Git integration should show you which files are not tracked by ``git``. You can select the check boxes for each file and add them.
 
    You need to create a "commit" message which briefly explains the changes you're about to make.
 
-**15.** Push your changes to the GitHub.
+**16.** Push your changes to the GitHub.
 
    Your updates are now ready to  be submitted to the GitHub from RStudio.
 
    Because you're sending these files from a remote computer, your changes will not automatically be accepted by the GitHub.
 
-*Review and Accept your Pull Request*
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*Review and Accept your own Pull Request*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**16.** Review and Accept your own "Pull Request"
+**17.** Review and Accept your own "Pull Request"
 
    Go to your GitHub user profile and select the repository.
 
@@ -180,7 +181,7 @@ Creating a project with Version Control will allow you to sync changes back up t
    
    You will see your "commit" message, and be able to review the new files and file changes.
 
-**17.** Your files are now saved in GitHub, under a new branch called ``main``
+**18.** Your files are now saved in GitHub, under a new branch called ``main``
 
    You can safely delete the ``master`` branch in RStudio and on GitHub. 
    
@@ -197,6 +198,12 @@ Creating a project with Version Control will allow you to sync changes back up t
 ----
 
 **Description of output and results**
+
+You should now have a tracked version control of your workshop project, with all of the pre-existing scripts. You can re-use this repository on your local computer, or somewhere else in the future.
+
+Hopefully, you now understand how GitHub can be used to share code and analyses, and to do your science! 
+
+NEON maintains a large library of pre-written scripts on their GitHub repository: `https://github.com/neonscience <https://github.com/neonscience>`_
 
 
 ----

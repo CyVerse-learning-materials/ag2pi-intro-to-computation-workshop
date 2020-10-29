@@ -46,19 +46,19 @@ As we run out of time for each section, you may need to complete the material se
     - Overview of course materials
     - This website
   * - 0910-0930
-    - Discovery Environment walkthrough
+    - CyVerse walkthrough
     - Tyson
-    - `Data, Apps, & Analyses <./step1.html>`_
+    - `Discovery Environment Overview <./step1.html>`_
     - `https://de.cyverse.org <https://de.cyverse.org>`_
   * - 0930-0935
-    - Launch an application
+    - Launching an application
     - Tyson
     - `Visual Interactive Computing <./step2.html>`_
     - 
   * - 0935-1000
     - Managing your code for reproducibility
-    -
-    - `GitHub for R projects <./step5.html>`_
+    - Tyson
+    - `Version Control with GitHub <./step5.html>`_
     - 
   * - 1000-1010
     - Break
@@ -66,14 +66,14 @@ As we run out of time for each section, you may need to complete the material se
     -
     -
   * - 1010-1100   
-    - NEON Data API
+    - Intro to NEON Data API
     - Donal
     - Download and Explore NEON Data
     - `https://www.neonscience.org/download-explore-neon-data <https://www.neonscience.org/download-explore-neon-data>`_
   * - 1100-1200
     - Brunch, Early-, Regular-, Late- Lunch Break
     -
-    -
+    - Eat. Chat.
     -
   * - 1200-1250
     - RStudio Activity
@@ -88,12 +88,12 @@ As we run out of time for each section, you may need to complete the material se
   * - 1300-1330
     - RStudio Activity (cont.)
     - Tyson
-    - `Download data using NEON Shiny App <./step3.html>`_
-    - `GitHub Download <https://github.com/cyverse-gis/neon-shiny-browser>`_
+    - `RStudio & Shiny Apps <./step3.html>`_
+    - `GitHub CyVerse NEON Shiny App <https://github.com/cyverse-gis/neon-shiny-browser>`_
   * - 1330-1350
     - Data Management
     - Tyson
-    - `Keeping your data in the cloud <./step4.html>`_
+    - `Managing data in the cloud <./step4.html>`_
     - 
   * - 1350-1400
     - Wrap-up
@@ -120,7 +120,7 @@ As we run out of time for each section, you may need to complete the material se
     - This website
   * - 0910-1000
     - RStudio Activity 
-    - 
+    - Donal
     - Calculating Forest Structural Diversity Metrics from NEON lidar data
     - `https://www.neonscience.org/structural-diversity-discrete-return <https://www.neonscience.org/structural-diversity-discrete-return>`_
   * - 1000-1010
@@ -130,19 +130,19 @@ As we run out of time for each section, you may need to complete the material se
     -
   * - 1010-1100
     - RStudio Activity
-    - 
-    - continued
-    -
+    - Donal
+    - NEON AOP lidar w/ gedi
+    - `https://katharynduffy.github.io/neon-aop.html#matching-gedi-waveforms-with-neon-aop-lidar-pointclouds <https://katharynduffy.github.io/neon-aop.html#matching-gedi-waveforms-with-neon-aop-lidar-pointclouds>`_
   * - 1100-1200
     - Brunch, Early-, Regular-, Late- Lunch Break
-    -
+    - Eat. Chat.
     -
     -
   * - 1200-1250
     - RStudio Activity
-    - 
-    - Select pixels and compare spectral signatures in R
-    - `https://www.neonscience.org/select-pixels-compare-spectral-signatures-r <https://www.neonscience.org/select-pixels-compare-spectral-signatures-r>`_
+    - Donal
+    - Introduction to Hyperspectral Remote Sensing Data
+    - `https://www.neonscience.org/intro-hsi-r-series <https://www.neonscience.org/intro-hsi-r-series>`_
   * - 1250-1300
     - Break
     -
@@ -151,7 +151,7 @@ As we run out of time for each section, you may need to complete the material se
   * - 1300-1350
     - RStudio Activity
     -
-    - continued
+    - Free time to explore tools, ask questions.
     - 
   * - 1350-1400
     - Wrap-up
@@ -175,11 +175,16 @@ As we run out of time for each section, you may need to complete the material se
     - 
     - Overview of course materials
     - This website
-  * - 0910-1000
-    - Jupyter Lab, Workspace
+  * - 0910-09:30
+    - Jupyter, Remote Desktops
     - Tyson
-    - More VICE apps in Discovery Environment 
+    - More on VICE apps in Discovery Environment 
     - 
+  * - 0930-1000
+    - Jupyter Lab
+    - Bridget
+    - NEON data API in Python 
+    - `Introduction to NEON Data API in Python <https://www.neonscience.org/neon-api-01-introduction-requests>`_  
   * - 1000-1010
     - Break
     - 
@@ -187,18 +192,18 @@ As we run out of time for each section, you may need to complete the material se
     -
   * - 1010-1100
     - Jupyter Lab
-    - Donal
-    - NEON data API in Python 
-    - `Introduction to NEON Data API in Python <https://www.neonscience.org/neon-api-01-introduction-requests>`_
+    - Bridget
+    - Working with NEON Hyperspectral 
+    - 
   * - 1100-1200
     - Brunch, Early-, Regular-, Late- Lunch Break
-    -
+    - Eat. Chat.
     -
     -
   * - 1200-1250
     - Remote Desktops 
     - Tyson
-    - Working in QGIS remotely
+    - QGIS and Desktops
     - 
   * - 1250-1300
     - Break
@@ -208,7 +213,7 @@ As we run out of time for each section, you may need to complete the material se
   * - 1300-1350
     - Batch processing lidar
     - Tyson
-    - Working with PDAL and Entwine Point Tiles
+    - PDAL and Entwine Point Tiles
     - 
   * - 1350-1400
     - Wrap-up

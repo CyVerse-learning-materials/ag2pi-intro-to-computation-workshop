@@ -63,7 +63,7 @@ RStudio-Server has a feature called "**Jobs**"" which can run the Shiny app as a
 
 **8.** Start the Job as a background process.
 
-**9.** This particular App will likely need to install a few missing dependencies before it starts running. Don't worry, it will do this automatically. After it has installed the missing package dependencies, it should begin to echo out logs and then start to run on the ``localhost`` address number ``127.0.0.1`` using a randomly assigned PORT number:
+**9.** This particular App will install a few missing R packages before it starts. Don't worry, it will do this automatically. After it has installed the missing package dependencies, it should begin to echo out logs and then start to run on the ``localhost`` address number ``127.0.0.1`` using a randomly assigned PORT number:
 
    .. code ::
 
@@ -176,7 +176,7 @@ Any data which are in the working directory of the instance (likely the ``/home/
     :width: 800
 
 .. |rstudio-geospatial-3.6.3| image:: https://de.cyverse.org/Powered-By-CyVerse-blue.svg
-.. _rstudio-geospatial-3.6.3: https://de.cyverse.org/de/?type=quick-launch&quick-launch-id=e7383172-dafd-42a2-b539-a67a9b65425e&app-id=6943b4f2-b663-11ea-92c5-008cfa5ae621
+.. _rstudio-geospatial-3.6.3: https://de.cyverse.org/de/?type=quick-launch&quick-launch-id=abce1ed0-8fb4-4cc5-bef3-3a9530446dc6&app-id=1903c788-1947-11eb-8f3e-008cfa5ae621
 
 .. |Github Repo Link|  raw:: html
 
