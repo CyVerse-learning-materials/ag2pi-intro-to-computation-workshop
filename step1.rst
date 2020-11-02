@@ -115,11 +115,11 @@ CyVerse started out with the project name "iPlant Collaborative", and our data s
    
       /iplant/home/shared/
       
-   Navigate to 'cyverse_training/' and 'datasets/'
+   Navigate to 'NEON_workshop/' and 'data/'
    
    .. code :: 
           
-      /iplant/home/shared/cyverse_training/datasets
+      /iplant/home/shared/NEON_workshop/data
    
    There are some sample NEON AOP Data in here that we'll get to tomorrow.
    
