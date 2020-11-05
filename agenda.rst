@@ -25,9 +25,11 @@ As we run out of time for each section, you may need to complete the material se
     :header-rows: 1
 
     * - URL
+      - Meeting ID
       - Password
-    * - 
-      - 
+    * - https://arizona.zoom.us/j/81204626687?pwd=MnpETmFBaCtvMW1KN2pRaHh4bysrQT09 
+      - 812 0462 6687
+      - ``cyverse``
 
 *Day 1 2020-11-05*
 ~~~~~~~~~~~~~~~~~~~
