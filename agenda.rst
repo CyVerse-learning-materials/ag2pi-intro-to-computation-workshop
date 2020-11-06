@@ -123,14 +123,19 @@ As we run out of time for each section, you may need to complete the material se
   * - 0910-1000
     - RStudio Activity 
     - Donal
-    - Calculating Forest Structural Diversity Metrics from NEON lidar data
-    - `https://www.neonscience.org/structural-diversity-discrete-return <https://www.neonscience.org/structural-diversity-discrete-return>`_
+    - Creating a Canopy Height Model from lidar-derived rasters
+    - `https://www.neonscience.org/create-chm-rasters-r <https://www.neonscience.org/create-chm-rasters-r>`_
   * - 1000-1010
     - Break
     -
     -
     -
   * - 1010-1100
+    - RStudio Activity
+    - Donal
+    - Calculating Forest Structural Diversity Metrics from NEON lidar data
+    - `https://www.neonscience.org/structural-diversity-discrete-return <https://www.neonscience.org/structural-diversity-discrete-return>`_
+  * - Optional:
     - RStudio Activity
     - Donal
     - NEON AOP lidar w/ gedi
