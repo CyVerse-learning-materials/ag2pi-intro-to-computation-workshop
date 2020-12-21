@@ -9,9 +9,9 @@
 **CyVerse NEON Airborne Observation Platform Workshop**
 =======================================================
 
-**Times: 09:00 - 14:00 MST, UTC-7**
+**Times: 11:00 - 16:00 EST/08:00-13:00 PST**
 
-**Dates: Thursday 5th, Friday 6th, and Saturday 7th (optional day) November 2020**
+**Dates: Wednesday 20th, Thursday 21st, and Friday 22nd January 2021**
 
 **Ready to join the workshop? Follow these steps:**
 
@@ -53,15 +53,12 @@ Who to contact if this guide needs fixing.
     * - Maintainer
       - Institution
       - GitHub Username
+    * - Ryan Bartelme
+      - CyVerse / University of Arizona
+      - ``rbartelme``
     * - Tyson Swetnam
       - CyVerse / University of Arizona
       - ``tyson-swetnam``
-    * - Bridget Hass
-      - NEON / Battelle Inc
-      - ``bridgethass``  
-    * - Donal O'Leary
-      - NEON / Battelle Inc
-      - ``donal-at-NEON``
 ----
 
 Content Links
