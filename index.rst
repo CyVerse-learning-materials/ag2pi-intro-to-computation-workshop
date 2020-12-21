@@ -6,7 +6,7 @@
 |Home_Icon|_
 `Learning Center Home <http://learning.cyverse.org/>`_
 
-**CyVerse NEON Airborne Observation Platform Workshop**
+**AG2PI Foundations of Computation: An Introduction for Beginners Workshop**
 =======================================================
 
 **Times: 11:00 - 16:00 EST/08:00-13:00 PST**
