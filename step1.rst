@@ -79,13 +79,13 @@ CyVerse started out with the project name "iPlant Collaborative", and our data s
 
    You can change the permissions of these files and folders to share them with your collaborators or the public.
    
-**4.** Create a new folder called ``NEON_Downloads``
+**4.** Create a new folder called ``agpi_workshop``
 
    The new folder should be located:
    
    .. code ::
    
-      /iplant/home/username/NEON_Downloads
+      /iplant/home/username/agpi_workshop
       
    This folder is private, only you can see it.   
 
@@ -115,13 +115,13 @@ CyVerse started out with the project name "iPlant Collaborative", and our data s
    
       /iplant/home/shared/
       
-   Navigate to 'NEON_workshop/' and 'data/'
+   Navigate to 'agpi_workshop/' and 'data/'
    
    .. code :: 
           
-      /iplant/home/shared/NEON_workshop/data
+      /iplant/home/shared/agpi_workshop/data
    
-   There are some sample NEON AOP Data in here that we'll get to tomorrow.
+   There are some sample datasets in here that we'll get to later in the workshop.
    
    There are many more Community Data folders in CyVerse that you cannot see -- that's because they have not been shared with the 'Public' or 'Anonymous' user groups.
 
@@ -172,7 +172,7 @@ CyVerse started out with the project name "iPlant Collaborative", and our data s
 ~~~~~~~~~~~~~~~~~
 
 
-If you signed up for the workshop, you will have already been added to the NEON Community group.  We have added a couple of apps that have all of the tools needed for the workshop.
+If you signed up for the workshop, you will have already been added to the AG2PI Community group.  We have added a couple of apps that have all of the tools needed for the workshop.
 
 These Apps are yours to use! You can install new packages and software into them, but if that becomes too time consuming, consider learning about how to integrate your own Tools and Apps using the |Apps and Tool Guide|.
 
