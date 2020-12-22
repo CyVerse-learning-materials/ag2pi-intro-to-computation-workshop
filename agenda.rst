@@ -31,7 +31,7 @@ As we run out of time for each section, you may need to complete the material se
       - 812 0462 6687
       - ``cyverse``
 
-*Day 1 2020-11-05*
+*Day 1 2021-01-19*
 ~~~~~~~~~~~~~~~~~~~
 
 .. list-table::
@@ -44,7 +44,7 @@ As we run out of time for each section, you may need to complete the material se
     - Additional Links
   * - 0900-0910
     - Briefing
-    - Tyson
+    - Ryan
     - Overview of course materials
     - This website
   * - 0910-0930
@@ -58,9 +58,9 @@ As we run out of time for each section, you may need to complete the material se
     - `Visual Interactive Computing <./step2.html>`_
     - 
   * - 0935-1000
-    - Managing your code for reproducibility
+    - Other CyVerse Resources
     - Tyson
-    - `Version Control with GitHub <./step5.html>`_
+    - `CyVerse Resources <./step5.html>`_
     - 
   * - 1000-1010
     - Break
@@ -68,19 +68,19 @@ As we run out of time for each section, you may need to complete the material se
     -
     -
   * - 1010-1100   
-    - Intro to NEON Data API
-    - Donal
-    - Download and Explore NEON Data
-    - `https://www.neonscience.org/download-explore-neon-data <https://www.neonscience.org/download-explore-neon-data>`_
+    - Hands on with the Data Store
+    - Ryan
+    - Find the data used in this course
+    - `Data Store <https://de.cyverse.org/>`_
   * - 1100-1200
     - Brunch, Early-, Regular-, Late- Lunch Break
     -
     - Eat. Chat.
     -
   * - 1200-1250
-    - RStudio Activity
-    - Donal
-    - Accessing and working with NEON geolocation data
+    - Launching RStudio
+    - Ryan
+    - Using the Discovery Environment to Run RStudio
     - `https://www.neonscience.org/neon-spatial-data-basics <https://www.neonscience.org/neon-spatial-data-basics>`_    
   * - 1250-1300
     - Break
@@ -88,9 +88,9 @@ As we run out of time for each section, you may need to complete the material se
     -
     -
   * - 1300-1330
-    - RStudio Activity (cont.)
+    - Launching Jupyter Lab
     - Tyson
-    - `RStudio & Shiny Apps <./step3.html>`_
+    - `Launching Jupyter Lab <./step3.html>`_
     - `GitHub CyVerse NEON Shiny App <https://github.com/cyverse-gis/neon-shiny-browser>`_
   * - 1330-1350
     - Data Management
@@ -104,7 +104,7 @@ As we run out of time for each section, you may need to complete the material se
     - 
 
 
-*Day 2 2020-11-06*
+*Day 2 2020-01-21*
 ~~~~~~~~~~~~~~~~~~~
 
 .. list-table::
@@ -121,34 +121,29 @@ As we run out of time for each section, you may need to complete the material se
     - Overview of course materials
     - This website
   * - 0910-1000
-    - RStudio Activity 
-    - Donal
-    - Creating a Canopy Height Model from lidar-derived rasters
-    - `https://www.neonscience.org/create-chm-rasters-r <https://www.neonscience.org/create-chm-rasters-r>`_
+    - Introducing the Shell 
+    - Ryan
+    - Open Discovery Environment Application for Commandline
+    - `Commandline Activity <./step9.rst>`_
   * - 1000-1010
     - Break
     -
     -
     -
   * - 1010-1100
-    - RStudio Activity
+    - Working with Files and Directories
     - Donal
-    - Calculating Forest Structural Diversity Metrics from NEON lidar data
+    - List files, navigating the commandline, creating directories, writing files in the shell
     - `https://www.neonscience.org/structural-diversity-discrete-return <https://www.neonscience.org/structural-diversity-discrete-return>`_
-  * - Optional:
-    - RStudio Activity
-    - Donal
-    - NEON AOP lidar w/ gedi
-    - `https://katharynduffy.github.io/neon-aop.html#matching-gedi-waveforms-with-neon-aop-lidar-pointclouds <https://katharynduffy.github.io/neon-aop.html#matching-gedi-waveforms-with-neon-aop-lidar-pointclouds>`_
   * - 1100-1200
     - Brunch, Early-, Regular-, Late- Lunch Break
     - Eat. Chat.
     -
     -
   * - 1200-1250
-    - RStudio Activity
-    - Donal
-    - Introduction to Hyperspectral Remote Sensing Data
+    - Finding Things in the Shell
+    - Ryan
+    - Introduction to Searching, Matching, and asking the shell for help
     - `https://www.neonscience.org/intro-hsi-r-series <https://www.neonscience.org/intro-hsi-r-series>`_
   * - 1250-1300
     - Break
@@ -156,7 +151,7 @@ As we run out of time for each section, you may need to complete the material se
     -
     -
   * - 1300-1350
-    - RStudio Activity
+    - 
     -
     - Free time to explore tools, ask questions.
     - 
@@ -179,18 +174,18 @@ As we run out of time for each section, you may need to complete the material se
     - Links
   * - 0900-0910
     - Briefing
-    - 
+    - Ryan
     - Overview of course materials
     - This website
   * - 0910-09:30
-    - Jupyter, Remote Desktops
-    - Tyson
-    - More on VICE apps in Discovery Environment 
+    - Introduction to Python / Introduction to R
+    - Meg / Ryan
+    - Using Jupyter / RStudio in the Discovery Environment 
     - 
   * - 0930-1000
-    - Jupyter Lab
-    - Bridget
-    - NEON data API in Python 
+    - Data Types, Classes, and Structures
+    - Meg / Ryan
+    - Python / R Data Types 
     - `Introduction to NEON Data API in Python <https://www.neonscience.org/neon-api-01-introduction-requests>`_  
   * - 1000-1010
     - Break
@@ -198,9 +193,9 @@ As we run out of time for each section, you may need to complete the material se
     -
     -
   * - 1010-1100
-    - Jupyter Lab
-    - Bridget
-    - Working with NEON Hyperspectral 
+    - Logic & Loops
+    - Meg / Ryan
+    - Working with logical arguments, and automating repetitive tasks 
     - 
   * - 1100-1200
     - Brunch, Early-, Regular-, Late- Lunch Break
@@ -208,9 +203,9 @@ As we run out of time for each section, you may need to complete the material se
     -
     -
   * - 1200-1250
-    - Remote Desktops 
-    - Tyson
-    - QGIS and Desktops
+    - Functions and Lists
+    - Meg / Ryan
+    - Writing functions to process data
     - 
   * - 1250-1300
     - Break
@@ -218,9 +213,9 @@ As we run out of time for each section, you may need to complete the material se
     -
     -
   * - 1300-1350
-    - Batch processing lidar
-    - Tyson
-    - PDAL and Entwine Point Tiles
+    - Debugging Code and Where to find help
+    - Meg / Ryan
+    - What to do when your code gives and error, where should you look for help?
     - 
   * - 1350-1400
     - Wrap-up
