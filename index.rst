@@ -11,7 +11,7 @@
 
 **Times: 11:00 - 16:00 EST/08:00-13:00 PST**
 
-**Dates: Wednesday 20th, Thursday 21st, and Friday 22nd January 2021**
+**Dates: Tuesday 19th, Thursday 21st, and Friday 22nd January 2021**
 
 **Ready to join the workshop? Follow these steps:**
 
