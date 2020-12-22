@@ -14,7 +14,7 @@ Your Workbench
 
 We have integrated several Docker containers into the CyVerse Discovery Environment workbench |VICE| platform, and made them "Public" for anyone with a CyVerse account to use.
 
-We have also copied some of the NEON example data sets to the CyVerse Data Store, along with the completed ``.ipynb`` and ``.Rmd`` notebooks and ``.r`` scripts
+We have also copied some of the AG2PI example data sets to the CyVerse Data Store
 
 In this section, we're going to walk through the required steps of starting an interactive analysis, and shutting it down when you're done.
 
@@ -33,15 +33,15 @@ In this section, we're going to walk through the required steps of starting an i
 
  Or click this quick launch button to be taken directly to the app:
 
-   - RStudio: |rstudio-geospatial-3.6.3|_
+   - RStudio: |rstudio-verse-3.6.3|_
 
 **2.** Click the |apps_button| 'Apps' button and a new window should open. 
 
-   Search using the query "rstudio geospatial" and see what comes up.
+   Search using the query "rstudio verse" and see what comes up.
   
    |apps_search|
 
-   Also, under the "My Apps" tab click on the "My Communities" section and "NEON" Group should appear.
+   Also, under the "My Apps" tab click on the "My Communities" section and "AG2PI" Group should appear.
 
    Click on the Hyperlinked name and a new window should open. 
 
