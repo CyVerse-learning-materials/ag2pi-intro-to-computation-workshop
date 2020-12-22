@@ -104,7 +104,7 @@ As we run out of time for each section, you may need to complete the material se
     - 
 
 
-*Day 2 2020-01-21*
+*Day 2 2021-01-21*
 ~~~~~~~~~~~~~~~~~~~
 
 .. list-table::
@@ -161,7 +161,7 @@ As we run out of time for each section, you may need to complete the material se
     - After-action review (what went well, wrong, could be done better)
     - 
 
-*Day 3 2020-11-07*
+*Day 3 2021-01-22*
 ~~~~~~~~~~~~~~~~~~~
 
 .. list-table::
