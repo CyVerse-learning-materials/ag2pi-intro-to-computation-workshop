@@ -27,8 +27,8 @@ As we run out of time for each section, you may need to complete the material se
     * - URL
       - Meeting ID
       - Password
-    * - `Zoom US <https://arizona.zoom.us/j/81204626687?pwd=MnpETmFBaCtvMW1KN2pRaHh4bysrQT09>`_ 
-      - 812 0462 6687
+    * - `Zoom US <>`_ 
+      - 
       - ``cyverse``
 
 *Day 1 2021-01-19*
@@ -81,7 +81,7 @@ As we run out of time for each section, you may need to complete the material se
     - Launching RStudio
     - Ryan
     - Using the Discovery Environment to Run RStudio
-    - `https://www.neonscience.org/neon-spatial-data-basics <https://www.neonscience.org/neon-spatial-data-basics>`_    
+    -   
   * - 1250-1300
     - Break
     -
@@ -91,7 +91,7 @@ As we run out of time for each section, you may need to complete the material se
     - Launching Jupyter Lab
     - Tyson
     - `Launching Jupyter Lab <./step3.html>`_
-    - `GitHub CyVerse NEON Shiny App <https://github.com/cyverse-gis/neon-shiny-browser>`_
+    - 
   * - 1330-1350
     - Data Management
     - Tyson
@@ -132,9 +132,9 @@ As we run out of time for each section, you may need to complete the material se
     -
   * - 1010-1100
     - Working with Files and Directories
-    - Donal
+    - 
     - List files, navigating the commandline, creating directories, writing files in the shell
-    - `https://www.neonscience.org/structural-diversity-discrete-return <https://www.neonscience.org/structural-diversity-discrete-return>`_
+    - 
   * - 1100-1200
     - Brunch, Early-, Regular-, Late- Lunch Break
     - Eat. Chat.
@@ -144,7 +144,7 @@ As we run out of time for each section, you may need to complete the material se
     - Finding Things in the Shell
     - Ryan
     - Introduction to Searching, Matching, and asking the shell for help
-    - `https://www.neonscience.org/intro-hsi-r-series <https://www.neonscience.org/intro-hsi-r-series>`_
+    - 
   * - 1250-1300
     - Break
     -
@@ -186,7 +186,7 @@ As we run out of time for each section, you may need to complete the material se
     - Data Types, Classes, and Structures
     - Meg / Ryan
     - Python / R Data Types 
-    - `Introduction to NEON Data API in Python <https://www.neonscience.org/neon-api-01-introduction-requests>`_  
+    - 
   * - 1000-1010
     - Break
     - 
