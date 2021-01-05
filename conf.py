@@ -10,9 +10,9 @@ sys.path.insert(0, os.path.dirname(__file__))
 
 from misc.cyverse_sphinx_conf import *  # noqa
 
-project = '2020-neon-aop-workshop'
+project = 'ag2pi_workshop'
 copyright = '2020, CyVerse'
-author = 'TL Swetnam <tswetnam@cyverse.org>'
+author = 'R Bartelme <bartelme@cyverse.org>'
 version = '2.0'
 release = '2.0'
 
