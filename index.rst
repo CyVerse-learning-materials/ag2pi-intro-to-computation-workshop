@@ -19,7 +19,7 @@
 
 Please use your institutional email address, and if you don't have an |ORCID ID| - sign up for one of those too, they're super important and valuable!
 
-**Step 2: Sign up for Workshop** |Workshop Enrollment| 
+**Step 2: Sign up for Workshop** |Workshop Enrollment|
 
 **Step 3: Review this website -- all of our training materials will be posted or linked from here**
 
@@ -30,7 +30,7 @@ Please use your institutional email address, and if you don't have an |ORCID ID|
 Goal
 ----
 
-The goals of the workshop are to allow you as new data scientists to leave with an understanding of the NEON Data API and working with NEON AOP data and to introduce CyVerse as a platform for conducting data intensive scientific research. 
+The goals of the workshop are to allow you as new data scientists to leave with an understanding of the NEON Data API and working with NEON AOP data and to introduce CyVerse as a platform for conducting data intensive scientific research.
 
 You will have opportunities to work in your preferred Integrated Development Environment (IDE) in the public research cyberinfrastructure. CyVerse enables us to work with large and very large analyses. You will be able to work with NEON AOP data across many sites and many years worth of data without ever having to "download" anything over your local internet service provider.
 
@@ -45,7 +45,7 @@ You will have opportunities to work in your preferred Integrated Development Env
 Tutorial Maintainer(s)
 ------------------------
 
-Who to contact if this guide needs fixing. 
+Who to contact if this guide needs fixing.
 
 .. list-table::
     :header-rows: 1
@@ -74,11 +74,11 @@ Use the table of contents on the left side of the page to navigate
   Agenda <agenda.rst>
   Discovery Environment Overview <step1.rst>
   Visual Interactive Computing <step2.rst>
-  Version Control with GitHub <step5.rst>
   RStudio & Shiny Apps <step3.rst>
   Managing data in the cloud <step4.rst>
   Data Science Workspaces <step6.rst>
-  
+  Introducing the Shell <step7.rst>
+
 ..
 	#### Comment:This tutorial can have multiple pages. The table of contents assumes
 	you have an additional page called 'Step One' with content located in 'step1.rst'
@@ -113,7 +113,7 @@ Downloads, access, and services
       - |GitHub|
     * - |gee|_
       - Google Earth Engine (GEE) code editor account
-      - |GEE|  
+      - |GEE|
 
 Platform(s)
 ~~~~~~~~~~~
@@ -143,8 +143,8 @@ We provide ready-to-use examples of (1) Docker containers with pre-configured ge
     * - Learning Center
       - ReadTheDocs
       - This website
-      - |CyVerse Learning Center|  
-    
+      - |CyVerse Learning Center|
+
 Application(s) used
 ~~~~~~~~~~~~~~~~~~~
 ..
@@ -160,17 +160,17 @@ Application(s) used
       - Description
       - Quick Launch
       - GitHub repositories
-    * - Workspace 
+    * - Workspace
       - ``latest``
       - |all-the-things|
       -	|workspace-geospatial-latest|_
       - |CyVerse Workspace GitHub|
-    * - RStudio 
+    * - RStudio
       - ``3.6.3``
       - Rocker Project RStudio with geospatial applications pre-installed
       - |rstudio-geospatial-3.6.3|_
       - |CyVerse R Studio GitHub|
-    * - JupyterLab 
+    * - JupyterLab
       - ``2.2.5``
       - Jupyter Lab Data Science Notebook with Geospatial applications pre-installed
       - |jupyterlab-geospatial|_
@@ -179,7 +179,7 @@ Application(s) used
       - ``latest``
       - Ubuntu Desktop with QGIS, GRASS-GIS, SAGA-GIS, PDAL, & GDAL tools
       - |QGIS-Xpra|_
-      - |QGIS Xpra GitHub|  
+      - |QGIS Xpra GitHub|
 
 Input and example data
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -203,7 +203,7 @@ Input and example data
     * - Sample Datasets
       - various
       - Example datasets cached on the CyVerse Data Store
-      - |WebDav|  
+      - |WebDav|
 
 ----
 
@@ -273,17 +273,17 @@ Input and example data
 .. _workspace-geospatial-latest: https://de.cyverse.org/de/?type=quick-launch&quick-launch-id=b19b3b00-0b6f-4c28-9d0f-23c965264309&app-id=580bbc6e-161e-11eb-880c-008cfa5ae621
 
 .. |CyVerse Workspace GitHub|  raw:: html
- 
+
    <a href="https://github.com/tyson-swetnam/workspace" target="blank">CyVerse Workspace GitHub</a>
-  
+
 .. |rstudio-geospatial-3.6.3| image:: https://de.cyverse.org/Powered-By-CyVerse-blue.svg
 .. _rstudio-geospatial-3.6.3: https://de.cyverse.org/de/?type=quick-launch&quick-launch-id=abce1ed0-8fb4-4cc5-bef3-3a9530446dc6&app-id=1903c788-1947-11eb-8f3e-008cfa5ae621
 
 .. |CyVerse R Studio GitHub|  raw:: html
 
    <a href="https://github.com/cyverse-vice/rstudio-geospatial" target="blank">CyVerse RStudio GitHub</a>
-   
-  
+
+
 .. |CyVerse JupyterLab GitHub|  raw:: html
 
    <a href="https://github.com/cyverse-vice/jupyterlab-datascience" target="blank">CyVerse JupyterLab GitHub</a>
@@ -295,7 +295,7 @@ Input and example data
 .. _QGIS-Xpra: https://de.cyverse.org/de/?type=quick-launch&quick-launch-id=80e972aa-c2ce-4e62-a4ba-3b8e320940b3&app-id=a847402e-ff2a-11e9-815d-008cfa5ae621
 
 .. |QGIS Xpra GitHub| raw:: html
-   
+
    <a href="https://github.com/tyson-swetnam/qgis-xpra" target="blank">QGIS Xpra GitHub</a>
 
 .. |NEON API|  raw:: html
@@ -338,7 +338,7 @@ Input and example data
 
 .. |GEE| raw:: html
 
-   <a href="https://earthengine.google.com/" target="blank">GEE</a>   
+   <a href="https://earthengine.google.com/" target="blank">GEE</a>
 
 .. |WebDav| raw:: html
 
