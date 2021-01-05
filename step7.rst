@@ -204,9 +204,9 @@ which will be constructed in a similar way, but not be exactly identical.
 
 On the CyVerse app, the filesystem looks like this:
 
- 
-.. image:: ../fig/filesystem.svg
-   :target: ../fig/filesystem.svg
+
+.. image:: ../img/filesystem.svg
+   :target: ../img/filesystem.svg
    :alt: The file system is made up of a root directory that contains sub-directories
  titled bin, data, users, and tmp
 
@@ -261,7 +261,7 @@ own filesystem.  We can see what's in our home directory by running ``ls``\ :
 
 * a trailing ``/`` indicates that this is a directory
 * ``@`` indicates a link
-* 
+*
   ``*`` indicates an executable
 
   Depending on your default options,
@@ -883,12 +883,12 @@ Relative Path Resolution
 #. ``../backup: No such file or directory``
 #. ``2012-12-01 2013-01-08 2013-01-27``
 #. ``2012-12-01/ 2013-01-08/ 2013-01-27/``
-#. 
+#.
    ``original/ pnas_final/ pnas_sub/``
 
 
-   .. image:: ../fig/filesystem-challenge.svg
-      :target: ../fig/filesystem-challenge.svg
+   .. image:: ../img/filesystem-challenge.svg
+      :target: ../img/filesystem-challenge.svg
       :alt: File System for Challenge Questions
 
 
@@ -914,9 +914,9 @@ Solution
 
     pnas_sub/ pnas_final/ original/
 
- 
-.. image:: ../fig/filesystem-challenge.svg
-   :target: ../fig/filesystem-challenge.svg
+
+.. image:: ../img/filesystem-challenge.svg
+   :target: ../img/filesystem-challenge.svg
    :alt: File System for Challenge Questions
 
 
@@ -1129,7 +1129,7 @@ Good names for files and directories
  tips for the names of your files.
 
 
-#. 
+#.
    Don't use spaces.
 
    Spaces can make a name more meaningful,
@@ -1137,12 +1137,12 @@ Good names for files and directories
    it is better to avoid them in names of files and directories.
    You can use ``-`` or ``_`` instead (e.g. ``north-pacific-gyre/`` rather than ``north pacific gyre/``\ ).
 
-#. 
+#.
    Don't begin the name with ``-`` (dash).
 
    Commands treat names starting with ``-`` as options.
 
-#. 
+#.
    Stick with letters, numbers, ``.`` (period or 'full stop'), ``-`` (dash) and ``_`` (underscore).
 
    Many other characters have special meanings on the command line.
@@ -1198,7 +1198,7 @@ Which Editor?
 
 .. raw:: html
 
-   <div style="width:80%; margin: auto;"><img alt="Nano in Action" src="../fig/nano-screenshot.png"></div>
+   <div style="width:80%; margin: auto;"><img alt="Nano in Action" src="../img/nano-screenshot.png"></div>
 
 
  Once our file is saved, we can use :raw-html-m2r:`<kbd>Ctrl</kbd>`\ +\ :raw-html-m2r:`<kbd>`\ X</kbdto quit the editor and
@@ -1218,7 +1218,7 @@ Control, Ctrl, or ^ Key
 * ``Ctrl-X``
 * ``Ctrl+X``
 * ``^X``
-* 
+*
   ``C-x``
 
   In nano, along the bottom of the screen you'll see ``^G Get Help ^O WriteOut``.
@@ -1247,34 +1247,34 @@ Creating Files a Different Way
     $ touch my_file.txt
 
 
-#. 
+#.
    What did the ``touch`` command do?
    When you look at your current directory using the GUI file explorer,
    does the file show up?
 
-#. 
+#.
    Use ``ls -l`` to inspect the files.  How large is ``my_file.txt``\ ?
 
-#. 
+#.
    When might you want to create a file this way?
 
 Solution
 ~~~~~~~~
 
 
-#. 
+#.
    The ``touch`` command generates a new file called ``my_file.txt`` in
    your current directory.  You
    can observe this newly generated file by typing ``ls`` at the
    command line prompt.  ``my_file.txt`` can also be viewed in your
    GUI file explorer.
 
-#. 
+#.
    When you inspect the file with ``ls -l``\ , note that the size of
    ``my_file.txt`` is 0 bytes.  In other words, it contains no data.
    If you open ``my_file.txt`` using your text editor it is blank.
 
-#. 
+#.
    Some programs do not generate output files themselves, but
    instead require that empty files have already been generated.
    When the program is run, it searches for an existing file to
@@ -2314,8 +2314,8 @@ the calculation is 'head of sort of line count of ``*.pdb``\ '.
 The redirection and pipes used in the last few commands are illustrated below:
 
 
-.. image:: ../fig/redirects-and-pipes.svg
-   :target: ../fig/redirects-and-pipes.svg
+.. image:: ../img/redirects-and-pipes.svg
+   :target: ../img/redirects-and-pipes.svg
    :alt: Redirects and Pipes
 
 
@@ -2568,17 +2568,17 @@ matches all files ending in ``A.txt`` or ``B.txt``. Imagine you forgot about
 this.
 
 
-#. 
+#.
    Can you match the same set of files with basic wildcard expressions
    that do not use the ``[]`` syntax? *Hint*\ : You may need more than one
    command, or two arguments to the ``ls`` command.
 
-#. 
+#.
    If you used two commands, the files in your output will match the
    same set of files in this example. What is the small difference between the
    outputs?
 
-#. 
+#.
    If you used two commands, under what circumstances would your new
    expression produce an error message where the original one would not?
 
@@ -2586,7 +2586,7 @@ Solution
 ~~~~~~~~
 
 
-#. 
+#.
    A solution using two wildcard commands:
 
    .. code-block::
@@ -2600,7 +2600,7 @@ Solution
 
        $ ls *A.txt *B.txt
 
-#. 
+#.
    The output from the two new commands is separated because there are two commands.
 
 #. When there are no files ending in ``A.txt``\ , or there are no files ending in
@@ -3025,8 +3025,8 @@ it has a lot of options;
 to show how the simplest ones work, we'll use the directory tree shown below.
 
 
-.. image:: ../fig/find-file-tree.svg
-   :target: ../fig/find-file-tree.svg
+.. image:: ../img/find-file-tree.svg
+   :target: ../img/find-file-tree.svg
    :alt: File Tree for Find Example
 
 
