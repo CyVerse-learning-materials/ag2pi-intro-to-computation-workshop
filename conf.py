@@ -11,7 +11,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 from misc.cyverse_sphinx_conf import *  # noqa
 
 project = 'ag2pi_workshop'
-copyright = '2020, CyVerse'
+copyright = '2021, CyVerse'
 author = 'R Bartelme <bartelme@cyverse.org>'
 version = '2.0'
 release = '2.0'

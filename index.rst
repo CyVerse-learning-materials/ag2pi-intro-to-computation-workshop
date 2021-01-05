@@ -74,11 +74,11 @@ Use the table of contents on the left side of the page to navigate
   Agenda <agenda.rst>
   Discovery Environment Overview <step1.rst>
   Visual Interactive Computing <step2.rst>
-  RStudio & Shiny Apps <step3.rst>
   Managing data in the cloud <step4.rst>
   Data Science Workspaces <step6.rst>
   Introducing the Shell <step7.rst>
-
+  RStudio & Shiny Apps <step3.rst>
+  Introducing R and Rstudio <step8.rst>
 ..
 	#### Comment:This tutorial can have multiple pages. The table of contents assumes
 	you have an additional page called 'Step One' with content located in 'step1.rst'
