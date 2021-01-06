@@ -7,28 +7,29 @@ Introducing the Shell
 
 ----
 
-Questions:
-~~~~~~~~~~
+**Questions:**
 
-- "What is a command shell and why would I use one?"
-----------------------------------------------------
+- What is a command shell and why would I use one?
 
-Objectives:
-~~~~~~~~~~~
+----
 
+**Objectives:**
 
-* "Explain how the shell relates to the keyboard, the screen, the operating system, and users' programs."
-* "Explain when and why command-line interfaces should be used instead of graphical interfaces."
-  keypoints:
-* "Explain the steps in the shell's read-run-print cycle."
-* "Most commands take options (flags) which begin with a ``-``."
-* "Identify the actual command, options, and filenames in a command-line call."
-* "Demonstrate the use of tab completion and explain its advantages."
-* "A shell is a program whose primary purpose is to read commands and run other programs."
-* "The shell's main advantages are its high action-to-keystroke ratio, its support for
-  automating repetitive tasks, and its capacity to access networked machines."
-* "The shell's main disadvantages are its primarily textual nature and how
-  cryptic its commands and operation can be."
+* Explain how the shell relates to the keyboard, the screen, the operating system, and users' programs.
+* Explain when and why command-line interfaces should be used instead of graphical interfaces.
+
+----
+
+**Keypoints:**
+* Explain the steps in the shell's read-run-print cycle.
+* Most commands take options (flags) which begin with a ``-``.
+* Identify the actual command, options, and filenames in a command-line call.
+* Demonstrate the use of tab completion and explain its advantages.
+* A shell is a program whose primary purpose is to read commands and run other programs.
+* The shell's main advantages are its high action-to-keystroke ratio, its support for
+  automating repetitive tasks, and its capacity to access networked machines.
+* The shell's main disadvantages are its primarily textual nature and how
+  cryptic its commands and operation can be.
 
 ----
 
@@ -48,8 +49,7 @@ Using the shell, the task in the literature example can be accomplished in secon
 
 ----
 
-The Shell
-^^^^^^^^^
+**The Shell:**
 
 The shell is a program where users can type commands.
 With the shell, it's possible to invoke complicated programs like climate modeling software or simple commands that create an empty directory with only one line of code.
@@ -75,8 +75,13 @@ to tackle a wide range of scientific questions and computational challenges.
 
 ----
 
-Let's get started.
-~~~~~~~~~~~~~~~~~~
+Getting Started
+^^^^^^^^^^^^^^^
+
+Opening The Shell Via CyVerse
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+##Add content here for opening the shell on CyVerse##
 
 When the shell is first opened, you are presented with a **prompt**\ ,
 indicating that the shell is waiting for input.
@@ -104,7 +109,7 @@ This command will list the contents of the current directory:
    Documents   Library     Music       Public
 
 Command not found
------------------
+~~~~~~~~~~~~~~~~~~
 
 If the shell can't find a program whose name is the command you typed, it
 will print an error message such as:
@@ -122,41 +127,39 @@ will print an error message such as:
 ----
 
 Navigating Files and Directories
-================================
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ----
 
-Questions:
-~~~~~~~~~~
+**Questions:**
 
-
-* "How can I move around on my computer?"
-* "How can I see what files and directories I have?"
-* "How can I specify the location of a file or directory on my computer?"
+* How can I move around on my computer?
+* How can I see what files and directories I have?
+* How can I specify the location of a file or directory on my computer?
 
 ----
 
-Objectives:
-~~~~~~~~~~~
+**Objectives:**
 
+* Explain the similarities and differences between a file and a directory.
+* Translate an absolute path into a relative path and vice versa.
+* Construct absolute and relative paths that identify specific files and directories.
+* Use options and arguments to change the behaviour of a shell command
+* Demonstrate the use of tab completion, and explain its advantages.
 
-* "Explain the similarities and differences between a file and a directory."
-* "Translate an absolute path into a relative path and vice versa."
-* "Construct absolute and relative paths that identify specific files and directories."
-* "Use options and arguments to change the behaviour of a shell command"
-* "Demonstrate the use of tab completion, and explain its advantages."
-  keypoints:
-* "The file system is responsible for managing information on the disk."
-* "Information is stored in files, which are stored in directories (folders)."
-* "Directories can also store other directories, which forms a directory tree."
-* "\ ``cd [path]`` changes the current working directory."
-* "\ ``ls [path]`` prints a listing of a specific file or directory; ``ls`` on its own lists the current working directory."
-* "\ ``pwd`` prints the user's current working directory."
-* "\ ``/`` on its own is the root directory of the whole file system."
-* "A relative path specifies a location starting from the current location."
-* "An absolute path specifies a location from the root of the file system."
-* "Directory names in a path are separated with ``/`` on Unix, but ``\\`` on Windows."
-* "\ ``..`` means 'the directory above the current one'; ``.`` on its own means 'the current directory'."
+**Keypoints:**
+
+* The file system is responsible for managing information on the disk.
+* Information is stored in files, which are stored in directories (folders).
+* Directories can also store other directories, which forms a directory tree.
+* \ ``cd [path]`` changes the current working directory.
+* \ ``ls [path]`` prints a listing of a specific file or directory; ``ls`` on its own lists the current working directory.
+* \ ``pwd`` prints the user's current working directory.
+* \ ``/`` on its own is the root directory of the whole file system.
+* A relative path specifies a location starting from the current location.
+* An absolute path specifies a location from the root of the file system.
+* Directory names in a path are separated with ``/`` on Unix, but ``\\`` on Windows.
+* \ ``..`` means 'the directory above the current one'; ``.`` on its own means 'the current directory'.
 
 ----
 
@@ -186,7 +189,7 @@ a command is important. ``pwd`` shows you where you are:
  which is the application's **home directory**\ :
 
 Home Directory Variation
-^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 The home directory path will look different on different operating systems.
 On Linux it may look like ``/home/nelle``\ ,
@@ -230,7 +233,7 @@ On the CyVerse app, the filesystem looks like this:
  because its name begins with ``/``.
 
 Slashes
-^^^^^^^
+~~~~~~~
 
  Notice that there are two meanings for the ``/`` character.
  When it appears at the front of a file or directory name,
@@ -278,7 +281,7 @@ own filesystem.  We can see what's in our home directory by running ``ls``\ :
      Desktop/      Downloads/    Movies/       Pictures/
 
 Clearing your terminal
-^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~
 
  If your screen gets too cluttered, you can clear your terminal using the
  ``clear`` command. You can still access previous commands using :raw-html-m2r:`<kbd>↑</kbd>`
@@ -290,7 +293,7 @@ Clearing your terminal
  are plain old **files**.
 
 General syntax of a shell command
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
  Consider the command below as a general example of a command,
  which we will dissect into its component parts:
@@ -490,7 +493,7 @@ The ``--help`` option
     or available locally via: info '(coreutils) ls invocation'
 
 Unsupported command-line options
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
  If you try to use an option (flag) that is not supported, ``ls`` and other commands
  will usually print an error message similar to:
@@ -1009,38 +1012,40 @@ Sorting Output
 Working With Files and Directories
 ==================================
 
-Questions:
-~~~~~~~~~~
+**Questions:**
 
+* How can I create, copy, and delete files and directories?
+* How can I edit files?
 
-* "How can I create, copy, and delete files and directories?"
-* "How can I edit files?"
-  #### Objectives:
-* "Create a directory hierarchy that matches a given diagram."
-* "Create files in that hierarchy using an editor or by copying and renaming existing files."
-* "Delete, copy and move specified files and/or directories."
-  keypoints:
-* "\ ``cp [old] [new]`` copies a file."
-* "\ ``mkdir [path]`` creates a new directory."
-* "\ ``mv [old] [new]`` moves (renames) a file or directory."
-* "\ ``rm [path]`` removes (deletes) a file."
-* "\ ``*`` matches zero or more characters in a filename, so ``*.txt`` matches all files ending in ``.txt``."
-* "\ ``?`` matches any single character in a filename, so ``?.txt`` matches ``a.txt`` but not ``any.txt``."
-* "Use of the Control key may be described in many ways, including ``Ctrl-X``\ , ``Control-X``\ , and ``^X``."
-* "The shell does not have a trash bin: once something is deleted, it's really gone."
-* "Most files' names are ``something.extension``. The extension isn't required, and doesn't guarantee anything, but is normally used to indicate the type of data in the file."
-* "Depending on the type of work you do, you may need a more powerful text editor than Nano."
+**Objectives:**
+
+* Create a directory hierarchy that matches a given diagram.
+* Create files in that hierarchy using an editor or by copying and renaming existing files.
+* Delete, copy and move specified files and/or directories.
+
+**Keypoints:**
+
+* \ ``cp [old] [new]`` copies a file.
+* \ ``mkdir [path]`` creates a new directory.
+* \ ``mv [old] [new]`` moves (renames) a file or directory.
+* \ ``rm [path]`` removes (deletes) a file.
+* \ ``*`` matches zero or more characters in a filename, so ``*.txt`` matches all files ending in ``.txt``.
+* \ ``?`` matches any single character in a filename, so ``?.txt`` matches ``a.txt`` but not ``any.txt``.
+* Use of the Control key may be described in many ways, including ``Ctrl-X``\ , ``Control-X``\ , and ``^X``.
+* The shell does not have a trash bin: once something is deleted, it's really gone.
+* Most files' names are ``something.extension``. The extension isn't required, and doesn't guarantee anything, but is normally used to indicate the type of data in the file.
+* Depending on the type of work you do, you may need a more powerful text editor than Nano.
 
 ----
 
-Creating directories
---------------------
+Creating Directories
+^^^^^^^^^^^^^^^^^^^^
 
  We now know how to explore files and directories,
  but how do we create them in the first place?
 
 Step one: see where we are and what we already have
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
  Let's go back to our ``data-shell`` directory on the Desktop
  and use ``ls -F`` to see what it contains:
@@ -2635,20 +2640,22 @@ Solution
 
 ----
 
-title: "Finding Things"
-teaching: 25
-exercises: 20
-questions:
+Finding Things
 
 
-* "How can I find files?"
-* "How can I find things in files?"
-  objectives:
+**Questions:**
+* How can I find files?
+* How can I find things in files?
+
+**Objectives:**
+
 * "Use ``grep`` to select lines from text files that match simple patterns."
 * "Use ``find`` to find files and directories whose names match simple patterns."
 * "Use the output of one command as the command-line argument(s) to another command."
 * "Explain what is meant by 'text' and 'binary' files, and why many common tools don't handle the latter well."
-  keypoints:
+
+**Keypoints:**
+
 * "\ ``find`` finds files with specific properties that match patterns."
 * "\ ``grep`` selects lines in files that match patterns."
 * "\ ``--help`` is an option supported by many bash commands, and programs that can be run from within Bash, to display more information on how to use these commands or programs."

@@ -77,7 +77,6 @@ Use the table of contents on the left side of the page to navigate
   Managing data in the cloud <step4.rst>
   Data Science Workspaces <step6.rst>
   Introducing the Shell <step7.rst>
-  RStudio & Shiny Apps <step3.rst>
   Introducing R and Rstudio <step8.rst>
 ..
 	#### Comment:This tutorial can have multiple pages. The table of contents assumes
@@ -111,14 +110,11 @@ Downloads, access, and services
     * - |github|_
       - GitHub allows you to create your own version controlled repositories
       - |GitHub|
-    * - |gee|_
-      - Google Earth Engine (GEE) code editor account
-      - |GEE|
 
 Platform(s)
 ~~~~~~~~~~~
 
-We provide ready-to-use examples of (1) Docker containers with pre-configured geospatial software environments, (2) Notebook examples of NEON AOP geospatial data analyses,  & (3) ReadTheDocs style documentation that will allow for self-paced asynchonous learning as well as opportunities for in-person live coding.
+We provide ready-to-use examples of (1) Docker containers with pre-configured  software development environments, (2) Example datasets,  & (3) ReadTheDocs style documentation that will allow for self-paced asynchonous learning as well as opportunities for in-person live coding.
 
 *We will use the following CyVerse platform(s):*
 
@@ -148,7 +144,7 @@ We provide ready-to-use examples of (1) Docker containers with pre-configured ge
 Application(s) used
 ~~~~~~~~~~~~~~~~~~~
 ..
-	#### Comment: these tables are examples, delete whatever is unnecessary ####
+	#### Comment: need to update CyVerse Links ####
 
 **Discovery Environment App(s):**
 
