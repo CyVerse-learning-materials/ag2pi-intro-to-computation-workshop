@@ -183,7 +183,7 @@ Input and example data
 *In order to complete this tutorial you will need to have the following inputs prepared*
 
 ..
-	#### comment: delete any row not needed in this table ####
+	#### comment: update with example dataset ####
 
 .. list-table::
     :header-rows: 1
