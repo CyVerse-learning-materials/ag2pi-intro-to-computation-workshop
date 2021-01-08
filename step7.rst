@@ -127,7 +127,7 @@ will print an error message such as:
 ----
 
 Navigating Files and Directories
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================
 
 ----
 
@@ -162,6 +162,9 @@ Navigating Files and Directories
 * \ ``..`` means 'the directory above the current one'; ``.`` on its own means 'the current directory'.
 
 ----
+
+The File System
+^^^^^^^^^^^^^^^
 
 The part of the operating system responsible for managing files and directories
 is called the **file system**. It organizes our data into files, which hold information, and directories (also called 'folders'), which hold files or other directories.
@@ -284,8 +287,8 @@ Clearing your terminal
 ~~~~~~~~~~~~~~~~~~~~~~
 
  If your screen gets too cluttered, you can clear your terminal using the
- ``clear`` command. You can still access previous commands using :raw-html-m2r:`<kbd>↑</kbd>`
- and :raw-html-m2r:`<kbd>`\ ↓</kbdto move line-by-line, or by scrolling in your terminal.
+ ``clear`` command. You can still access previous commands using <kbd>↑</kbd>
+ and <kbd>↓</kbd> to move line-by-line, or by scrolling in your terminal.
 
  Here,
  we can see that our home directory contains only **sub-directories**.
@@ -293,7 +296,7 @@ Clearing your terminal
  are plain old **files**.
 
 General syntax of a shell command
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
  Consider the command below as a general example of a command,
  which we will dissect into its component parts:
@@ -531,7 +534,7 @@ The ``man`` command
  To **quit** the ``man`` pages, press :raw-html-m2r:`<kbd>Q</kbd>`.
 
 Manual pages on the web
-^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~
 
  Of course there is a third way to access help for commands:
  searching the internet via your web browser.
@@ -571,7 +574,7 @@ instead of ``5369``.
 
 
 Listing in Reverse Chronological Order
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
  By default ``ls`` lists the contents of a directory in alphabetical
  order by name. The command ``ls -t`` lists items by time of last
@@ -753,7 +756,7 @@ Exploring Other Directories
  equivalent to ``ls -Fa``.
 
 Other Hidden Files
-==================
+~~~~~~~~~~~~~~~~~~~
 
  In addition to the hidden directories ``..`` and ``.``\ , you may also see a file
  called ``.bash_profile``. This file usually contains shell configuration
@@ -764,7 +767,7 @@ Other Hidden Files
  is used.
 
 Orthogonality
-^^^^^^^^^^^^^
+~~~~~~~~~~~~~~
 
  The special names ``.`` and ``..`` don't belong to ``cd``\ ;
  they are interpreted the same way by every program.
@@ -843,7 +846,7 @@ Orthogonality
  Run ``pwd`` and ``ls -F`` to ensure that we're in the directory we expect.
 
 Two More Shortcuts
-^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~
 
  The shell interprets the character ``~`` (tilde) at the start of a path to
  mean "the current user's home directory". For example, if Nelle's home
@@ -859,7 +862,7 @@ Two More Shortcuts
  think of it as the *Last Channel* button on a TV remote.
 
 Absolute vs Relative Paths
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
  Starting from ``/Users/amanda/data``\ ,
  which of the following commands could Amanda use to navigate to her home directory,
@@ -896,7 +899,7 @@ Absolute vs Relative Paths
    </details><br><br>
 
 Relative Path Resolution
-^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~
 
  Using the filesystem diagram below, if ``pwd`` displays ``/Users/thing``\ ,
  what will ``ls -F ../backup`` display?
@@ -924,15 +927,12 @@ Relative Path Resolution
 #. No: see previous explanation.
 #. Yes: ``../backup/`` refers to ``/Users/backup/``.
 
-
-
 .. raw:: html
-
-  </details>
+  </details><br><br>
 
 
 ``ls`` Reading Comprehension
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
  Using the filesystem diagram below,
  if ``pwd`` displays ``/Users/backup``\ ,
@@ -967,11 +967,11 @@ Relative Path Resolution
 
 .. raw:: html
 
-   </details>
+   </details><br><br>
 
 
-Nelle's Pipeline: Organizing Files
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Challenge - Nelle's Pipeline: Organizing Files
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
  Knowing this much about files and directories,
  Nelle is ready to organize the files that the protein assay machine will create.
@@ -1099,8 +1099,8 @@ Step one: see where we are and what we already have
 
     creatures/  data/  molecules/  north-pacific-gyre/  notes.txt  pizza.cfg  solar.pdf  writing/
 
-Create a directory
-^^^^^^^^^^^^^^^^^^
+Step two: Create a directory
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
  Let's create a new directory called ``thesis`` using the command ``mkdir thesis``
  (which has no output):
@@ -1109,11 +1109,11 @@ Create a directory
 
     $ mkdir thesis
 
- As you might guess from its name,
- ``mkdir`` means 'make directory'.
- Since ``thesis`` is a relative path
- (i.e., does not have a leading slash, like ``/what/ever/thesis``\ ),
- the new directory is created in the current working directory:
+As you might guess from its name,
+``mkdir`` means 'make directory'.
+Since ``thesis`` is a relative path
+(i.e., does not have a leading slash, like ``/what/ever/thesis``\ ),
+the new directory is created in the current working directory:
 
 .. code-block::
 
@@ -1123,19 +1123,19 @@ Create a directory
 
     creatures/  data/  molecules/  north-pacific-gyre/  notes.txt  pizza.cfg  solar.pdf  thesis/  writing/
 
- Since we've just created the ``thesis`` directory, there's nothing in it yet:
+Since we've just created the ``thesis`` directory, there's nothing in it yet:
 
 .. code-block::
 
     $ ls -F thesis
 
- Note that ``mkdir`` is not limited to creating single directories one at a time. The ``-p`` option allows ``mkdir`` to create a directory with any number of nested subdirectories in a single operation:
+Note that ``mkdir`` is not limited to creating single directories one at a time. The ``-p`` option allows ``mkdir`` to create a directory with any number of nested subdirectories in a single operation:
 
 .. code-block::
 
     $ mkdir -p thesis/chapter_1/section_1/subsection_1
 
- The ``-R`` option to the ``ls`` command will list all nested subdirectories wtihin a directory.  Let's use ``ls -FR`` to recursively list the new directory hierarchy we just created beneath the ``thesis`` directory:
+The ``-R`` option to the ``ls`` command will list all nested subdirectories wtihin a directory.  Let's use ``ls -FR`` to recursively list the new directory hierarchy we just created beneath the ``thesis`` directory:
 
 .. code-block::
 
@@ -1203,7 +1203,7 @@ Create a text file
     $ nano draft.txt
 
 Which Editor?
--------------
+~~~~~~~~~~~~~
 
  When we say, '\ ``nano`` is a text editor' we really do mean 'text': it can
  only work with plain character data, not tables, images, or any other
@@ -1246,8 +1246,8 @@ Control, Ctrl, or ^ Key
 
  The Control key is also called the 'Ctrl' key. There are various ways
  in which using the Control key may be described. For example, you may
- see an instruction to press the :raw-html-m2r:`<kbd>`\ Control</kbdkey and, while holding it down,
- press the :raw-html-m2r:`<kbd>`\ X</kbdkey, described as any of:
+ see an instruction to press the <kbd>Control</kbd> key and, while holding it down,
+ press the <kbd>X</kbd> key, described as any of:
 
 
 * ``Control-X``
@@ -1255,15 +1255,14 @@ Control, Ctrl, or ^ Key
 * ``Ctrl-X``
 * ``Ctrl+X``
 * ``^X``
-*
-  ``C-x``
+* ``C-x``
 
-  In nano, along the bottom of the screen you'll see ``^G Get Help ^O WriteOut``.
-  This means that you can use ``Control-G`` to get help and ``Control-O`` to save your
-  file.
+In nano, along the bottom of the screen you'll see ``^G Get Help ^O WriteOut``.
+This means that you can use ``Control-G`` to get help and ``Control-O`` to save your
+file.
 
- ``nano`` doesn't leave any output on the screen after it exits,
- but ``ls`` now shows that we have created a file called ``draft.txt``\ :
+``nano`` doesn't leave any output on the screen after it exits,
+but ``ls`` now shows that we have created a file called ``draft.txt``\ :
 
 .. code-block::
 
@@ -1274,7 +1273,7 @@ Control, Ctrl, or ^ Key
     draft.txt
 
 Creating Files a Different Way
-------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
  We have seen how to create text files using the ``nano`` editor.
  Now, try the following command:
@@ -1316,7 +1315,7 @@ Creating Files a Different Way
 
 .. raw:: html
 
-      </details>
+      </details><br><br>
 
 What's In A Name?
 -----------------
@@ -1416,7 +1415,7 @@ Moving files and directories
     quotes.txt
 
 Moving Files to a new folder
-----------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
  After running the following commands,
  Jamie realizes that she put the files ``sucrose.dat`` and ``maltose.dat`` into the wrong folder.
@@ -1430,8 +1429,8 @@ Moving Files to a new folder
     fructose.dat glucose.dat maltose.dat sucrose.dat
     $ cd analyzed
 
- Fill in the blanks to move these files to the ``raw/`` folder
- (i.e. the one she forgot to put them in)
+Fill in the blanks to move these files to the ``raw/`` folder
+(i.e. the one she forgot to put them in)
 
 .. code-block::
 
@@ -1451,11 +1450,11 @@ and that ``.`` refers to the current directory.
 
 .. raw:: html
 
-   </details>
+   </details><br><br>
 
 
 Copying files and directories
------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
  The ``cp`` command works very much like ``mv``\ ,
  except it copies a file instead of moving it.
@@ -1472,15 +1471,15 @@ Copying files and directories
 
     quotes.txt   thesis/quotations.txt
 
- We can also copy a directory and all its contents by using the
- `recursive <https://en.wikipedia.org/wiki/Recursion>`_ option ``-r``\ ,
- e.g. to back up a directory:
+We can also copy a directory and all its contents by using the
+`recursive <https://en.wikipedia.org/wiki/Recursion>`_ option ``-r``\ ,
+e.g. to back up a directory:
 
 .. code-block::
 
     $ cp -r thesis thesis_backup
 
- We can check the result by listing the contents of both the ``thesis`` and ``thesis_backup`` directory:
+We can check the result by listing the contents of both the ``thesis`` and ``thesis_backup`` directory:
 
 .. code-block::
 
@@ -1495,13 +1494,13 @@ Copying files and directories
     quotations.txt
 
 Renaming Files
---------------
+~~~~~~~~~~~~~~~
 
- Suppose that you created a plain-text file in your current directory to contain a list of the
- statistical tests you will need to do to analyze your data, and named it: ``statstics.txt``
+Suppose that you created a plain-text file in your current directory to contain a list of the
+statistical tests you will need to do to analyze your data, and named it: ``statstics.txt``
 
- After creating and saving this file you realize you misspelled the filename! You want to
- correct the mistake, which of the following commands could you use to do so?
+After creating and saving this file you realize you misspelled the filename! You want to
+correct the mistake, which of the following commands could you use to do so?
 
 
 #. ``cp statstics.txt statistics.txt``
@@ -1524,11 +1523,11 @@ Renaming Files
 
 .. raw:: html
 
-    </details>
+    </details><br><br>
 
 
 Moving and Copying
-------------------
+~~~~~~~~~~~~~~~~~~
 
  What is the output of the closing ``ls`` command in the sequence shown below?
 
@@ -1582,15 +1581,15 @@ So, the only thing that will show using ls (in ``/Users/jamie/data``\ ) is the r
 
 .. raw:: html
 
-   </details>
+   </details><br><br>
 
 
 Removing files and directories
-------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
- Returning to the ``data-shell`` directory,
- let's tidy up this directory by removing the ``quotes.txt`` file we created.
- The Unix command we'll use for this is ``rm`` (short for 'remove'):
+Returning to the ``data-shell`` directory,
+let's tidy up this directory by removing the ``quotes.txt`` file we created.
+The Unix command we'll use for this is ``rm`` (short for 'remove'):
 
 .. code-block::
 
@@ -1609,16 +1608,17 @@ Removing files and directories
 Deleting Is Forever
 -------------------
 
- The Unix shell doesn't have a trash bin that we can recover deleted
- files from (though most graphical interfaces to Unix do).  Instead,
- when we delete files, they are unlinked from the file system so that
- their storage space on disk can be recycled. Tools for finding and
- recovering deleted files do exist, but there's no guarantee they'll
- work in any particular situation, since the computer may recycle the
- file's disk space right away.
+*`rm` is a powerful command.*
+The Unix shell doesn't have a trash bin that we can recover deleted
+files from (though most graphical interfaces to Unix do).  Instead,
+when we delete files, they are unlinked from the file system so that
+their storage space on disk can be recycled. Tools for finding and
+recovering deleted files do exist, but there's no guarantee they'll
+work in any particular situation, since the computer may recycle the
+file's disk space right away.
 
 Using ``rm`` Safely
------------------------
+~~~~~~~~~~~~~~~~~~~
 
  What happens when we execute ``rm -i thesis_backup/quotations.txt``\ ?
  Why would we want this protection when using ``rm``\ ?
@@ -1661,15 +1661,15 @@ Given that there is no way to retrieve files deleted using the shell,
 
 .. raw:: html
 
-    </details>
+    </details><br><br>
 
 Operations with multiple files and directories
-----------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Oftentimes one needs to copy or move several files at once. This can be done by providing a list of individual filenames, or specifying a naming pattern using wildcards.
 
 Copy with Multiple Filenames
-----------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 For this exercise, you can test the commands in the ``data-shell/data`` directory.
 
@@ -1711,10 +1711,10 @@ name as the last argument.
 
 .. raw:: html
 
-      </details>
+      </details><br><br>
 
 Using wildcards for accessing multiple files at once
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Wildcards
 ---------
@@ -1747,7 +1747,7 @@ Wildcards
  expanding wildcards, and this is another example of orthogonal design.
 
 List filenames matching a pattern
----------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
  When run in the ``molecules`` directory, which ``ls`` command(s) will
  produce this output?
@@ -1884,7 +1884,7 @@ The resulting directory structure should look like this
 
 
 Organizing Directories and Files
---------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
  Jamie is working on a project and she sees that her files aren't very well
  organized:
@@ -1932,10 +1932,10 @@ The shell will expand *.dat to match all .dat files in the current directory.
 The ``mv`` command then moves the list of .dat files to the 'analyzed' directory.
 
 .. raw:: html
-    </details>
+    </details><br><br>
 
 Reproduce a folder structure
-----------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You're starting a new experiment, and would like to duplicate the directory
 structure from your previous experiment so you can add new data.
@@ -2326,19 +2326,18 @@ and:
 Hint: Try executing each command twice in a row and then examining the output files.
 
 .. raw:: html
-
       <details>
       <summary><a>Solution</a></summary>
 
- In the first example with ``>``, the string 'hello' is written to ``testfile01.txt``,
- but the file gets overwritten each time we run the command.
+In the first example with ``>``, the string 'hello' is written to ``testfile01.txt``,
+but the file gets overwritten each time we run the command.
 
- We see from the second example that the ``>>`` operator also writes 'hello' to a file
- (in this case ``testfile02.txt``),
- but appends the string to the file if it already exists (i.e. when we run it for the second time).
+We see from the second example that the ``>>`` operator also writes 'hello' to a file
+(in this case ``testfile02.txt``),
+but appends the string to the file if it already exists (i.e. when we run it for the second time).
 
 .. raw:: html
-    </details>
+    </details><br><br>
 
 Appending Data
 --------------
@@ -2599,7 +2598,7 @@ If you have difficulty understanding why, try running the commands, or sub-secti
 the pipelines (make sure you are in the ``data-shell/data`` directory).
 
 .. raw:: html
-   </details>
+   </details><br><br>
 
 Nelle's Pipeline: Checking Files
 --------------------------------
@@ -2730,7 +2729,7 @@ A solution using one command but with two arguments:
    ``B.txt``\ , then one of the two commands will fail.
 
 .. raw:: html
-    </details>
+    </details><br><br>
 
 Removing Unneeded Files
 -----------------------
@@ -2760,14 +2759,15 @@ and *only* the processed data files?
    so this command would delete all files
 
 .. raw:: html
-    </details>
+    </details><br><br>
 
 ----
 
 Finding Things
-~~~~~~~~~~~~~~
+==============
 
 **Questions:**
+
 * How can I find files?
 * How can I find things in files?
 
