@@ -45,9 +45,9 @@ First, we need to initiate a connection to the CyVerse iRODS.
 
    .. code ::
 
-      One or more fields in your iRODS environment file (irods_environment.json) are missing; 
+      One or more fields in your iRODS environment file (irods_environment.json) are missing;
       please enter them.
-      
+
       Enter the host name (DNS) of the server to connect to:
 
 
@@ -65,14 +65,14 @@ First, we need to initiate a connection to the CyVerse iRODS.
     Enter your current iRODS password:
 
   - host name (DNS): ``data.cyverse.org``
-  - port number: ``1247`` 
+  - port number: ``1247``
   - irods user name: ``<your CyVerse username>``
   - irods zone: ``iplant``
   - current iRODS password: ``<your current password>``
 
-**3.** You should now be authenticated to the Data Store. 
+**3.** You should now be authenticated to the Data Store.
 
-   To test, try typing ``ils`` 
+   To test, try typing ``ils``
 
    If you do not echo back anything, try Step 2. again
 
@@ -84,7 +84,7 @@ First, we need to initiate a connection to the CyVerse iRODS.
    .. code ::
 
       rstudio@a4bdcc31:~$ ils
-  
+
       /iplant/home/username:
       C- /iplant/home/username/analyses
       C- /iplant/home/username/NEON_Downloads
@@ -94,7 +94,7 @@ First, we need to initiate a connection to the CyVerse iRODS.
 **5.** Upload a single file to the Data Store using ``iput``
 
   You need to select the file you want to copy, and the location in the Data Store you want to copy it to.
-  
+
   .. code ::
 
      iput -KPvf /home/rstudio/neon-shiny-browser/background.R /iplant/home/username/NEON_Downloads/
@@ -106,15 +106,15 @@ The flags ``K``, ``P``, ``v``, and ``f`` are described in the help file.
 **6.** Upload a folder with recursive sub-folders and files
 
    Next, we want to upload an entire directory with many folders and files in it.
-   
+
    .. code ::
 
       iput -KPbrvf /home/rstudio/NEON_Downloads/NEON_HARV_DP1.30003.001_2019 /iplant/home/<your-user-name>/NEON_Downloads/
 
   I have added the flags ``b`` for bulk, and ``r`` for recursive to the ``iput`` command. This will upload the entire directory ``NEON_HARV_DP1.30003.001_2019`` to the data store.
 
-**7.** The ``P`` flag for Progressive and ``v`` flag for verbose will echo out the progress of the upload until it completes. 
-   
+**7.** The ``P`` flag for Progressive and ``v`` flag for verbose will echo out the progress of the upload until it completes.
+
   When it is complete, the terminal should be available again.
 
   To test whether your files are now in CyVerse try:
@@ -133,9 +133,9 @@ The flags ``K``, ``P``, ``v``, and ``f`` are described in the help file.
 
   .. code ::
 
-     ichmod 
+     ichmod
 
-Follow the instructions in the help menu to set the user privileges and ownership. 
+Follow the instructions in the help menu to set the user privileges and ownership.
 
 This example makes your data directory public on the internet as a read-only archive:
 
@@ -157,7 +157,7 @@ It is also likely that you're going to download data from the Data Store into yo
 **10.** Download a file using ``iget``
 
   .. code ::
-     
+
      iget -KPvf /iplant/home/username/NEON_Downloads/benchmarking.rmd
 
   This should download an Rmd file into your local instance (whatever current working directory you're in in terminal)
@@ -168,13 +168,13 @@ It is also likely that you're going to download data from the Data Store into yo
 
      time iget -KPbvrf /iplant/home/username/NEON_Downloads/NEON_HARV_DP1.30003.001_2019/
 
-  Here we're using the ``time`` flag to tell us how long the download takes   
+  Here we're using the ``time`` flag to tell us how long the download takes
 
 
 *Downloading with WebDav*
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-CyVerse Data Store also uses `WebDav <https://cyverse.atlassian.net/wiki/spaces/DS/pages/241869825/Using+WebDAV>`_, an https based protocol for read-only data downloads from the Data Store. 
+CyVerse Data Store also uses `WebDav <https://cyverse.atlassian.net/wiki/spaces/DS/pages/241869825/Using+WebDAV>`_, an https based protocol for read-only data downloads from the Data Store.
 
 We can use ``wget`` or ``curl`` commands in the terminal to download files this way.
 
@@ -195,9 +195,9 @@ We can use ``wget`` or ``curl`` commands in the terminal to download files this 
 
 Many organizations are hosting data on Amazon Web Services S3, Google Cloud Storage, or Microsoft Azure.
 
-Cloud buckets, like `S3 <https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-linux.html>`_, use HTTPS protocols, just like WebDav. 
+Cloud buckets, like `S3 <https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-linux.html>`_, use HTTPS protocols, just like WebDav.
 
-OpenTopography.org (re)hosts some NEON lidar data, e.g. `NEON D17 Pacific Southwest- California <https://portal.opentopography.org/lidarDataset?opentopoID=OTLAS.092015.32611.1>`_ 
+OpenTopography.org (re)hosts some NEON lidar data, e.g. `NEON D17 Pacific Southwest- California <https://portal.opentopography.org/lidarDataset?opentopoID=OTLAS.092015.32611.1>`_
 
 We can download these using their Point Cloud Bulk Data Download option:
 

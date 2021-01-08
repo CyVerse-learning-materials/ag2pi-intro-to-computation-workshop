@@ -209,7 +209,7 @@ On the CyVerse app, the filesystem looks like this:
 
 
 .. image:: ../img/filesystem.svg
-   :target: ../img/filesystem.svg
+   :target: ../img/filesystem.html
    :alt: The file system is made up of a root directory that contains sub-directories
  titled bin, data, users, and tmp
 
@@ -553,14 +553,22 @@ Exploring More ``ls`` Flags
  as file permissions and ownership), but the rest should be useful
  nevertheless.
 
-Solution
-~~~~~~~~
+.. raw:: html
 
- The ``-l`` option makes ``ls`` use a **l**\ ong listing format, showing not only
- the file/directory names but also additional information such as the file size
- and the time of its last modification. If you use both the ``-h`` option and the ``-l`` option,
- this makes the file size '\ **h**\ uman readable', i.e. displaying something like ``5.3K``
- instead of ``5369``.
+   <details>
+   <summary><a>Solution</a></summary>
+
+
+The ``-l`` option makes ``ls`` use a **l**\ ong listing format, showing not only
+the file/directory names but also additional information such as the file size
+and the time of its last modification. If you use both the ``-h`` option and the ``-l`` option,
+this makes the file size '\ **h**\ uman readable', i.e. displaying something like ``5.3K``
+instead of ``5369``.
+
+.. raw:: html
+
+   </details><br><br>
+
 
 Listing in Reverse Chronological Order
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -573,12 +581,18 @@ Listing in Reverse Chronological Order
  Hint: You may need to use the ``-l`` flag to see the
  last changed dates.
 
-Solution
-~~~~~~~~
+.. raw:: html
 
- The most recently changed file is listed last when using ``-rt``. This
- can be very useful for finding your most recent edits or checking to
- see if a new output file was written.
+   <details>
+   <summary><a>Solution</a></summary>
+
+The most recently changed file is listed last when using ``-rt``. This
+can be very useful for finding your most recent edits or checking to
+see if a new output file was written.
+
+.. raw:: html
+
+    </details><br><br>
 
 Exploring Other Directories
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -862,9 +876,10 @@ Absolute vs Relative Paths
 #. ``cd``
 #. ``cd ..``
 
-Solution
-~~~~~~~~
+.. raw:: html
 
+   <details>
+   <summary><a>Solution</a></summary>
 
 #. No: ``.`` stands for the current directory.
 #. No: ``/`` stands for the root directory.
@@ -876,6 +891,10 @@ Solution
 #. Yes: shortcut to go back to the user's home directory.
 #. Yes: goes up one level.
 
+.. raw:: html
+
+   </details><br><br>
+
 Relative Path Resolution
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -886,24 +905,31 @@ Relative Path Resolution
 #. ``../backup: No such file or directory``
 #. ``2012-12-01 2013-01-08 2013-01-27``
 #. ``2012-12-01/ 2013-01-08/ 2013-01-27/``
-#.
-   ``original/ pnas_final/ pnas_sub/``
+#. ``original/ pnas_final/ pnas_sub/``
 
 
-   .. image:: ../img/filesystem-challenge.svg
-      :target: ../img/filesystem-challenge.svg
-      :alt: File System for Challenge Questions
+.. |Static image| image:: ./img/filesystem-challenge.svg
+      :width: 500
+      :height: 100
 
 
-Solution
-~~~~~~~~
+.. raw:: html
 
+  <details>
+  <summary><a>Solution</a></summary>
 
 #. No: there *is* a directory ``backup`` in ``/Users``.
 #. No: this is the content of ``Users/thing/backup``\ ,
-   but with ``..`` we asked for one level further up.
+     but with ``..`` we asked for one level further up.
 #. No: see previous explanation.
 #. Yes: ``../backup/`` refers to ``/Users/backup/``.
+
+
+
+.. raw:: html
+
+  </details>
+
 
 ``ls`` Reading Comprehension
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -919,7 +945,7 @@ Solution
 
 
 .. image:: ../img/filesystem-challenge.svg
-   :target: ../img/filesystem-challenge.svg
+   :target: ../img/filesystem-challenge.html
    :alt: File System for Challenge Questions
 
 
@@ -928,14 +954,21 @@ Solution
 #. ``ls -r -F``
 #. ``ls -r -F /Users/backup``
 
-Solution
-~~~~~~~~
+.. raw:: html
+
+   <details>
+   <summary><a>Solution</a></summary>
 
 
 #. No: ``pwd`` is not the name of a directory.
 #. Yes: ``ls`` without directory argument lists files and directories
    in the current directory.
 #. Yes: uses the absolute path explicitly.
+
+.. raw:: html
+
+   </details>
+
 
 Nelle's Pipeline: Organizing Files
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1203,11 +1236,10 @@ Which Editor?
 
 .. raw:: html
 
-   <div style="width:80%; margin: auto;"><img alt="Nano in Action" src="../img/nano-screenshot.png"></div>
+   <img alt="Nano in Action" src="../img/nano.png"></div>
 
 
- Once our file is saved, we can use :raw-html-m2r:`<kbd>Ctrl</kbd>`\ +\ :raw-html-m2r:`<kbd>`\ X</kbdto quit the editor and
- return to the shell.
+ Once our file is saved, we can use <kbd>Ctrl+X</kbd> to quit the editor and return to the shell.
 
 Control, Ctrl, or ^ Key
 -----------------------
@@ -1252,40 +1284,39 @@ Creating Files a Different Way
     $ touch my_file.txt
 
 
-#.
-   What did the ``touch`` command do?
+#. What did the ``touch`` command do?
    When you look at your current directory using the GUI file explorer,
    does the file show up?
 
-#.
-   Use ``ls -l`` to inspect the files.  How large is ``my_file.txt``\ ?
+#. Use ``ls -l`` to inspect the files.  How large is ``my_file.txt``\ ?
 
-#.
-   When might you want to create a file this way?
+#. When might you want to create a file this way?
 
-Solution
-~~~~~~~~
+.. raw:: html
 
+  <details>
+  <summary><a>Solution</a></summary>
 
-#.
-   The ``touch`` command generates a new file called ``my_file.txt`` in
+#. The ``touch`` command generates a new file called ``my_file.txt`` in
    your current directory.  You
    can observe this newly generated file by typing ``ls`` at the
    command line prompt.  ``my_file.txt`` can also be viewed in your
    GUI file explorer.
 
-#.
-   When you inspect the file with ``ls -l``\ , note that the size of
+#. When you inspect the file with ``ls -l``\ , note that the size of
    ``my_file.txt`` is 0 bytes.  In other words, it contains no data.
    If you open ``my_file.txt`` using your text editor it is blank.
 
-#.
-   Some programs do not generate output files themselves, but
+#. Some programs do not generate output files themselves, but
    instead require that empty files have already been generated.
    When the program is run, it searches for an existing file to
    populate with its output.  The touch command allows you to
    efficiently generate a blank text file to be used by such
    programs.
+
+.. raw:: html
+
+      </details>
 
 What's In A Name?
 -----------------
@@ -1406,15 +1437,22 @@ Moving Files to a new folder
 
     $ mv sucrose.dat maltose.dat ____/____
 
-Solution
-~~~~~~~~
+.. raw:: html
+
+ <details>
+ <summary><a>Solution</a></summary>
 
 .. code-block::
 
     $ mv sucrose.dat maltose.dat ../raw
 
- Recall that ``..`` refers to the parent directory (i.e. one above the current directory)
- and that ``.`` refers to the current directory.
+Recall that ``..`` refers to the parent directory (i.e. one above the current directory)
+and that ``.`` refers to the current directory.
+
+.. raw:: html
+
+   </details>
+
 
 Copying files and directories
 -----------------------------
@@ -1471,9 +1509,10 @@ Renaming Files
 #. ``mv statstics.txt .``
 #. ``cp statstics.txt .``
 
-Solution
-~~~~~~~~
+.. raw:: html
 
+   <details>
+   <summary><a>Solution</a></summary>
 
 #. No.  While this would create a file with the correct name, the incorrectly named file still exists in the directory
    and would need to be deleted.
@@ -1482,6 +1521,11 @@ Solution
    cannot be created.
 #. No, the period(.) indicates where to copy the file, but does not provide a new file name; identical file names
    cannot be created.
+
+.. raw:: html
+
+    </details>
+
 
 Moving and Copying
 ------------------
@@ -1517,22 +1561,29 @@ Moving and Copying
 #. ``proteins.dat recombined``
 #. ``proteins-saved.dat``
 
-Solution
-~~~~~~~~
+.. raw:: html
 
- We start in the ``/Users/jamie/data`` directory, and create a new folder called ``recombined``.
- The second line moves (\ ``mv``\ ) the file ``proteins.dat`` to the new folder (\ ``recombined``\ ).
- The third line makes a copy of the file we just moved.  The tricky part here is where the file was
- copied to.  Recall that ``..`` means 'go up a level', so the copied file is now in ``/Users/jamie``.
- Notice that ``..`` is interpreted with respect to the current working
- directory, **not** with respect to the location of the file being copied.
- So, the only thing that will show using ls (in ``/Users/jamie/data``\ ) is the recombined folder.
+   <details>
+   <summary><a>Solution</a></summary>
+
+We start in the ``/Users/jamie/data`` directory, and create a new folder called ``recombined``.
+The second line moves (\ ``mv``\ ) the file ``proteins.dat`` to the new folder (\ ``recombined``\ ).
+The third line makes a copy of the file we just moved.  The tricky part here is where the file was
+copied to.  Recall that ``..`` means 'go up a level', so the copied file is now in ``/Users/jamie``.
+Notice that ``..`` is interpreted with respect to the current working
+directory, **not** with respect to the location of the file being copied.
+So, the only thing that will show using ls (in ``/Users/jamie/data``\ ) is the recombined folder.
 
 
 #. No, see explanation above.  ``proteins-saved.dat`` is located at ``/Users/jamie``
 #. Yes
 #. No, see explanation above.  ``proteins.dat`` is located at ``/Users/jamie/data/recombined``
 #. No, see explanation above.  ``proteins-saved.dat`` is located at ``/Users/jamie``
+
+.. raw:: html
+
+   </details>
+
 
 Removing files and directories
 ------------------------------
@@ -1572,19 +1623,21 @@ Using ``rm`` Safely
  What happens when we execute ``rm -i thesis_backup/quotations.txt``\ ?
  Why would we want this protection when using ``rm``\ ?
 
-Solution
-~~~~~~~~
+ .. raw:: html
+
+    <details>
+    <summary><a>Solution</a></summary>
 
 .. code-block::
 
     $ rm: remove regular file 'thesis_backup/quotations.txt'? y
 
- The ``-i`` option will prompt before (every) removal (use :raw-html-m2r:`<kbd>`\ Y</kbdto confirm deletion or :raw-html-m2r:`<kbd>`\ N</kbdto keep the file).
- The Unix shell doesn't have a trash bin, so all the files removed will disappear forever.
- By using the ``-i`` option, we have the chance to check that we are deleting only the files that we want to remove.
+The ``-i`` option will prompt before (every) removal (use :raw-html-m2r:`<kbd>`\ Y</kbdto confirm deletion or :raw-html-m2r:`<kbd>`\ N</kbdto keep the file).
+The Unix shell doesn't have a trash bin, so all the files removed will disappear forever.
+By using the ``-i`` option, we have the chance to check that we are deleting only the files that we want to remove.
 
- If we try to remove the ``thesis`` directory using ``rm thesis``\ ,
- we get an error message:
+If we try to remove the ``thesis`` directory using ``rm thesis``\ ,
+we get an error message:
 
 .. code-block::
 
@@ -1594,36 +1647,40 @@ Solution
 
     rm: cannot remove `thesis': Is a directory
 
- This happens because ``rm`` by default only works on files, not directories.
+This happens because ``rm`` by default only works on files, not directories.
 
- ``rm`` can remove a directory *and all its contents* if we use the
- recursive option ``-r``\ , and it will do so *without any confirmation prompts*\ :
+``rm`` can remove a directory *and all its contents* if we use the
+recursive option ``-r``\ , and it will do so *without any confirmation prompts*\ :
 
 .. code-block::
 
     $ rm -r thesis
 
- Given that there is no way to retrieve files deleted using the shell,
- ``rm -r`` *should be used with great caution* (you might consider adding the interactive option ``rm -r -i``\ ).
+Given that there is no way to retrieve files deleted using the shell,
+``rm -r`` *should be used with great caution* (you might consider adding the interactive option ``rm -r -i``\ ).
+
+.. raw:: html
+
+    </details>
 
 Operations with multiple files and directories
 ----------------------------------------------
 
- Oftentimes one needs to copy or move several files at once. This can be done by providing a list of individual filenames, or specifying a naming pattern using wildcards.
+Oftentimes one needs to copy or move several files at once. This can be done by providing a list of individual filenames, or specifying a naming pattern using wildcards.
 
 Copy with Multiple Filenames
 ----------------------------
 
- For this exercise, you can test the commands in the ``data-shell/data`` directory.
+For this exercise, you can test the commands in the ``data-shell/data`` directory.
 
- In the example below, what does ``cp`` do when given several filenames and a directory name?
+In the example below, what does ``cp`` do when given several filenames and a directory name?
 
 .. code-block::
 
     $ mkdir backup
     $ cp amino-acids.txt animals.txt backup/
 
- In the example below, what does ``cp`` do when given three or more file names?
+In the example below, what does ``cp`` do when given three or more file names?
 
 .. code-block::
 
@@ -1637,18 +1694,24 @@ Copy with Multiple Filenames
 
     $ cp amino-acids.txt animals.txt morse.txt
 
-Solution
-~~~~~~~~
+.. raw:: html
 
- If given more than one file name followed by a directory name (i.e. the destination directory must
- be the last argument), ``cp`` copies the files to the named directory.
+  <details>
+  <summary><a>Solution</a></summary>
 
- If given three file names, ``cp`` throws an error such as the one below, because it is expecting a directory
- name as the last argument.
+If given more than one file name followed by a directory name (i.e. the destination directory must
+be the last argument), ``cp`` copies the files to the named directory.
+
+If given three file names, ``cp`` throws an error such as the one below, because it is expecting a directory
+name as the last argument.
 
 .. code-block::
 
     cp: target ‘morse.txt’ is not a directory
+
+.. raw:: html
+
+      </details>
 
 Using wildcards for accessing multiple files at once
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1697,24 +1760,30 @@ List filenames matching a pattern
 #. ``ls *t??ne.pdb``
 #. ``ls ethane.*``
 
-Solution
-~~~~~~~~
+.. raw:: html
 
- The solution is ``3.``
+  <details>
+  <summary><a>Solution</a></summary>
 
-``1.`` shows all files whose names contain zero or more characters (\ ``*``\ ) followed by the letter ``t``\ , then zero or more characters (\ ``*``\ ) followed by ``ane.pdb``. This gives ``ethane.pdb  methane.pdb  octane.pdb  pentane.pdb``.
+The solution is ``3.``
 
-``2.`` shows all files whose names start with zero or more characters (\ ``*``\ ) followed by the letter ``t``\ , then a single character (\ ``?``\ ), then ``ne.`` followed by zero or more characters (\ ``*``\ ). This will give us ``octane.pdb`` and ``pentane.pdb`` but doesn't match anything which ends in ``thane.pdb``.
+#. shows all files whose names contain zero or more characters (\ ``*``\ ) followed by the letter ``t``\ , then zero or more characters (\ ``*``\ ) followed by ``ane.pdb``. This gives ``ethane.pdb  methane.pdb  octane.pdb  pentane.pdb``.
 
-``3.`` fixes the problems of option 2 by matching two characters (\ ``??``\ ) between ``t`` and ``ne``. This is the solution.
+#. shows all files whose names start with zero or more characters (\ ``*``\ ) followed by the letter ``t``\ , then a single character (\ ``?``\ ), then ``ne.`` followed by zero or more characters (\ ``*``\ ). This will give us ``octane.pdb`` and ``pentane.pdb`` but doesn't match anything which ends in ``thane.pdb``.
 
-``4.`` only shows files starting with ``ethane.``.
+#. fixes the problems of option 2 by matching two characters (\ ``??``\ ) between ``t`` and ``ne``. This is the solution.
+
+#. only shows files starting with ``ethane.``.
+
+.. raw:: html
+
+  </details><br><br>
 
 More on Wildcards
 -----------------
 
- Sam has a directory containing calibration data, datasets, and descriptions of
- the datasets:
+Sam has a directory containing calibration data, datasets, and descriptions of
+the datasets:
 
 .. code-block::
 
@@ -1738,9 +1807,9 @@ More on Wildcards
         ├── all_datasets_created_on_a_23rd
         └── all_november_files
 
- Before heading off to another field trip, she wants to back up her data and
- send some datasets to her colleague Bob. Sam uses the following commands
- to get the job done:
+Before heading off to another field trip, she wants to back up her data and
+send some datasets to her colleague Bob. Sam uses the following commands
+to get the job done:
 
 .. code-block::
 
@@ -1749,9 +1818,9 @@ More on Wildcards
     $ cp 2015-____-____ send_to_bob/all_november_files/
     $ cp ____ send_to_bob/all_datasets_created_on_a_23rd/
 
- Help Sam by filling in the blanks.
+Help Sam by filling in the blanks.
 
- The resulting directory structure should look like this
+The resulting directory structure should look like this
 
 .. code-block::
 
@@ -1797,14 +1866,22 @@ More on Wildcards
             ├── 2015-11-23-dataset2.txt
             └── 2015-11-23-dataset_overview.txt
 
-Solution
-~~~~~~~~
+.. raw:: html
+
+  <details>
+  <summary><a>Solution</a></summary>
+
 
 .. code-block::
 
     $ cp *calibration.txt backup/calibration
     $ cp 2015-11-* send_to_bob/all_november_files/
     $ cp *-23-dataset* send_to_bob/all_datasets_created_on_a_23rd/
+
+.. raw:: html
+
+  </details><br><br>
+
 
 Organizing Directories and Files
 --------------------------------
@@ -1840,28 +1917,34 @@ Organizing Directories and Files
 
     fructose.dat    sucrose.dat
 
-Solution
-~~~~~~~~
+.. raw:: html
+
+    <details>
+    <summary><a>Solution</a></summary>
+
 
 .. code-block::
 
     mv *.dat analyzed
 
- Jamie needs to move her files ``fructose.dat`` and ``sucrose.dat`` to the ``analyzed`` directory.
- The shell will expand *.dat to match all .dat files in the current directory.
- The ``mv`` command then moves the list of .dat files to the 'analyzed' directory.
+Jamie needs to move her files ``fructose.dat`` and ``sucrose.dat`` to the ``analyzed`` directory.
+The shell will expand *.dat to match all .dat files in the current directory.
+The ``mv`` command then moves the list of .dat files to the 'analyzed' directory.
+
+.. raw:: html
+    </details>
 
 Reproduce a folder structure
 ----------------------------
 
- You're starting a new experiment, and would like to duplicate the directory
- structure from your previous experiment so you can add new data.
+You're starting a new experiment, and would like to duplicate the directory
+structure from your previous experiment so you can add new data.
 
- Assume that the previous experiment is in a folder called '2016-05-18',
- which contains a ``data`` folder that in turn contains folders named ``raw`` and
- ``processed`` that contain data files.  The goal is to copy the folder structure
- of the ``2016-05-18-data`` folder into a folder called ``2016-05-20``
- so that your final directory structure looks like this:
+Assume that the previous experiment is in a folder called '2016-05-18',
+which contains a ``data`` folder that in turn contains folders named ``raw`` and
+``processed`` that contain data files.  The goal is to copy the folder structure
+of the ``2016-05-18-data`` folder into a folder called ``2016-05-20``
+so that your final directory structure looks like this:
 
 .. code-block::
 
@@ -1871,8 +1954,8 @@ Reproduce a folder structure
        └── raw
 
 
- Which of the following set of commands would achieve this objective?
- What would the other commands do?
+Which of the following set of commands would achieve this objective?
+What would the other commands do?
 
 .. code-block::
 
@@ -1906,8 +1989,11 @@ Reproduce a folder structure
     $ mkdir data
     $ mkdir raw processed
 
-Solution
-~~~~~~~~
+.. raw:: html
+
+      <details>
+      <summary><a>Solution</a></summary>
+
 
  The first two sets of commands achieve this objective.
  The first set uses relative paths to create the top level directory before
@@ -1922,31 +2008,39 @@ Solution
  The final set of commands generates the 'raw' and 'processed' directories at the same level
  as the 'data' directory.
 
+.. raw:: html
+
+    </details><br><br>
+
+
 ----
 
-title: "Pipes and Filters"
-teaching: 25
-exercises: 10
-questions:
+Pipes and Filters
+=================
 
+**Questions:**
 
 * "How can I combine existing commands to do new things?"
-  objectives:
-* "Redirect a command's output to a file."
-* "Process a file instead of keyboard input using redirection."
-* "Construct command pipelines with two or more stages."
-* "Explain what usually happens if a program or pipeline isn't given any input to process."
-* "Explain Unix's 'small pieces, loosely joined' philosophy."
-  keypoints:
-* "\ ``cat`` displays the contents of its inputs."
-* "\ ``head`` displays the first 10 lines of its input."
-* "\ ``tail`` displays the last 10 lines of its input."
-* "\ ``sort`` sorts its inputs."
-* "\ ``wc`` counts lines, words, and characters in its inputs."
-* "\ ``command [file]`` redirects a command's output to a file (overwriting any existing content)."
-* "\ ``command >[file]`` appends a command's output to a file."
-* "\ ``[first] | [second]`` is a pipeline: the output of the first command is used as the input to the second."
-* "The best way to use the shell is to use pipes to combine simple single-purpose programs (filters)."
+
+**Objectives:**
+
+* Redirect a command's output to a file.
+* Process a file instead of keyboard input using redirection.
+* Construct command pipelines with two or more stages.
+* Explain what usually happens if a program or pipeline isn't given any input to process.
+* Explain Unix's 'small pieces, loosely joined' philosophy.
+
+**Keypoints:**
+
+* ``cat`` displays the contents of its inputs.
+* ``head`` displays the first 10 lines of its input.
+* ``tail`` displays the last 10 lines of its input.
+* ``sort`` sorts its inputs.
+* ``wc`` counts lines, words, and characters in its inputs.
+* ``command [file]`` redirects a command's output to a file (overwriting any existing content).
+* ``command >[file]`` appends a command's output to a file.
+* ``[first] | [second]`` is a pipeline: the output of the first command is used as the input to the second.
+* The best way to use the shell is to use pipes to combine simple single-purpose programs (filters).
 
 ----
 
@@ -2037,8 +2131,8 @@ it some data interactively. From the outside, though, all we see is it
 sitting there: the command doesn't appear to do anything.
 
 If you make this kind of mistake, you can escape out of this state by holding down
-the control key (\ :raw-html-m2r:`<kbd>Ctrl</kbd>`\ ) and typing the letter :raw-html-m2r:`<kbd>C</kbdonce and letting go of the <kbd>Ctrl</kbdkey.
-<kbd>Ctrl</kbd>`\ +\ :raw-html-m2r:`<kbd>C</kbd>`
+the control key <kbd>Ctrl</kbd> and typing the letter <kbd>C</kbd> once and letting go of the <kbd>Ctrl</kbd> key.
+<kbd>Ctrl + C</kbd>
 
 Which of these files contains the fewest lines?
 It's an easy question to answer when there are only six files,
@@ -2134,10 +2228,18 @@ If we run ``sort -n`` on the same input, we get this instead:
 
 Explain why ``-n`` has this effect.
 
-Solution
-~~~~~~~~
+.. raw:: html
 
- The ``-n`` option specifies a numerical rather than an alphanumerical sort.
+      <details>
+      <summary><a>Solution</a></summary>
+
+
+The ``-n`` option specifies a numerical rather than an alphanumerical sort.
+
+.. raw:: html
+
+      </details><br><br>
+
 
 We will also use the ``-n`` option to specify that the sort is
 numerical instead of alphanumerical.
@@ -2175,8 +2277,7 @@ we can run another command called ``head`` to get the first few lines in ``sorte
 
 Using ``-n 1`` with ``head`` tells it that
 we only want the first line of the file;
-``-n 20`` would get the first 20,
-and so on.
+``-n 20`` would get the first 20, and so on.
 Since ``sorted-lengths.txt`` contains the lengths of our files ordered from least to greatest,
 the output of ``head`` must be the file with the fewest lines.
 
@@ -2198,7 +2299,7 @@ the contents of ``lengths.txt``.
 What Does ``>>`` Mean?
 --------------------------
 
-We have seen the use of ``>``\ , but there is a similar operator ``>>`` which works slightly differently.
+We have seen the use of ``>``, but there is a similar operator ``>>`` which works slightly differently.
 We'll learn about the differences between these two operators by printing some strings.
 We can use the ``echo`` command to print strings e.g.
 
@@ -2224,15 +2325,20 @@ and:
 
 Hint: Try executing each command twice in a row and then examining the output files.
 
-Solution
-~~~~~~~~
+.. raw:: html
 
- In the first example with ``>``\ , the string 'hello' is written to ``testfile01.txt``\ ,
+      <details>
+      <summary><a>Solution</a></summary>
+
+ In the first example with ``>``, the string 'hello' is written to ``testfile01.txt``,
  but the file gets overwritten each time we run the command.
 
  We see from the second example that the ``>>`` operator also writes 'hello' to a file
- (in this case\ ``testfile02.txt``\ ),
+ (in this case ``testfile02.txt``),
  but appends the string to the file if it already exists (i.e. when we run it for the second time).
+
+.. raw:: html
+    </details>
 
 Appending Data
 --------------
@@ -2255,16 +2361,19 @@ corresponds to the file ``animals-subset.txt``\ :
 #. The first three lines and the last two lines of ``animals.txt``
 #. The second and third lines of ``animals.txt``
 
-Solution
-~~~~~~~~
+.. raw:: html
+     <details>
+     <summary><a>Solution</a></summary>
 
  Option 3 is correct.
  For option 1 to be correct we would only run the ``head`` command.
  For option 2 to be correct we would only run the ``tail`` command.
  For option 4 to be correct we would have to pipe the output of ``head`` into ``tail -n 2`` by doing ``head -n 3 animals.txt | tail -n 2 animals-subset.txt``
 
-If you think this is confusing,
-you're in good company:
+.. raw:: html
+     </details><br><br>
+
+If you think this is confusing, you're in good company:
 even once you understand what ``wc``\ , ``sort``\ , and ``head`` do,
 all those intermediate files make it hard to follow what's going on.
 We can make it easier to understand by running ``sort`` and ``head`` together:
@@ -2320,7 +2429,7 @@ The redirection and pipes used in the last few commands are illustrated below:
 
 
 .. image:: ../img/redirects-and-pipes.svg
-   :target: ../img/redirects-and-pipes.svg
+   :target: ../img/redirects-and-pipes.html
    :alt: Redirects and Pipes
 
 
@@ -2336,14 +2445,18 @@ lines. Which command listed below would work?
 #. ``wc -l * | head -n 3 | sort -n``
 #. ``wc -l * | sort -n | head -n 3``
 
-Solution
-~~~~~~~~
+.. raw:: html
+    <details>
+    <summary<a>Solution</a></summary>
 
  Option 4 is the solution.
  The pipe character ``|`` is used to connect the output from one command to
  the input of another.
  ``>`` is used to redirect standard output to a file.
  Try it in the ``data-shell/molecules`` directory!
+
+.. raw:: html
+    </details><br><br>
 
 This idea of linking programs together is why Unix has been so successful.
 Instead of creating enormous programs that try to do many different things,
@@ -2389,21 +2502,25 @@ What text passes through each of the pipes and the final redirect in the pipelin
 
 Hint: build the pipeline up one command at a time to test your understanding
 
-Solution
-~~~~~~~~
+.. raw:: html
+     <details>
+     <summary><a>Soltuion</a></summary>
 
- The ``head`` command extracts the first 5 lines from ``animals.txt``.
- Then, the last 3 lines are extracted from the previous 5 by using the ``tail`` command.
- With the ``sort -r`` command those 3 lines are sorted in reverse order and finally,
- the output is redirected to a file ``final.txt``.
- The content of this file can be checked by executing ``cat final.txt``.
- The file should contain the following lines:
+The ``head`` command extracts the first 5 lines from ``animals.txt``.
+Then, the last 3 lines are extracted from the previous 5 by using the ``tail`` command.
+With the ``sort -r`` command those 3 lines are sorted in reverse order and finally,
+the output is redirected to a file ``final.txt``.
+The content of this file can be checked by executing ``cat final.txt``.
+The file should contain the following lines:
 
 .. code-block::
 
     2012-11-06,rabbit
     2012-11-06,deer
     2012-11-05,raccoon
+
+.. raw:: html
+    </details><br><br>
 
 Pipe Construction
 -----------------
@@ -2437,12 +2554,16 @@ How could you extend this pipeline (using ``uniq`` and another command) to find
 out what animals the file contains (without any duplicates in their
 names)?
 
-Solution
-~~~~~~~~
+.. raw:: html
+    <details>
+    <summary><a>Solution</a></summary>
 
 .. code-block::
 
     $ cut -d , -f 2 animals.txt | sort | uniq
+
+.. raw:: html
+    </details><br><br>
 
 Which Pipe?
 -----------
@@ -2469,12 +2590,16 @@ a table that shows the total count of each type of animal in the file?
 #. ``cut -d, -f 2 animals.txt | sort | uniq -c``
 #. ``cut -d, -f 2 animals.txt | sort | uniq -c | wc -l``
 
-Solution
-~~~~~~~~
+.. raw:: html
+    <details>
+    <summary><a>Solution</a></summary>
 
- Option 4. is the correct answer.
- If you have difficulty understanding why, try running the commands, or sub-sections of
- the pipelines (make sure you are in the ``data-shell/data`` directory).
+Option 4. is the correct answer.
+If you have difficulty understanding why, try running the commands, or sub-sections of
+the pipelines (make sure you are in the ``data-shell/data`` directory).
+
+.. raw:: html
+   </details>
 
 Nelle's Pipeline: Checking Files
 --------------------------------
@@ -2553,11 +2678,10 @@ when she checks the log on her laptop,
 there's no depth recorded for either of those samples.
 Since it's too late to get the information any other way,
 she must exclude those two files from her analysis.
-She could delete them using ``rm``\ ,
+She could delete them using ``rm``,
 but there are actually some analyses she might do later where depth doesn't matter,
 so instead, she'll have to be careful later on to select files using the wildcard expression ``*[AB].txt``.
-As always,
-the ``*`` matches any number of characters;
+As always, the ``*`` matches any number of characters;
 the expression ``[AB]`` matches either an 'A' or a 'B',
 so this matches all the valid data files she has.
 
@@ -2565,51 +2689,48 @@ Wildcard Expressions
 --------------------
 
 Wildcard expressions can be very complex, but you can sometimes write
-them in ways that only use simple syntax, at the expense of being a bit
-more verbose.
+them in ways that only use simple syntax, at the expense of being a bit more verbose.
 Consider the directory ``data-shell/north-pacific-gyre/2012-07-03`` :
 the wildcard expression ``*[AB].txt``
 matches all files ending in ``A.txt`` or ``B.txt``. Imagine you forgot about
 this.
 
 
-#.
-   Can you match the same set of files with basic wildcard expressions
+#. Can you match the same set of files with basic wildcard expressions
    that do not use the ``[]`` syntax? *Hint*\ : You may need more than one
    command, or two arguments to the ``ls`` command.
 
-#.
-   If you used two commands, the files in your output will match the
+#. If you used two commands, the files in your output will match the
    same set of files in this example. What is the small difference between the
    outputs?
 
-#.
-   If you used two commands, under what circumstances would your new
+#. If you used two commands, under what circumstances would your new
    expression produce an error message where the original one would not?
 
-Solution
-~~~~~~~~
+.. raw:: html
+     <details>
+     <summary><a>Solution</a></summary>
 
-
-#.
-   A solution using two wildcard commands:
+#. A solution using two wildcard commands:
 
    .. code-block::
 
        $ ls *A.txt
        $ ls *B.txt
 
-    A solution using one command but with two arguments:
+A solution using one command but with two arguments:
 
    .. code-block::
 
        $ ls *A.txt *B.txt
 
-#.
-   The output from the two new commands is separated because there are two commands.
+#. The output from the two new commands is separated because there are two commands.
 
 #. When there are no files ending in ``A.txt``\ , or there are no files ending in
    ``B.txt``\ , then one of the two commands will fail.
+
+.. raw:: html
+    </details>
 
 Removing Unneeded Files
 -----------------------
@@ -2626,9 +2747,9 @@ and *only* the processed data files?
 #. ``rm * .txt``
 #. ``rm *.*``
 
-Solution
-~~~~~~~~
-
+.. raw:: html
+    <details>
+    <summary><a>Solution</a></summary>
 
 #. This would remove ``.txt`` files with one-character names
 #. This is correct answer
@@ -2638,10 +2759,13 @@ Solution
 #. The shell would expand ``*.*`` to match all files with any extension,
    so this command would delete all files
 
+.. raw:: html
+    </details>
+
 ----
 
 Finding Things
-
+~~~~~~~~~~~~~~
 
 **Questions:**
 * How can I find files?
@@ -2649,18 +2773,18 @@ Finding Things
 
 **Objectives:**
 
-* "Use ``grep`` to select lines from text files that match simple patterns."
-* "Use ``find`` to find files and directories whose names match simple patterns."
-* "Use the output of one command as the command-line argument(s) to another command."
-* "Explain what is meant by 'text' and 'binary' files, and why many common tools don't handle the latter well."
+* Use ``grep`` to select lines from text files that match simple patterns.
+* Use ``find`` to find files and directories whose names match simple patterns.
+* Use the output of one command as the command-line argument(s) to another command.
+* Explain what is meant by 'text' and 'binary' files, and why many common tools don't handle the latter well.
 
 **Keypoints:**
 
-* "\ ``find`` finds files with specific properties that match patterns."
-* "\ ``grep`` selects lines in files that match patterns."
-* "\ ``--help`` is an option supported by many bash commands, and programs that can be run from within Bash, to display more information on how to use these commands or programs."
-* "\ ``man [command]`` displays the manual page for a given command."
-* "\ ``$([command])`` inserts a command's output in place."
+* ``find`` finds files with specific properties that match patterns.
+* ``grep`` selects lines in files that match patterns.
+* ``--help`` is an option supported by many bash commands, and programs that can be run from within Bash, to display more information on how to use these commands or programs.
+* ``man [command]`` displays the manual page for a given command.
+* ``$([command])`` inserts a command's output in place.
 
 ----
 
@@ -2888,11 +3012,15 @@ Which command would result in the following output:
 #. ``grep -w "of" haiku.txt``
 #. ``grep -i "of" haiku.txt``
 
-Solution
-~~~~~~~~
+.. raw:: html
+     <details>
+     <summary><a>Solution</a></solution>
 
- The correct answer is 3, because the ``-w`` option looks only for whole-word matches.
- The other options will also match 'of' when part of another word.
+The correct answer is 3, because the ``-w`` option looks only for whole-word matches.
+The other options will also match 'of' when part of another word.
+
+.. raw:: html
+     </details><br><br>
 
 Wildcards
 ---------
@@ -2963,8 +3091,9 @@ and ``man cut`` to select more than one field in a line.
 
 An example of such a file is provided in ``data-shell/data/animal-counts/animals.txt``
 
-Solution
-~~~~~~~~
+.. raw:: html
+    <details>
+    <summary><a>Solution</a></summary>
 
 .. code-block::
 
@@ -2975,6 +3104,9 @@ Solution
 .. code-block::
 
     $ bash count-species.sh bear .
+
+.. raw:: html
+   </details><br><br>
 
 Little Women
 ------------
@@ -2995,8 +3127,9 @@ There is often more than one way to solve a programming task, so a
 particular solution is usually chosen based on a combination of
 yielding the correct result, elegance, readability, and speed.
 
-Solutions
-~~~~~~~~~
+.. raw:: html
+    <details>
+    <summary><a>Solutions</a></summary>
 
 .. code-block::
 
@@ -3016,14 +3149,17 @@ Solutions
        grep -ocw $sis LittleWomen.txt
     done
 
- This solution is inferior because ``grep -c`` only reports the number of lines matched.
- The total number of matches reported by this method will be lower if there is more
- than one match per line.
+This solution is inferior because ``grep -c`` only reports the number of lines matched.
+The total number of matches reported by this method will be lower if there is more
+than one match per line.
 
- Perceptive observers may have noticed that character names sometimes appear in all-uppercase
- in chapter titles (e.g. 'MEG GOES TO VANITY FAIR').
- If you wanted to count these as well, you could add the ``-i`` option for case-insensitivity
- (though in this case, it doesn't affect the answer to which sister is mentioned most frequently).
+.. raw:: html
+  </details><br><br>
+
+Perceptive observers may have noticed that character names sometimes appear in all-uppercase
+in chapter titles (e.g. 'MEG GOES TO VANITY FAIR').
+If you wanted to count these as well, you could add the ``-i`` option for case-insensitivity
+(though in this case, it doesn't affect the answer to which sister is mentioned most frequently).
 
 While ``grep`` finds lines in files,
 the ``find`` command finds files themselves.
@@ -3033,7 +3169,7 @@ to show how the simplest ones work, we'll use the directory tree shown below.
 
 
 .. image:: ../img/find-file-tree.svg
-   :target: ../img/find-file-tree.svg
+   :target: ../img/find-file-tree.html
    :alt: File Tree for Find Example
 
 
@@ -3226,17 +3362,21 @@ directory.
 #. ``grep -v "net" $(find data -name "*s.txt")``
 #. None of the above.
 
-Solution
-~~~~~~~~
+.. raw:: html
+    <details>
+    <summary><a>Solution</a></summary>
 
- The correct answer is 1. Putting the match expression in quotes prevents the shell
- expanding it, so it gets passed to the ``find`` command.
+The correct answer is 1. Putting the match expression in quotes prevents the shell
+expanding it, so it gets passed to the ``find`` command.
 
- Option 2 is incorrect because the shell expands ``*s.txt`` instead of passing the wildcard
- expression to ``find``.
+Option 2 is incorrect because the shell expands ``*s.txt`` instead of passing the wildcard
+expression to ``find``.
 
- Option 3 is incorrect because it searches the contents of the files for lines which
- do not match 'net', rather than searching the file names.
+Option 3 is incorrect because it searches the contents of the files for lines which
+do not match 'net', rather than searching the file names.
+
+.. raw:: html
+    </details><br><br>
 
 Binary Files
 ------------
@@ -3279,10 +3419,13 @@ Write a short explanatory comment for the following shell script:
 
    wc -l $(find . -name "*.dat") | sort -n
 
-Solution
-~~~~~~~~
-
+.. raw:: html
+    <details>
+    <summary><a>Solution</a></summary>
 
 #. Find all files with a ``.dat`` extension recursively from the current directory
 #. Count the number of lines each of these files contains
 #. Sort the output from step 2. numerically
+
+.. raw:: html
+    </details><br><br>

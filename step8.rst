@@ -173,7 +173,7 @@ You can see installed packages with the following command:
 
 To use the package after it's been loaded:
 
-.. code-blocl:: R
+.. code-block:: R
 	#both do the same thing:
 	require("package") #loads dependencies; will give a warning if it is in conflict with another package (e.g., masks)
 		#can overwrite masked functions using "::" (e.g., package::function)

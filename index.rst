@@ -7,7 +7,7 @@
 `Learning Center Home <http://learning.cyverse.org/>`_
 
 **AG2PI Foundations of Computation: An Introduction for Beginners Workshop**
-=======================================================
+============================================================================
 
 **Times: 11:00 - 16:00 EST/08:00-13:00 PST**
 
