@@ -6,7 +6,7 @@
 |Home_Icon|_
 `Learning Center Home <http://learning.cyverse.org/>`_
 
-**AG2PI Foundations of Computation: An Introduction for Beginners Workshop**
+**AG2PI Foundations of Computation: An Introduction for Biologists Workshop**
 ============================================================================
 
 **Times: 11:00 - 16:00 EST/08:00-13:00 PST**
@@ -30,9 +30,9 @@ Please use your institutional email address, and if you don't have an |ORCID ID|
 Goal
 ----
 
-The goals of the workshop are to allow you as new data scientists to leave with an understanding of the NEON Data API and working with NEON AOP data and to introduce CyVerse as a platform for conducting data intensive scientific research.
+The goals of the workshop are to allow you as new data scientists to leave with an understanding of using CyVerse resources, the command line, and the basics of R and Rstudio programming.
 
-You will have opportunities to work in your preferred Integrated Development Environment (IDE) in the public research cyberinfrastructure. CyVerse enables us to work with large and very large analyses. You will be able to work with NEON AOP data across many sites and many years worth of data without ever having to "download" anything over your local internet service provider.
+You will have opportunities to work in your preferred Integrated Development Environment (IDE) in the public research cyberinfrastructure. CyVerse enables us to work with large and very large analyses.
 
 
 ..
@@ -107,9 +107,6 @@ Downloads, access, and services
     * - |cyberduck|_
       - CyberDuck File manager (Windows and Mac OS X only)
       - |Download Cyberduck|
-    * - |github|_
-      - GitHub allows you to create your own version controlled repositories
-      - |GitHub|
 
 Platform(s)
 ~~~~~~~~~~~
@@ -163,19 +160,10 @@ Application(s) used
       - |CyVerse Workspace GitHub|
     * - RStudio
       - ``3.6.3``
-      - Rocker Project RStudio with geospatial applications pre-installed
-      - |rstudio-geospatial-3.6.3|_
+      - Rocker Project RStudio with Tidyverse applications pre-installed
+      - |rstudio-verse|_
       - |CyVerse R Studio GitHub|
-    * - JupyterLab
-      - ``2.2.5``
-      - Jupyter Lab Data Science Notebook with Geospatial applications pre-installed
-      - |jupyterlab-geospatial|_
-      - |CyVerse JupyterLab GitHub|
-    * - GIS Desktop
-      - ``latest``
-      - Ubuntu Desktop with QGIS, GRASS-GIS, SAGA-GIS, PDAL, & GDAL tools
-      - |QGIS-Xpra|_
-      - |QGIS Xpra GitHub|
+
 
 Input and example data
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -192,10 +180,6 @@ Input and example data
       - Format
       - Preparation/Notes
       - Example Data
-    * - |NEON API|
-      - various
-      - Use in browser or R Studio Shiny App
-      - |NEON Shiny Browser|
     * - Sample Datasets
       - various
       - Example datasets cached on the CyVerse Data Store
@@ -259,48 +243,16 @@ Input and example data
 
 .. |Workshop Enrollment|  raw:: html
 
-   <a href="https://user.cyverse.org/workshops/56/overview" target="blank">Workshop Enrollment</a>
-
-.. |ORCID ID| raw:: html
-
-   <a href="https://orcid.org/" target="blank">ORCID ID</a>
-
-.. |workspace-geospatial-latest| image:: https://de.cyverse.org/Powered-By-CyVerse-blue.svg
-.. _workspace-geospatial-latest: https://de.cyverse.org/de/?type=quick-launch&quick-launch-id=b19b3b00-0b6f-4c28-9d0f-23c965264309&app-id=580bbc6e-161e-11eb-880c-008cfa5ae621
-
-.. |CyVerse Workspace GitHub|  raw:: html
-
-   <a href="https://github.com/tyson-swetnam/workspace" target="blank">CyVerse Workspace GitHub</a>
-
-.. |rstudio-geospatial-3.6.3| image:: https://de.cyverse.org/Powered-By-CyVerse-blue.svg
-.. _rstudio-geospatial-3.6.3: https://de.cyverse.org/de/?type=quick-launch&quick-launch-id=abce1ed0-8fb4-4cc5-bef3-3a9530446dc6&app-id=1903c788-1947-11eb-8f3e-008cfa5ae621
+   <a href="https://user.cyverse.org/workshops/59/overview" target="blank">Workshop Enrollment</a>
 
 .. |CyVerse R Studio GitHub|  raw:: html
 
-   <a href="https://github.com/cyverse-vice/rstudio-geospatial" target="blank">CyVerse RStudio GitHub</a>
+   <a href="https://github.com/cyverse-vice/rstudio-verse" target="blank">CyVerse RStudio GitHub</a>
 
 
 .. |CyVerse JupyterLab GitHub|  raw:: html
 
    <a href="https://github.com/cyverse-vice/jupyterlab-datascience" target="blank">CyVerse JupyterLab GitHub</a>
-
-.. |jupyterlab-geospatial| image:: https://de.cyverse.org/Powered-By-CyVerse-blue.svg
-.. _jupyterlab-geospatial: https://de.cyverse.org/de/?type=quick-launch&quick-launch-id=63afd24c-9acc-4a8c-85ef-58b634a2ebc2&app-id=c940912c-fcea-11ea-b07f-008cfa5ae621
-
-.. |QGIS-Xpra| image:: https://de.cyverse.org/Powered-By-CyVerse-blue.svg
-.. _QGIS-Xpra: https://de.cyverse.org/de/?type=quick-launch&quick-launch-id=80e972aa-c2ce-4e62-a4ba-3b8e320940b3&app-id=a847402e-ff2a-11e9-815d-008cfa5ae621
-
-.. |QGIS Xpra GitHub| raw:: html
-
-   <a href="https://github.com/tyson-swetnam/qgis-xpra" target="blank">QGIS Xpra GitHub</a>
-
-.. |NEON API|  raw:: html
-
-   <a href="https://data.neonscience.org/data-products/explore" target="blank">NEON API</a>
-
-.. |NEON Shiny Browser|  raw:: html
-
-   <a href="https://github.com/cyverse-gis/neon-shiny-browser" target="blank">NEON Shiny Browser</a>
 
 .. |Download Cyberduck|  raw:: html
 
@@ -308,7 +260,7 @@ Input and example data
 
 .. |Github Repo Link|  raw:: html
 
-   <a href="https://github.com/CyVerse-learning-materials/2020-neon-aop-workshop" target="blank">Github Repo Link</a>
+   <a href="https://github.com/rbartelme/ag2pi_workshop" target="blank">Github Repo Link</a>
 
 .. |all-the-things| image:: ./img/all-the-things.png
     :width: 400
