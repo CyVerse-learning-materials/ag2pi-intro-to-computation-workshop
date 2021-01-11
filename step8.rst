@@ -484,16 +484,36 @@ Tools --> Terminal --> New Terminal
    RStudio provides numerous `"cheat sheets" <https://www.rstudio.com/resources/cheatsheets/>`_ which help learners.
    `2019 Package Cheat Sheets <https://www.rstudio.com/wp-content/uploads/2019/01/Cheatsheets_2019.pdf>`_
 
+----
+
+*Lesson content modified from The Carpentries: R for Reproducible Scientific Analysis*
+       |R Novice Gapminder|
+
+Under The Carpentries License:
+       |Carpentries License|
+
+----
+
+
 --------------
 **Fix or improve this documentation:**
 - On Github: |Github Repo Link|
 - Send feedback: `Tutorials@CyVerse.org <Tutorials@CyVerse.org>`_
 --------------
 
+.. |R Novice Gapminder| raw:: html
+
+   <a href="http://swcarpentry.github.io/r-novice-gapminder/" target="blank">The Carpentries Tutorial Link</a>
+
+.. |Carpentries License| raw:: html
+
+   <a href="http://swcarpentry.github.io/r-novice-gapminder/LICENSE.html" target="blank">R for Reproducible Scientific Analysis: Licenses</a>
+
+
 .. |R Console| image:: ../img/rstudio.png
   :width: 750
 
 
-  .. |Github Repo Link|  raw:: html
+.. |Github Repo Link|  raw:: html
 
    <a href="https://github.com/CyVerse-learning-materials/foss-2019/tree/master/software_essentials/R_Studio.rst" target="blank">Github Repo Link</a>

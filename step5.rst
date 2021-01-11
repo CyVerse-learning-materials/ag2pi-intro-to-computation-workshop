@@ -30,7 +30,7 @@ We want to keep track of our work in a place that we can also share it with our 
 
 **1.** Log into `GitHub <https://github.com>`_ with your GitHub username
 
-**2.** click on the + icon in the upper right of the screen. 
+**2.** click on the + icon in the upper right of the screen.
 
    Select 'New Repository'
 
@@ -38,19 +38,19 @@ We want to keep track of our work in a place that we can also share it with our 
 
    If you have an existing repo with this name it will be disallowed.
 
-**4.** Allow the repository to be "Public" -- if you want, you can make it "Private", and it will add the requirement that you authenticate to GitHub everytime you want to clone the repository somewhere else. 
+**4.** Allow the repository to be "Public" -- if you want, you can make it "Private", and it will add the requirement that you authenticate to GitHub everytime you want to clone the repository somewhere else.
 
 **5.** Select the option to create a ``README.md`` file with the repository. This will create a blank markdown file that you can populate with text later.
 
 **6.** (Optional) Select a License for your code
 
-   Choosing a license is important to ensuring that your work is properly attributed and cited in the future. 
-   
+   Choosing a license is important to ensuring that your work is properly attributed and cited in the future.
+
    .. admonition:: Choosing a License
 
-      `choosealicense.com <https://choosealicense.com/>`_ offers support and answers questions about selecting the right license.     
+      `choosealicense.com <https://choosealicense.com/>`_ offers support and answers questions about selecting the right license.
 
-**7.** You're ready to go back to your CyVerse RStudio browser tab. 
+**7.** You're ready to go back to your CyVerse RStudio browser tab.
 
 *Clone your Repository into RStudio Server running in CyVerse*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -71,7 +71,7 @@ Creating a R project with Version Control will allow you to sync changes back up
 
   Any changes thare are made locally on this machine will not affect the GitHub repository from which you got this.
 
-**10.** Adding new files to the repository. 
+**10.** Adding new files to the repository.
 
   Now that there is a copy of the repo on your instance, you're ready to start making changes and adding new scripts.
 
@@ -79,7 +79,7 @@ Creating a R project with Version Control will allow you to sync changes back up
 
   ``git`` is useful for tracking code -- but it is not intended to track your data files.
 
-  The best practice is to NOT keep your data in the same directory as the ``git`` repository. 
+  The best practice is to NOT keep your data in the same directory as the ``git`` repository.
 
   However, you can add a ``.gitignore`` file and update it with the various types of files you want ``git`` to not track or to submit back to GitHub when you commit your changes.
 
@@ -106,14 +106,14 @@ Creating a R project with Version Control will allow you to sync changes back up
      *.las
      *.hdf5
      *.hd
-     *.txt 
-   
+     *.txt
+
   this ``.gitignore`` will ignore all files with the ``*`` and given file extensions.
 
   An alternate way of making sure that you track your files is to include ``!`` only certain file types:
 
   .. code ::
-     
+
      # ignores everything ...
      /*
      # ... but the following
@@ -124,20 +124,20 @@ Creating a R project with Version Control will allow you to sync changes back up
 
   If you own the GitHub repository, you will be able to make changes "commits" to the repository and "push" them back to the GitHub.
 
-  If you pulled this repository from someone else, and you make commits and submit a "push" it back to the other person's GitHub, it will ask you to enter some user identification. 
+  If you pulled this repository from someone else, and you make commits and submit a "push" it back to the other person's GitHub, it will ask you to enter some user identification.
 
-  This process creates something called a "pull request" on GitHub, where the owner of the repository can see who made the changes, and review whether or not they agree with these changes. They can then choose to approve the request, and the changes will update their repository. 
+  This process creates something called a "pull request" on GitHub, where the owner of the repository can see who made the changes, and review whether or not they agree with these changes. They can then choose to approve the request, and the changes will update their repository.
 
 *Add your code to the Repository*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**12.** Copy the contents of our other NEON exercises into the new directory. 
+**12.** Copy the contents of our other NEON exercises into the new directory.
 
    These new files are not yet added to the ``git`` module tracking.
 
 **13.** Configure ``git`` for the first time
 
-   Because we're working on a remote instance, the ``git`` configuration has not been set. 
+   Because we're working on a remote instance, the ``git`` configuration has not been set.
 
    To configure ``git`` for sending requests to GitHub, set the email address and a name for your remote:
 
@@ -146,16 +146,16 @@ Creating a R project with Version Control will allow you to sync changes back up
       git config --global user.name "Your Name"
       git config --global user.email "Your@email.address"
 
-**14.** Create a new "Branch" 
+**14.** Create a new "Branch"
 
    The repository has a version called ``master``
 
    Create a new branch called ``main``
-   
+
    We'll do this in the RStudio Git menu, but it can also be done in the terminal:
-   
+
    .. code ::
-   
+
       git checkout -b main
 
 **15.** Add tracking for the new files in the repository and create a "commit" message
@@ -177,17 +177,17 @@ Creating a R project with Version Control will allow you to sync changes back up
 
    Go to your GitHub user profile and select the repository.
 
-   Your changes should now be registered as a "Pull Request"   
-   
+   Your changes should now be registered as a "Pull Request"
+
    You will see your "commit" message, and be able to review the new files and file changes.
 
 **18.** Your files are now saved in GitHub, under a new branch called ``main``
 
-   You can safely delete the ``master`` branch in RStudio and on GitHub. 
-   
+   You can safely delete the ``master`` branch in RStudio and on GitHub.
+
    On GitHub, above the list of files, click the ``branches`` hyperlink, select the ``master`` branch and delete it.
 
-   `Official instructions <https://docs.github.com/en/enterprise/2.14/user/articles/creating-and-deleting-branches-within-your-repository#deleting-a-branch>`_ 
+   `Official instructions <https://docs.github.com/en/enterprise/2.14/user/articles/creating-and-deleting-branches-within-your-repository#deleting-a-branch>`_
 
    .. admonition:: Black Lives Matter
 
@@ -201,7 +201,7 @@ Creating a R project with Version Control will allow you to sync changes back up
 
 You should now have a tracked version control of your workshop project, with all of the pre-existing scripts. You can re-use this repository on your local computer, or somewhere else in the future.
 
-Hopefully, you now understand how GitHub can be used to share code and analyses, and to do your science! 
+Hopefully, you now understand how GitHub can be used to share code and analyses, and to do your science!
 
 NEON maintains a large library of pre-written scripts on their GitHub repository: `https://github.com/neonscience <https://github.com/neonscience>`_
 
@@ -258,4 +258,4 @@ NEON maintains a large library of pre-written scripts on their GitHub repository
 
 .. |Github Repo Link|  raw:: html
 
-   <a href="https://github.com/CyVerse-learning-materials/2020-neon-aop-workshop" target="blank">Github Repo Link</a>
+   <a href="https://github.com/rbartelme/ag2pi_workshop" target="blank">Github Repo Link</a>

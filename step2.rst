@@ -35,15 +35,15 @@ In this section, we're going to walk through the required steps of starting an i
 
    - RStudio: |rstudio-verse-3.6.3|_
 
-**2.** Click the |apps_button| 'Apps' button and a new window should open. 
+**2.** Click the |apps_button| 'Apps' button and a new window should open.
 
    Search using the query "rstudio verse" and see what comes up.
-  
+
    |apps_search|
 
    Also, under the "My Apps" tab click on the "My Communities" section and "AG2PI" Group should appear.
 
-   Click on the Hyperlinked name and a new window should open. 
+   Click on the Hyperlinked name and a new window should open.
 
 **3.** In the pop-up for the particular App you have a few options.
 
@@ -51,28 +51,28 @@ In this section, we're going to walk through the required steps of starting an i
 
    Your analysis will run, and when it completes, it will write any data that you have in the WORKING DIRECTORY of the container back to the Data Store in your Analyses folder, e.g. ``/iplant/home/<username>/analyses/<the-app-name>_analysis1-<DATE-TIME-of-job-starting>``
 
-  **ii.** The second section is ``Input Data`` and has options for adding (1) a folder, (2) a single file, or (3) multiple files. 
+  **ii.** The second section is ``Input Data`` and has options for adding (1) a folder, (2) a single file, or (3) multiple files.
 
    For our use case today, we're going to add a folder from the data store.
 
   |add_data_window2|
 
-   Add the path: ``/iplant/home/shared/NEON_workshop/`` 
+   Add the path: ``/iplant/home/shared/NEON_workshop/``
 
   |add_data_window1|
 
 
     .. admonition:: Input Data (not required)
 
-     When you launch a new VICE app, you can add data to it before it is launched. If you do this, it will slow down the launch, as the service must copy the data from the data store into your new instance before it becomes available. 
-     
+     When you launch a new VICE app, you can add data to it before it is launched. If you do this, it will slow down the launch, as the service must copy the data from the data store into your new instance before it becomes available.
+
      A faster option is to start the container without the data, and then copy the data into the running container later using WebDav, iCommands, or a file system mount.
 
    **iii.** The third section is ``Resource Requirements``, again you can leave the default settings, or you can modify them.
 
    You can set the ``Minimum CPU`` to the minimum number of cores your app requires. If you do not select anything, the app will still be able to use multiple cores on the shared node on which it is deployed.
 
-   You can set the ``Minimum RAM`` to the minimum number of GB of RAM you think your app requires. 
+   You can set the ``Minimum RAM`` to the minimum number of GB of RAM you think your app requires.
 
    You can set the ``Minimum Disk Space`` to the minimum amount of scratch space you think your data will need.
 
@@ -82,7 +82,7 @@ In this section, we're going to walk through the required steps of starting an i
 
 **4.** Open the |analyses_button| icon labeled "Analyses" to view your running analysis.
 
-    Look for your App by Name. 
+    Look for your App by Name.
 
     See the square icon with an arrow pointed up to the right? Click on that icon and a new browser tab will open.
 
@@ -92,11 +92,11 @@ In this section, we're going to walk through the required steps of starting an i
 
 **5.** Having clicked on either of the hyperlinked icons in Step 4 should result in a new tab opening in your browser.
 
-   Your Discovery Environment Browser tab should still be open at ``https://de.cyverse.org/de/`` 
+   Your Discovery Environment Browser tab should still be open at ``https://de.cyverse.org/de/``
 
    The new URL for the App should be something like ``https://af7664685.cyverse.run/``.
 
-   Your app is now ready for you to begin work. 
+   Your app is now ready for you to begin work.
 
 **6.** Return to your Discovery Environment Browser tab.
 
@@ -116,7 +116,7 @@ In this section, we're going to walk through the required steps of starting an i
 
    ``View Analysis Info`` will show you the status and Analysis ID -- this is useful when asking for support from the CyVerse team.
 
-   ``Share with Collaborators`` you can share your running analysis with other CyVerse users or team members. 
+   ``Share with Collaborators`` you can share your running analysis with other CyVerse users or team members.
 
    ``Complete and Save Outputs`` **DANGER Zone** -- when you click this, your job will be stopped and your analysis results will be copied to the ``/analyses`` folder
 
@@ -126,12 +126,12 @@ In this section, we're going to walk through the required steps of starting an i
 
    ``Rename`` You can rename your analysis
 
-   ``Update Comments`` You can update your comments about your analysis. 
+   ``Update Comments`` You can update your comments about your analysis.
 
 *Stopping a VICE app*
 ~~~~~~~~~~~~~~~~~~~~~
 
-**1.** After you've finished working on your instance, it is conscientious to shut down your analysis and free up share resources for other researchers. 
+**1.** After you've finished working on your instance, it is conscientious to shut down your analysis and free up share resources for other researchers.
 
 **2.** Make sure that your data that you've copied into the running Analysis have been moved to another storage location on the internet, or back into your data store in another file path.
 
@@ -147,7 +147,7 @@ In this section, we're going to walk through the required steps of starting an i
 
 **6.** Depending on how much data you have in the WORKDIR folder of the running App, the analysis may take a few minutes to complete and shut down.
 
-**7.** When the Analysis completes, you will now have the option to Delete the finished job. 
+**7.** When the Analysis completes, you will now have the option to Delete the finished job.
 
 
 
@@ -238,5 +238,4 @@ Any data which are in the working directory of ``/iplant/home/<username>/analyse
 
 .. |Github Repo Link|  raw:: html
 
-   <a href="https://github.com/CyVerse-learning-materials/2020-neon-aop-workshop" target="blank">Github Repo Link</a>
-
+   <a href="https://github.com/rbartelme/ag2pi_workshop" target="blank">Github Repo Link</a>

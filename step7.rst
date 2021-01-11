@@ -1,3 +1,6 @@
+.. include:: cyverse_rst_defined_substitutions.txt
+.. include:: custom_urls.txt
+
 .. role:: raw-html-m2r(raw)
    :format: html
 
@@ -3429,3 +3432,37 @@ Write a short explanatory comment for the following shell script:
 
 .. raw:: html
     </details><br><br>
+
+----
+
+*Lesson content modified from The Carpentries: The Unix Shell*
+    |Introducing the Shell|
+
+Under The Carpentries License:
+    |Carpentries License|
+
+----
+
+**Fix or improve this documentation**
+
+- Search for an answer:
+      |CyVerse Learning Center|
+- Ask us for help:
+      click |Intercom| on the lower right-hand side of the page
+- Report an issue or submit a change:
+      |Github Repo Link|
+- Send feedback: `learning@CyVerse.org <learning@CyVerse.org>`_
+
+----
+
+.. |Introducing the Shell| raw:: html
+
+   <a href="https://https://swcarpentry.github.io/shell-novice/" target="blank">The Carpentries Tutorial Link</a>
+
+.. |Carpentries License| raw:: html
+
+   <a href="https://swcarpentry.github.io/shell-novice/LICENSE.html" target="blank">The Unix Shell: Licenses</a>
+
+.. |Github Repo Link|  raw:: html
+
+   <a href="https://github.com/rbartelme/ag2pi_workshop" target="blank">Github Repo Link</a>

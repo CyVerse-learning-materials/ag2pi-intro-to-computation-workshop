@@ -12,11 +12,11 @@ Jupyter Lab, Desktop Environments, and Text Editors
 
 **Description:**
 
-Earlier in the workshop you launched a VICE image with RStudio. Follow the same process again using our Jupyter Lab Geospatial container instead. 
+Earlier in the workshop you launched a VICE image with RStudio. Follow the same process again using our Jupyter Lab Geospatial container instead.
 
 We have integrated Project Jupyter's Data Science Jupyter Lab images with geospatial packages.
 
-We have also integrated an all-in-one container which supports a desktop environment, Jupyter, VS Code (or your favorite text editors), and even RStudio. This container represents a 'Workspace' where you can do almost all of your daily data science tasks.  
+We have also integrated an all-in-one container which supports a desktop environment, Jupyter, VS Code (or your favorite text editors), and even RStudio. This container represents a 'Workspace' where you can do almost all of your daily data science tasks.
 
 ..
 	#### Comment: short text description goes here ####
@@ -32,7 +32,7 @@ We have also integrated an all-in-one container which supports a desktop environ
 
    - Jupyter Lab Geospatial: |jupyterlab-geospatial|_
    - Workspace: |workspace-geospatial-latest|_
-   
+
    Or, search using the |apps_button| 'Apps' search bar.
 
    query "jupyter lab geospatial" or "workspace geospatial" and see what comes up.
@@ -47,13 +47,13 @@ We have also integrated an all-in-one container which supports a desktop environ
 
    Your analysis will run, and when it completes, it will write any data that you have in the WORKING DIRECTORY of the container back to the Data Store in your Analyses folder, e.g. ``/iplant/home/<username>/analyses/<the-app-name>_analysis1-<DATE-TIME-of-job-starting>``
 
-  **ii.** The second section is ``Input Data`` and has options for adding (1) a folder, (2) a single file, or (3) multiple files. 
+  **ii.** The second section is ``Input Data`` and has options for adding (1) a folder, (2) a single file, or (3) multiple files.
 
    For our use case today, we're going to add a folder from the data store.
 
   |add_data_window3|
 
-   Add the path: ``/iplant/home/shared/NEON_workshop/`` 
+   Add the path: ``/iplant/home/shared/NEON_workshop/``
 
   |add_data_window1|
 
@@ -62,7 +62,7 @@ We have also integrated an all-in-one container which supports a desktop environ
 
    You can set the ``Minimum CPU`` to the minimum number of cores your app requires. If you do not select anything, the app will still be able to use multiple cores on the shared node on which it is deployed.
 
-   You can set the ``Minimum RAM`` to the minimum number of GB of RAM you think your app requires. 
+   You can set the ``Minimum RAM`` to the minimum number of GB of RAM you think your app requires.
 
    You can set the ``Minimum Disk Space`` to the minimum amount of scratch space you think your data will need.
 
@@ -86,7 +86,7 @@ Watch closely, you'll see a notification at the top of your screen and in the Be
 
    This is a new instance is running a Virtual Machine for you on CyVerse cloud.
 
-   You can now begin working in your running instance. 
+   You can now begin working in your running instance.
 
 
 ----
@@ -178,5 +178,4 @@ Note, there are pre-completed ``.ipynb`` notebooks in the ``/tutorials`` folder 
 
 .. |Github Repo Link|  raw:: html
 
-   <a href="https://github.com/CyVerse-learning-materials/2020-neon-aop-workshop" target="blank">Github Repo Link</a>
-
+   <a href="https://github.com/rbartelme/ag2pi_workshop" target="blank">Github Repo Link</a>

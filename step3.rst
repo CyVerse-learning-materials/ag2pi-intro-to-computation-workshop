@@ -12,15 +12,15 @@ Using the NEON Shiny App in RStudio-Server
 
 **Description:**
 
-The `Download and Explore NEON Data API <https://www.neonscience.org/download-explore-neon-data>`_ tutorial covers the basics of downloading data directy into R and RStudio via the ``neonUtilities`` R package.  
+The `Download and Explore NEON Data API <https://www.neonscience.org/download-explore-neon-data>`_ tutorial covers the basics of downloading data directy into R and RStudio via the ``neonUtilities`` R package.
 
 Our team created a NEON Shiny App for interfacing with the NEON API in R Studio in a graphical manner.
 
-The Shiny app can be launched using `Docker <https://hub.docker.com/r/cyversevice/shiny-geospatial/neon-shiny-browser>`_, in RStudio or an RStudio-Server. 
+The Shiny app can be launched using `Docker <https://hub.docker.com/r/cyversevice/shiny-geospatial/neon-shiny-browser>`_, in RStudio or an RStudio-Server.
 
 When started the Shiny app will create a new folder called ``~/NEON_Downloads`` in the home working directory. For the R Studio instance on CyVerse, this is set as ``/home/rstudio/NEON_Downloads``.
 
-Data that are selected and downloaded go into this folder and are organized using the same ontology as the NEON Data API. 
+Data that are selected and downloaded go into this folder and are organized using the same ontology as the NEON Data API.
 
 
 *Prerequisite*
@@ -36,7 +36,7 @@ If you have not, do so again |rstudio-geospatial-3.6.3|_
 
 .. 	#### Comment: Step title should be descriptive (i.e. Cleaning Read data) ###
 
-**1.** Have an instance of RStudio-Server in VICE already started, see `Your Workspace <./step2.html>`_ for details. 
+**1.** Have an instance of RStudio-Server in VICE already started, see `Your Workspace <./step2.html>`_ for details.
 
 **2.** Click on the ``Terminal`` tab in the R Console
 
@@ -55,7 +55,7 @@ If you have not, do so again |rstudio-geospatial-3.6.3|_
 *Start the Shiny App*
 ~~~~~~~~~~~~~~~~~~~~~
 
-RStudio-Server has a feature called "**Jobs**"" which can run the Shiny app as a background process. This will keep the R Console active and allow us to continue work in the R Studio while the App is running at the same time. 
+RStudio-Server has a feature called "**Jobs**"" which can run the Shiny app as a background process. This will keep the R Console active and allow us to continue work in the R Studio while the App is running at the same time.
 
 **6.** Select the ``Jobs`` option in the Console.
 
@@ -69,10 +69,10 @@ RStudio-Server has a feature called "**Jobs**"" which can run the Shiny app as a
 
       (A bunch of stuff above this...)
 
-      Reading       layer `D19_HEAL_R3_P1_v1' from data source `/home/rstudio/      neon-shi      ny-browser/NEON-data/Flightdata/      Flight_b      oundaries_2017/D19_HEAL_R3_P1_v1      .geojson' using driver       `GeoJSON      '      
+      Reading       layer `D19_HEAL_R3_P1_v1' from data source `/home/rstudio/      neon-shi      ny-browser/NEON-data/Flightdata/      Flight_b      oundaries_2017/D19_HEAL_R3_P1_v1      .geojson' using driver       `GeoJSON      '
       Simple f      e      ature collection with 1 feature       and 4 fields
-      geometry             type:  MULTIPOLYGON      
-      dimensio      n      :      XY      
+      geometry             type:  MULTIPOLYGON
+      dimensio      n      :      XY
       bbox:                 xmin: -149.3151 ymin: 63      .82981 xmax: -149.1116       ymax: 63.93015
       CRS:            4326
 
@@ -84,20 +84,20 @@ RStudio-Server has a feature called "**Jobs**"" which can run the Shiny app as a
 
    .. code ::
 
-      rstudioapi::viewer("http://127.0.0.1:5716")      
+      rstudioapi::viewer("http://127.0.0.1:5716")
 
-**11.** The App should start to run and appear in the lower right "Viewer". You can pop the app out into its own browser tab, and begin to use it.    
+**11.** The App should start to run and appear in the lower right "Viewer". You can pop the app out into its own browser tab, and begin to use it.
 
 *Downloading Data via the NEON API*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**12.** Browse the App and find a dataset that you're interested in downloading. 
+**12.** Browse the App and find a dataset that you're interested in downloading.
 
 |neon-shiny|
 
 **13.** AOP data use a slightly different protocol in the NEON Data API, so make sure to select the AOP data check box when you are ready.
 
-**14.** After you've initiated the download, the data will begin being downloaded to the ``~/NEON_Downloads`` folder. 
+**14.** After you've initiated the download, the data will begin being downloaded to the ``~/NEON_Downloads`` folder.
 
    When the data download is complete you will get a notification.
 
@@ -114,7 +114,7 @@ RStudio-Server has a feature called "**Jobs**"" which can run the Shiny app as a
       - Notes
     * - NEON Data!
       - Data should be in the ``/home/rstudio/NEON_Downloads`` directory
-      - These data use the same file-tree hierarchy as the NEON Data API. 
+      - These data use the same file-tree hierarchy as the NEON Data API.
 
 
 ----
@@ -180,5 +180,4 @@ Any data which are in the working directory of the instance (likely the ``/home/
 
 .. |Github Repo Link|  raw:: html
 
-   <a href="https://github.com/CyVerse-learning-materials/2020-neon-aop-workshop" target="blank">Github Repo Link</a>
-
+   <a href="https://github.com/rbartelme/ag2pi_workshop" target="blank">Github Repo Link</a>

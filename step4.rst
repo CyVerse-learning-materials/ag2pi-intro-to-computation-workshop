@@ -255,7 +255,7 @@ We can download these using their Point Cloud Bulk Data Download option:
 
 .. |Github Repo Link|  raw:: html
 
-   <a href="https://github.com/CyVerse-learning-materials/2020-neon-aop-workshop" target="blank">Github Repo Link</a>
+   <a href="https://github.com/rbartelme/ag2pi_workshop" target="blank">Github Repo Link</a>
 
 .. |connect_de| image:: ./img/de/connect_cyverse.svg
     :width: 700
