@@ -472,6 +472,186 @@ Subsetting Data
 	x[names(x) == "a" | "c"]
 	x[names(x) != "a"]
 
+**Making Figures**
+------------------
+
+Publication Quality Figures with ggplot2
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Plotting our data is one of the best ways to quickly explore it and the various relationships between variables.
+There are three main plotting systems in R, the base plotting system, the lattice package, and the ggplot2 package.
+Today we’ll be learning about the ggplot2 package, because it is the most effective for creating publication quality graphics.
+ggplot2 is built on the grammar of graphics, the idea that any plot can be expressed from the same set of components: a data set, a coordinate system, and a set of geoms – the visual representation of data points.
+The key to understanding ggplot2 is thinking about a figure in layers. This idea may be familiar to you if you have used image editing programs like Photoshop, Illustrator, or Inkscape.
+
+Let’s start off with an example. This will be plotting *Sorghum bicolor* phenotype data.
+We'll look at how Growing Degree Days (gdd) compares to canopy height:
+
+.. code-block:: R
+
+  #load the library
+  library("ggplot2")
+  #load the dataset
+  mac_season6 <- read.table("~/ag-data/season6_cleaned.txt", sep = "\t",
+    header = TRUE, stringsAsFactors = FALSE)
+  #plot the data
+  ggplot(data = mac_season6, mapping = aes(x = gdd, y = canopy_height)) +
+    geom_point()
+
+However, the ggplot function alone isn't enough to draw a figure:
+
+.. code-block:: R
+
+  ggplot(data = mac_season6, mapping = aes(x = gdd, y = canopy_height))
+
+We need to explcitly tell ggplot hwo to visualize the data with a geom layer.
+In the above example we used geom_point, which tells ggplot we want to generate a scatter plot.
+
+**Exercise:**
+
+Modify the example above so that the figure shows canopy_height vs. day_of_year.
+
+What if we want to color our plot by a group? In this case, let's try coloring the plot by the *Sorghum bicolor* cultivar.
+
+.. code-block:: R
+
+  ggplot(data = mac_season6, mapping = aes(x=day_of_year, y=canopy_height, by=cultivar)) +
+    geom_point(mapping = aes(color = cultivar), show.legend = FALSE)
+
+|plot day of year colorized|
+
+It seems impractical to visualize hundreds of cultivars of *S. bicolor* on a single plot.
+
+Let's look at another handy tool from Tidyverse, the R ecosystem that ggplot2 belongs to.
+
+We will use the dplyr library to pick 3 cultivars of interest.
+The power of dplyr comes from its ability to use the ``%>%``, or pipe, to combine functions.
+
+Let's try using just the select command:
+
+.. code-block:: R
+
+  #load the dyplr library
+  library(dplyr)
+  s6_subset <- select(mac_season6, day_of_year, gdd, cultivar, canopy_height)
+
+Now the problem with our subsetted data is it has less variables, but it still has all the cultivars!
+We want to make a clean looking plot of our favorite cultivars for our publication.
+This is where the pipe comes in handy, but we'll need to make a character vector to use with the filter command as well to get our results.
+
+.. code-block:: R
+
+  s6_favorites <- c("PI569148", "PI585961", "PI196583")
+  s6_figure_data <- mac_season6 %>%
+    filter(cultivar == s6_favorites) %>%
+    select(day_of_year, gdd, cultivar, canopy_height)
+
+Now that we have our data in an even smaller subset, let's make a nice looking plot with it.
+
+.. code-block:: R
+
+  ggplot(data = s6_figure_data, mapping = aes(x=day_of_year, y=canopy_height, by=cultivar)) +
+    geom_point(mapping = aes(color = cultivar), show.legend = TRUE)
+
+But wait...that looks really sparse with the scatterplot. Let's combine a few different geoms to make something nicer.
+
+.. code-block:: R
+
+  ggplot(data = s6_figure_data, mapping = aes(x=day_of_year, y=canopy_height, by=cultivar)) +
+    geom_line(mapping = aes(color = cultivar), show.legend = TRUE) +
+    geom_point(mapping = aes(color = cultivar))
+
+Now we can report on why PI585961 is so strange comapred to the other two culivars which follow normal growth curves.
+
+Let's use dplyr to summarize our measurements in a few ways:
+
+.. code-block:: R
+
+  height_mean_summary <- s6_figure_data %>%
+    group_by(cultivar) %>%
+    summarize(mean_height = mean(canopy_height))
+
+You'll see the message:
+
+.. code-block::
+
+  `summarise()` ungrouping output (override with `.groups` argument)
+
+But if you type in the variable name, height_mean_summary, you should see something like the following:
+
+.. code-block::
+
+  > height_mean_summary
+    # A tibble: 3 x 2
+      cultivar mean_height
+      <chr>          <dbl>
+    1 PI196583        82.9
+    2 PI569148        90.0
+    3 PI585961       109.
+
+Well that's really strange that the mean height of PI585961 is so inflated.
+Let's look at the standard error of the measurements, which is calculated as follows:
+
+.. code-block:: R
+
+  height_se_summary <- s6_figure_data %>%
+    group_by(cultivar) %>%
+    summarize(se_height = sd(canopy_height)/sqrt(n()))
+
+The standard error doesn't look too strange though:
+
+.. code-block::
+
+  > height_se_summary
+# A tibble: 3 x 2
+  cultivar    se_height
+  <chr>          <dbl>
+1 PI196583        10.1
+2 PI569148        11.4
+3 PI585961        11.9
+
+However, standard error of the mean only measures how far the data is from the "true population mean".
+If we look at the mean, standard deviation, and standard error, we can see a different story in the data.
+
+.. code-block:: R
+
+  height_summary <- s6_figure_data %>%
+    group_by(cultivar) %>%
+    summarize(mean_height = mean(canopy_height),
+              sd_height = sd(canopy_height),
+              se_height = sd(canopy_height)/sqrt(n()))
+
+.. code-block::
+
+  > height_summary
+    #  A tibble: 3 x 4
+      cultivar mean_height sd_height se_height
+      <chr>          <dbl>     <dbl>     <dbl>
+    1 PI196583        82.9      75.6      10.1
+    2 PI569148        90.0      90.0      11.4
+    3 PI585961       109.       75.9      11.9
+
+So now we have some summaries, but there are still some outliers in the plot.
+When you discuss these outliers with your group it turns out that there was an error in sample collection,
+but you caught it with your new data visualization skills.
+
+Let's write out this tibble, similar to a data frame, but it's TidyVerse specific,
+so let's convert this summary to a data farme and export the data to discuss the anomalous data with our research group.
+
+.. code-block:: R
+
+  # convert from tibble to a data frame
+  height_df_summary <- as.data.frame(height_summary)
+  # write out dataframe as a csv file, row.names = FALSE gets rid of row numbers
+  write.csv(x = height_df_summary, file = "~/ag-data/height_summary.csv", row.names = FALSE)
+
+
+Caveat, this dataset doesn't actually contain a real error.
+This is from an ongoing project, and there are other variables that we did not visualize today.
+However, this is the power of visualizing data, and learning the R language gives you access to a lot of statistical functions.
+
+
+
 Terminal
 --------
 
