@@ -106,7 +106,7 @@ In this section, we're going to walk through the required steps of starting an i
 
    |analyses_options|
 
-   ``Go to output folder`` will take you to the output folder in yout ``/analyses`` Data store path. This output folder will not exist until AFTER you end the running analysis.
+   ``Go to output folder`` will take you to the output folder in your ``/analyses`` Data store path. This output folder will not exist until AFTER you end the running analysis.
 
    ``View Logs`` will show you the echo of the container job starting -- this is very useful for debugging containers that are not acting appropriately.
 
@@ -230,11 +230,8 @@ Any data which are in the working directory of ``/iplant/home/<username>/analyse
 .. |add_data_window2| image:: ./img/de/add_data_window2.png
     :width: 400
 
-.. |workspace-geospatial-latest| image:: https://de.cyverse.org/Powered-By-CyVerse-blue.svg
-.. _workspace-geospatial-latest: https://de.cyverse.org/de/?type=quick-launch&quick-launch-id=b19b3b00-0b6f-4c28-9d0f-23c965264309&app-id=580bbc6e-161e-11eb-880c-008cfa5ae621
-
-.. |rstudio-geospatial-3.6.3| image:: https://de.cyverse.org/Powered-By-CyVerse-blue.svg
-.. _rstudio-geospatial-3.6.3: https://de.cyverse.org/de/?type=quick-launch&quick-launch-id=abce1ed0-8fb4-4cc5-bef3-3a9530446dc6&app-id=1903c788-1947-11eb-8f3e-008cfa5ae621
+.. |rstudio-verse-3.6.3| image:: https://de.cyverse.org/Powered-By-CyVerse-blue.svg
+.. _rstudio-verse-3.6.3: https://de.cyverse.org/de/?type=quick-launch&quick-launch-id=97782f8c-8c6f-4969-8c4e-2dd9d5bf5f96&app-id=a8b21a2c-e6f4-11ea-844a-008cfa5ae621
 
 .. |Github Repo Link|  raw:: html
 

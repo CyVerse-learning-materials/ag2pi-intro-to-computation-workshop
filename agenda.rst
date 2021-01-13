@@ -27,8 +27,8 @@ As we run out of time for each section, you may need to complete the material se
     * - URL
       - Meeting ID
       - Password
-    * - `Zoom US <>`_ 
-      - 
+    * - `Zoom US <>`_
+      -
       - ``cyverse``
 
 *Day 1 2021-01-19*
@@ -56,18 +56,18 @@ As we run out of time for each section, you may need to complete the material se
     - Launching an application
     - Tyson
     - `Visual Interactive Computing <./step2.html>`_
-    - 
+    -
   * - 0935-1000
     - Other CyVerse Resources
     - Tyson
     - `CyVerse Resources <./step5.html>`_
-    - 
+    -
   * - 1000-1010
     - Break
     -
     -
     -
-  * - 1010-1100   
+  * - 1010-1100
     - Hands on with the Data Store
     - Ryan
     - Find the data used in this course
@@ -81,7 +81,7 @@ As we run out of time for each section, you may need to complete the material se
     - Launching RStudio
     - Ryan
     - Using the Discovery Environment to Run RStudio
-    -   
+    -
   * - 1250-1300
     - Break
     -
@@ -91,17 +91,17 @@ As we run out of time for each section, you may need to complete the material se
     - Launching Jupyter Lab
     - Tyson
     - `Launching Jupyter Lab <./step3.html>`_
-    - 
+    -
   * - 1330-1350
     - Data Management
     - Tyson
     - `Managing data in the cloud <./step4.html>`_
-    - 
+    -
   * - 1350-1400
     - Wrap-up
     -
     - After-action review (what went well, wrong, could be done better)
-    - 
+    -
 
 
 *Day 2 2021-01-21*
@@ -121,7 +121,7 @@ As we run out of time for each section, you may need to complete the material se
     - Overview of course materials
     - This website
   * - 0910-1000
-    - Introducing the Shell 
+    - Introducing the Shell
     - Ryan
     - Open Discovery Environment Application for Commandline
     - `Commandline Activity <./step9.rst>`_
@@ -132,9 +132,9 @@ As we run out of time for each section, you may need to complete the material se
     -
   * - 1010-1100
     - Working with Files and Directories
-    - 
+    -
     - List files, navigating the commandline, creating directories, writing files in the shell
-    - 
+    -
   * - 1100-1200
     - Brunch, Early-, Regular-, Late- Lunch Break
     - Eat. Chat.
@@ -144,22 +144,22 @@ As we run out of time for each section, you may need to complete the material se
     - Finding Things in the Shell
     - Ryan
     - Introduction to Searching, Matching, and asking the shell for help
-    - 
+    -
   * - 1250-1300
     - Break
     -
     -
     -
   * - 1300-1350
-    - 
+    -
     -
     - Free time to explore tools, ask questions.
-    - 
+    -
   * - 1350-1400
     - Wrap-up
     -
     - After-action review (what went well, wrong, could be done better)
-    - 
+    -
 
 *Day 3 2021-01-22*
 ~~~~~~~~~~~~~~~~~~~
@@ -178,25 +178,25 @@ As we run out of time for each section, you may need to complete the material se
     - Overview of course materials
     - This website
   * - 0910-09:30
-    - Introduction to Python / Introduction to R
-    - Meg / Ryan
-    - Using Jupyter / RStudio in the Discovery Environment 
+    - Introduction to R
+    - Ryan
+    - Navigating & Interacting with RStudio
     - 
   * - 0930-1000
     - Data Types, Classes, and Structures
     - Meg / Ryan
-    - Python / R Data Types 
-    - 
+    - Python / R Data Types
+    -
   * - 1000-1010
     - Break
-    - 
+    -
     -
     -
   * - 1010-1100
     - Logic & Loops
     - Meg / Ryan
-    - Working with logical arguments, and automating repetitive tasks 
-    - 
+    - Working with logical arguments, and automating repetitive tasks
+    -
   * - 1100-1200
     - Brunch, Early-, Regular-, Late- Lunch Break
     - Eat. Chat.
@@ -206,7 +206,7 @@ As we run out of time for each section, you may need to complete the material se
     - Functions and Lists
     - Meg / Ryan
     - Writing functions to process data
-    - 
+    -
   * - 1250-1300
     - Break
     -
@@ -216,12 +216,12 @@ As we run out of time for each section, you may need to complete the material se
     - Debugging Code and Where to find help
     - Meg / Ryan
     - What to do when your code gives and error, where should you look for help?
-    - 
+    -
   * - 1350-1400
     - Wrap-up
     -
     - After-action review (what went well, wrong, could be done better)
-    - 
+    -
 
 
 
@@ -273,4 +273,3 @@ As we run out of time for each section, you may need to complete the material se
 .. |Github Repo Link|  raw:: html
 
    <a href="https://github.com/CyVerse-learning-materials/2020-neon-aop-workshop" target="blank">Github Repo Link</a>
-

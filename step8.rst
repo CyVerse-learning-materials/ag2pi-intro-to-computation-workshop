@@ -8,10 +8,24 @@
 **Introduction to R & RStudio**
 ===============================
 
-**Setup**
----------
+**Why Learn R? RStudio? What's that?**
+--------------------------------------
 
-1. You need to download R & RStudio:
+R is a statistical programming language with many data science features.
+Often, if there is a new statistical method, it is published as a tool for R users.
+Learning R, or any programming language, can help you if you decide to learn more languages in the future.
+
+Most importantly for biologists, there is a deep amount of community support for scientific applications.
+
+
+**Optional Local Setup**
+------------------------
+
+**Please note:** we will be running our code inside the CyVerse DE VICE App here: |rstudio-verse-3.6.3|
+
+*These local installation instructions are for you to explore on your own time.*
+
+1. You can download R & RStudio for your local:
 
    - `Download R <https://cran.r-project.org/>`_
 
@@ -179,15 +193,15 @@ To use the package after it's been loaded:
 		#can overwrite masked functions using "::" (e.g., package::function)
 	library("package") #will give an error if in conflict with other packages or has missing dependencies
 
-Uploading Data
-~~~~~~~~~~~~~~
+Loading Data
+~~~~~~~~~~~~
 
-There are many ways to upload data in the R environment depending on the document type you have.
+There are many ways to load data in the R environment depending on the document type you have.
 
 .. code-block:: R
 
 	#General reading
-	read.table("dataFile.txt", sep = "/t")
+	read.table("dataFile.txt", sep = "\t")
 
 **Exercise:**
 
@@ -271,6 +285,7 @@ For example, we can store the number 10 in a letter to use later
 **Exercise:**
 
 	1. What does a*2 give you?
+
 Vectors
 ~~~~~~~
 
@@ -303,7 +318,7 @@ Try adding two to every numer in the vector "x".
 What happens what you add a character to a vector?
 
 .. code-block:: R
-	d <- c(d, "a)
+	d <- c(d, "a")
 	str(d)
 
 **ATOMIC VECTORS** are vectors which cannot be simplified anymore, and therefore "$" cannot be used on them. Yes, this error happens a lot. Yes, it is frustrating. Good luck.
@@ -324,7 +339,7 @@ You can combine dataframes:
 
 .. code-block:: R
 
-	hello <- data.frame (1:26, letters, words = c("hey", "you"))
+	hello <- data.frame(1:26, letters, words = c("hey", "you"))
 	hi <- data.frame(1:26, letters, c("hey", "you"))
 	howdy <- data.frame(hello, hi)
 
@@ -334,7 +349,7 @@ How do you name the column with the numbers 1-26?
 	hi <- data.frame(numbers = 1:26, letters, c("hey", "you"))
 
 What are the column headers?
-What happends when you do the following?
+What happens when you do the following?
 
 .. code-block:: R
 	hola <- data.frame(1:26, letters, words = "hey", "you")
@@ -378,19 +393,10 @@ Subsetting:
 
 **Exercise**
 
-	1. What is the output?
-
-.. code-block:: R
-
-	hello[,-2]
-
-Likewise, columns and rows can be removed using "-" as a modifier
+	1. What is the output of these commands on the data frame hello?
 
 You can save a dataframe using write.table() and write.csv().
 
-**NOTE** do not overwrite your dataset!!
-
-If you rerun a script, you may overwrite your results or new data. Put a "#" after use!
 
 The R Environment
 ~~~~~~~~~~~~~~~~~
@@ -409,6 +415,8 @@ Exercise:
 
 **Exploring Data**
 ------------------
+
+R is a great tool for exploratory data analysis (EDA), and RStudio makes EDA even easier!
 
 Data Manipulation
 ~~~~~~~~~~~~~~~~~
@@ -475,11 +483,20 @@ Subsetting Data
 **Making Figures**
 ------------------
 
+Here we will learn:
+
+-How to plot using ggplot2
+-How to subset data with dplyr
+-Basic data summaries
+-Writing Files from an Analysis
+-Generating plots for publications
+
+
 Publication Quality Figures with ggplot2
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Plotting our data is one of the best ways to quickly explore it and the various relationships between variables.
-There are three main plotting systems in R, the base plotting system, the lattice package, and the ggplot2 package.
+There are three main plotting systems in R, the **base plotting system**, the **lattice package**, and the **ggplot2** package.
 Today we’ll be learning about the ggplot2 package, because it is the most effective for creating publication quality graphics.
 ggplot2 is built on the grammar of graphics, the idea that any plot can be expressed from the same set of components: a data set, a coordinate system, and a set of geoms – the visual representation of data points.
 The key to understanding ggplot2 is thinking about a figure in layers. This idea may be familiar to you if you have used image editing programs like Photoshop, Illustrator, or Inkscape.
@@ -561,7 +578,7 @@ But wait...that looks really sparse with the scatterplot. Let's combine a few di
     geom_line(mapping = aes(color = cultivar), show.legend = TRUE) +
     geom_point(mapping = aes(color = cultivar))
 
-Now we can report on why PI585961 is so strange comapred to the other two culivars which follow normal growth curves.
+Now we can report on why PI585961 is so strange compared to the other two cultivars which follow normal growth curves.
 
 Let's use dplyr to summarize our measurements in a few ways:
 
@@ -573,15 +590,15 @@ Let's use dplyr to summarize our measurements in a few ways:
 
 You'll see the message:
 
-.. code-block::
+.. code-block:: R
 
   `summarise()` ungrouping output (override with `.groups` argument)
 
 But if you type in the variable name, height_mean_summary, you should see something like the following:
 
-.. code-block::
+.. code-block:: R
 
-  > height_mean_summary
+ > height_mean_summary
     # A tibble: 3 x 2
       cultivar mean_height
       <chr>          <dbl>
@@ -600,7 +617,7 @@ Let's look at the standard error of the measurements, which is calculated as fol
 
 The standard error doesn't look too strange though:
 
-.. code-block::
+.. code-block:: R
 
   > height_se_summary
 # A tibble: 3 x 2
@@ -651,13 +668,11 @@ This is from an ongoing project, and there are other variables that we did not v
 However, this is the power of visualizing data, and learning the R language gives you access to a lot of statistical functions.
 
 
+----
 
-Terminal
---------
+Where to from here?
+-------------------
 
-Can run terminal in RStudio. This is useful if you want to run a program and still be able to use R, or if you need dependencies. Also, the terminal does not interact with the R environment.
-
-Tools --> Terminal --> New Terminal
 
 
 .. CHEAT SHEETS::
@@ -697,3 +712,6 @@ Under The Carpentries License:
 .. |Github Repo Link|  raw:: html
 
    <a href="https://github.com/CyVerse-learning-materials/foss-2019/tree/master/software_essentials/R_Studio.rst" target="blank">Github Repo Link</a>
+
+.. |rstudio-verse-3.6.3| image:: https://de.cyverse.org/Powered-By-CyVerse-blue.svg
+.. _rstudio-verse-3.6.3: https://de.cyverse.org/de/?type=quick-launch&quick-launch-id=97782f8c-8c6f-4969-8c4e-2dd9d5bf5f96&app-id=a8b21a2c-e6f4-11ea-844a-008cfa5ae621
