@@ -181,11 +181,11 @@ As we run out of time for each section, you may need to complete the material se
     - Introduction to R
     - Ryan
     - Navigating & Interacting with RStudio
-    - 
+    -
   * - 0930-1000
     - Data Types, Classes, and Structures
-    - Meg / Ryan
-    - Python / R Data Types
+    - Ryan
+    - R Data Types
     -
   * - 1000-1010
     - Break
@@ -194,7 +194,7 @@ As we run out of time for each section, you may need to complete the material se
     -
   * - 1010-1100
     - Logic & Loops
-    - Meg / Ryan
+    - Ryan
     - Working with logical arguments, and automating repetitive tasks
     -
   * - 1100-1200
@@ -203,9 +203,9 @@ As we run out of time for each section, you may need to complete the material se
     -
     -
   * - 1200-1250
-    - Functions and Lists
-    - Meg / Ryan
-    - Writing functions to process data
+    -
+    - Ryan
+    -
     -
   * - 1250-1300
     - Break
@@ -213,8 +213,8 @@ As we run out of time for each section, you may need to complete the material se
     -
     -
   * - 1300-1350
-    - Debugging Code and Where to find help
-    - Meg / Ryan
+    - 
+    - Ryan
     - What to do when your code gives and error, where should you look for help?
     -
   * - 1350-1400
