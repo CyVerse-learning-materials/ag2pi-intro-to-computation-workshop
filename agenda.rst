@@ -117,14 +117,14 @@ As we run out of time for each section, you may need to complete the material se
     - Links
   * - 0900-0910
     - Briefing
-    - Tyson
+    -
     - Overview of course materials
     - This website
   * - 0910-1000
     - Introducing the Shell
     - Ryan
-    - Open Discovery Environment Application for Commandline
-    - `Commandline Activity <./step9.rst>`_
+    - Using CyVerse for the Command line
+    - `Commandline Activity <./step7.html#navigating-files-and-directories>`_
   * - 1000-1010
     - Break
     -
@@ -132,29 +132,29 @@ As we run out of time for each section, you may need to complete the material se
     -
   * - 1010-1100
     - Working with Files and Directories
-    -
-    - List files, navigating the commandline, creating directories, writing files in the shell
-    -
+    - Ryan
+    - List files, navigating the command line, creating directories, writing files in the shell
+    - `Activity </step7.html#working-with-files-and-directories>`
   * - 1100-1200
     - Brunch, Early-, Regular-, Late- Lunch Break
     - Eat. Chat.
     -
     -
   * - 1200-1250
-    - Finding Things in the Shell
+    - Pipes and Filters
     - Ryan
-    - Introduction to Searching, Matching, and asking the shell for help
-    -
+    - How to combine commands to do new things
+    - `Activity </step7.html#pipes-and-filters>`
   * - 1250-1300
     - Break
     -
     -
     -
   * - 1300-1350
-    -
-    -
-    - Free time to explore tools, ask questions.
-    -
+    - Finding Things in the Shell
+    - Ryan
+    - Introduction to Searching, Matching, and asking the shell for help
+    - `Activity </step7.html#finding-things>`
   * - 1350-1400
     - Wrap-up
     -
@@ -181,42 +181,42 @@ As we run out of time for each section, you may need to complete the material se
     - Introduction to R
     - Ryan
     - Navigating & Interacting with RStudio
-    -
+    - `Activity </step8.html>`
   * - 0930-1000
-    - Data Types, Classes, and Structures
+    - Data Structures in R
     - Ryan
     - R Data Types
-    -
+    - `Activity </step8.html#data-structures>`
   * - 1000-1010
     - Break
     -
     -
     -
   * - 1010-1100
-    - Logic & Loops
+    - Exploring Data with R
     - Ryan
-    - Working with logical arguments, and automating repetitive tasks
-    -
+    - Data Manipulation and Subsetting
+    - `Activity </step8.html#exploring-data>`
   * - 1100-1200
     - Brunch, Early-, Regular-, Late- Lunch Break
     - Eat. Chat.
     -
     -
   * - 1200-1250
-    -
+    - Making Figures in R
     - Ryan
-    -
-    -
+    - Foundational Skills of Plotting
+    - `Activity </step8.html#making-figures>`
   * - 1250-1300
     - Break
     -
     -
     -
   * - 1300-1350
-    - 
+    - Making Figures in R (continued)
     - Ryan
-    - What to do when your code gives and error, where should you look for help?
-    -
+    - Combining skills to improve plotting
+    - `Activity </step8.html#making-figures>`
   * - 1350-1400
     - Wrap-up
     -

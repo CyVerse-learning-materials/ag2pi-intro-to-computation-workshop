@@ -620,12 +620,12 @@ The standard error doesn't look too strange though:
 .. code-block:: R
 
   > height_se_summary
-# A tibble: 3 x 2
-  cultivar    se_height
-  <chr>          <dbl>
-1 PI196583        10.1
-2 PI569148        11.4
-3 PI585961        11.9
+  # A tibble: 3 x 2
+     cultivar    se_height
+     <chr>          <dbl>
+  1 PI196583        10.1
+  2 PI569148        11.4
+  3 PI585961        11.9
 
 However, standard error of the mean only measures how far the data is from the "true population mean".
 If we look at the mean, standard deviation, and standard error, we can see a different story in the data.
