@@ -124,7 +124,7 @@ As we run out of time for each section, you may need to complete the material se
     - Introducing the Shell
     - Ryan
     - Using CyVerse for the Command line
-    - `Commandline Activity <./step7.html#navigating-files-and-directories>`_
+    - `Activity <./step7.html#navigating-files-and-directories>`_
   * - 1000-1010
     - Break
     -
@@ -132,9 +132,9 @@ As we run out of time for each section, you may need to complete the material se
     -
   * - 1010-1100
     - Working with Files and Directories
-    - Ryan
+    - Meg
     - List files, navigating the command line, creating directories, writing files in the shell
-    - `Activity </step7.html#working-with-files-and-directories>`
+    - `Activity <./step7.html#working-with-files-and-directories>`
   * - 1100-1200
     - Brunch, Early-, Regular-, Late- Lunch Break
     - Eat. Chat.
@@ -144,7 +144,7 @@ As we run out of time for each section, you may need to complete the material se
     - Pipes and Filters
     - Ryan
     - How to combine commands to do new things
-    - `Activity </step7.html#pipes-and-filters>`
+    - `Activity <./step7.html#pipes-and-filters>`
   * - 1250-1300
     - Break
     -
@@ -152,12 +152,12 @@ As we run out of time for each section, you may need to complete the material se
     -
   * - 1300-1350
     - Finding Things in the Shell
-    - Ryan
+    - Meg
     - Introduction to Searching, Matching, and asking the shell for help
-    - `Activity </step7.html#finding-things>`
+    - `Activity <./step7.html#finding-things>`
   * - 1350-1400
     - Wrap-up
-    -
+    - Ryan & Meg
     - After-action review (what went well, wrong, could be done better)
     -
 
@@ -181,12 +181,12 @@ As we run out of time for each section, you may need to complete the material se
     - Introduction to R
     - Ryan
     - Navigating & Interacting with RStudio
-    - `Activity </step8.html>`
+    - `Activity <./step8.html>`
   * - 0930-1000
     - Data Structures in R
     - Ryan
     - R Data Types
-    - `Activity </step8.html#data-structures>`
+    - `Activity <./step8.html#data-structures>`
   * - 1000-1010
     - Break
     -
@@ -196,7 +196,7 @@ As we run out of time for each section, you may need to complete the material se
     - Exploring Data with R
     - Ryan
     - Data Manipulation and Subsetting
-    - `Activity </step8.html#exploring-data>`
+    - `Activity <./step8.html#exploring-data>`
   * - 1100-1200
     - Brunch, Early-, Regular-, Late- Lunch Break
     - Eat. Chat.
@@ -206,7 +206,7 @@ As we run out of time for each section, you may need to complete the material se
     - Making Figures in R
     - Ryan
     - Foundational Skills of Plotting
-    - `Activity </step8.html#making-figures>`
+    - `Activity <./step8.html#making-figures>`
   * - 1250-1300
     - Break
     -
@@ -216,7 +216,7 @@ As we run out of time for each section, you may need to complete the material se
     - Making Figures in R (continued)
     - Ryan
     - Combining skills to improve plotting
-    - `Activity </step8.html#making-figures>`
+    - `Activity <./step8.html#making-figures>`
   * - 1350-1400
     - Wrap-up
     -
