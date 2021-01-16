@@ -153,17 +153,16 @@ Application(s) used
       - Description
       - Quick Launch
       - GitHub repositories
-    * - Workspace
-      - ``latest``
-      - |all-the-things|
-      -	|workspace-geospatial-latest|_
-      - |CyVerse Workspace GitHub|
     * - RStudio
       - ``3.6.3``
       - Rocker Project RStudio with Tidyverse applications pre-installed
       - |rstudio-verse|_
       - |CyVerse R Studio GitHub|
-
+    * - Jupyter Lab SciPy
+      - ``2.2.5``
+      -  Jupyter Lab SciPy Official
+      -	|jupyterlab-scipy-2.2.5|_
+      - |CyVerse Jupyterlab GitHub|
 
 Input and example data
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -229,8 +228,6 @@ Input and example data
     :width: 25
     :height: 25
 
-
-
 .. Comment: Place URLS Below This Line
 
    # Use this example to ensure that links open in new tabs, avoiding
@@ -245,14 +242,23 @@ Input and example data
 
    <a href="https://user.cyverse.org/workshops/59/overview" target="blank">Workshop Enrollment</a>
 
+.. |ORCID ID| raw:: html
+
+   <a href="https://orcid.org/" target="blank">ORCID ID</a>
+
 .. |CyVerse R Studio GitHub|  raw:: html
 
    <a href="https://github.com/cyverse-vice/rstudio-verse" target="blank">CyVerse RStudio GitHub</a>
 
+.. |rstudio-verse-3.6.3| image:: https://de.cyverse.org/Powered-By-CyVerse-blue.svg
+.. _rstudio-verse-3.6.3: https://de.cyverse.org/de/?type=quick-launch&quick-launch-id=97782f8c-8c6f-4969-8c4e-2dd9d5bf5f96&app-id=a8b21a2c-e6f4-11ea-844a-008cfa5ae621
 
 .. |CyVerse JupyterLab GitHub|  raw:: html
 
-   <a href="https://github.com/cyverse-vice/jupyterlab-datascience" target="blank">CyVerse JupyterLab GitHub</a>
+   <a href="https://github.com/cyverse-vice/jupyterlab-scipy" target="blank">CyVerse JupyterLab GitHub</a>
+
+.. |jupyterlab-scipy-2.2.5| image:: https://de.cyverse.org/Powered-By-CyVerse-blue.svg
+.. _jupyterlab-scipy-2.2.5: https://de.cyverse.org/de/?type=quick-launch&quick-launch-id=91c72a5d-0ce9-484f-a1f1-feba4cab75a5&app-id=bc93504c-d584-11e9-8413-008cfa5ae621
 
 .. |Download Cyberduck|  raw:: html
 
@@ -261,9 +267,6 @@ Input and example data
 .. |Github Repo Link|  raw:: html
 
    <a href="https://github.com/rbartelme/ag2pi_workshop" target="blank">Github Repo Link</a>
-
-.. |all-the-things| image:: ./img/all-the-things.png
-    :width: 400
 
 .. |cyberduck| image:: ./img/cyberduck.png
     :width: 50
@@ -275,18 +278,9 @@ Input and example data
 
 .. _github: https://github.com
 
-.. |gee| image:: ./img/gee.png
-    :width: 50
-
-.. _gee: https://earthengine.google.com
-
 .. |GitHub| raw:: html
 
    <a href="https://github.com" target="blank">GitHub</a>
-
-.. |GEE| raw:: html
-
-   <a href="https://earthengine.google.com/" target="blank">GEE</a>
 
 .. |WebDav| raw:: html
 
