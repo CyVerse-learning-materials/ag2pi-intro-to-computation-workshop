@@ -155,7 +155,7 @@ Application(s) used
       - GitHub repositories
     * - RStudio
       - ``3.6.3``
-      - Rocker Project RStudio with Tidyverse applications pre-installed
+      - RStudio Tidyverse
       - |rstudio-verse|_
       - |CyVerse R Studio GitHub|
     * - Jupyter Lab SciPy
@@ -250,8 +250,8 @@ Input and example data
 
    <a href="https://github.com/cyverse-vice/rstudio-verse" target="blank">CyVerse RStudio GitHub</a>
 
-.. |rstudio-verse-3.6.3| image:: https://de.cyverse.org/Powered-By-CyVerse-blue.svg
-.. _rstudio-verse-3.6.3: https://de.cyverse.org/de/?type=quick-launch&quick-launch-id=97782f8c-8c6f-4969-8c4e-2dd9d5bf5f96&app-id=a8b21a2c-e6f4-11ea-844a-008cfa5ae621
+.. |rstudio-verse| image:: https://de.cyverse.org/Powered-By-CyVerse-blue.svg
+.. _rstudio-verse: https://de.cyverse.org/de/?type=quick-launch&quick-launch-id=97782f8c-8c6f-4969-8c4e-2dd9d5bf5f96&app-id=a8b21a2c-e6f4-11ea-844a-008cfa5ae621
 
 .. |CyVerse JupyterLab GitHub|  raw:: html
 
