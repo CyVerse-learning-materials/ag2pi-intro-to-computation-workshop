@@ -4,6 +4,11 @@
 .. role:: raw-html-m2r(raw)
    :format: html
 
+|CyVerse_logo|_
+
+|Home_Icon|_
+
+`Learning Center Home <http://learning.cyverse.org/>`_
 
 Introducing the Shell
 =====================
