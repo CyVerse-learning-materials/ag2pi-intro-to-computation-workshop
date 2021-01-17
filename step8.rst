@@ -68,7 +68,7 @@ R Studio makes using R programming language easier to interact with and to keep 
 Basic Layout
 ~~~~~~~~~~~~
 
-|R Console|
+  |R Console|
 
 The basic layout includes:
 - Interactive R Console (left) <- most of your time will be spent here
