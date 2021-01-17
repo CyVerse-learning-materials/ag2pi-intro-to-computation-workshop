@@ -27,9 +27,9 @@ As we run out of time for each section, you may need to complete the material se
     * - URL
       - Meeting ID
       - Password
-    * - `Zoom US <>`_
-      -
-      - ``cyverse``
+    * - `Zoom US <https://arizona.zoom.us/j/85763111594>`_
+      - 857 6311 1594
+      - ``agdata``
 
 *Day 1 2021-01-19*
 ~~~~~~~~~~~~~~~~~~~
