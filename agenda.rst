@@ -134,7 +134,7 @@ As we run out of time for each section, you may need to complete the material se
     - Working with Files and Directories
     - Meg
     - List files, navigating the command line, creating directories, writing files in the shell
-    - `Activity <./step7.html#working-with-files-and-directories>`
+    - `Activity <./step7.html#working-with-files-and-directories>`_
   * - 1100-1200
     - Brunch, Early-, Regular-, Late- Lunch Break
     - Eat. Chat.
@@ -144,7 +144,7 @@ As we run out of time for each section, you may need to complete the material se
     - Pipes and Filters
     - Ryan
     - How to combine commands to do new things
-    - `Activity <./step7.html#pipes-and-filters>`
+    - `Activity <./step7.html#pipes-and-filters>`_
   * - 1250-1300
     - Break
     -
@@ -154,7 +154,7 @@ As we run out of time for each section, you may need to complete the material se
     - Finding Things in the Shell
     - Meg
     - Introduction to Searching, Matching, and asking the shell for help
-    - `Activity <./step7.html#finding-things>`
+    - `Activity <./step7.html#finding-things>`_
   * - 1350-1400
     - Wrap-up
     - Ryan & Meg
@@ -186,7 +186,7 @@ As we run out of time for each section, you may need to complete the material se
     - Data Structures in R
     - Ryan
     - R Data Types
-    - `Activity <./step8.html#data-structures>`
+    - `Activity <./step8.html#data-structures>`_
   * - 1000-1010
     - Break
     -
@@ -196,7 +196,7 @@ As we run out of time for each section, you may need to complete the material se
     - Exploring Data with R
     - Ryan
     - Data Manipulation and Subsetting
-    - `Activity <./step8.html#exploring-data>`
+    - `Activity <./step8.html#exploring-data>`_
   * - 1100-1200
     - Brunch, Early-, Regular-, Late- Lunch Break
     - Eat. Chat.
@@ -206,7 +206,7 @@ As we run out of time for each section, you may need to complete the material se
     - Making Figures in R
     - Ryan
     - Foundational Skills of Plotting
-    - `Activity <./step8.html#making-figures>`
+    - `Activity <./step8.html#making-figures>`_
   * - 1250-1300
     - Break
     -
@@ -216,7 +216,7 @@ As we run out of time for each section, you may need to complete the material se
     - Making Figures in R (continued)
     - Ryan
     - Combining skills to improve plotting
-    - `Activity <./step8.html#making-figures>`
+    - `Activity <./step8.html#making-figures>`_
   * - 1350-1400
     - Wrap-up
     -
@@ -272,4 +272,4 @@ As we run out of time for each section, you may need to complete the material se
 
 .. |Github Repo Link|  raw:: html
 
-   <a href="https://github.com/CyVerse-learning-materials/2020-neon-aop-workshop" target="blank">Github Repo Link</a>
+   <a href="https://github.com/CyVerse-learning-materials/ag2pi-intro-to-computation-workshop" target="blank">Github Repo Link</a>
