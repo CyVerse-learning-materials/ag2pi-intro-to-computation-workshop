@@ -7,7 +7,6 @@
 |CyVerse_logo|_
 
 |Home_Icon|_
-
 `Learning Center Home <http://learning.cyverse.org/>`_
 
 Introducing the Shell
