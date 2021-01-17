@@ -675,7 +675,16 @@ However, this is the power of visualizing data, and learning the R language give
 Where to from here?
 -------------------
 
+Some good resources for help coding are:
 
+* |Stack Overflow|
+* |RStudio Community|
+* |Medium|
+
+Additional organizations that offer other coding workshops:
+
+* |CyVerse FOSS|
+* |The Carpentries|
 
 .. CHEAT SHEETS::
    RStudio provides numerous `"cheat sheets" <https://www.rstudio.com/resources/cheatsheets/>`_ which help learners.
@@ -697,6 +706,26 @@ Under The Carpentries License:
 - On Github: |Github Repo Link|
 - Send feedback: `Tutorials@CyVerse.org <Tutorials@CyVerse.org>`_
 --------------
+
+.. |Medium| raw:: html_theme
+
+  <a href="https://www.medium.com/">Medium</a>
+
+.. |Stack Overflow| raw:: html
+
+  <a href="https://www.stackoverflow.com/">StackOverflow</a>
+
+.. |The Carpentries| raw:: html
+
+  <a href="https://carpentries.org/">The Carpentries</a>
+
+.. |CyVerse FOSS| raw:: html
+
+  <a href="https://cyverse.org/fossonline">CyVerse FOSS Online</a>
+
+.. |RStudio Community| raw:: html
+
+  <a href="https://community.rstudio.com/">RStudio Community</a>
 
 .. |R Novice Gapminder| raw:: html
 
