@@ -57,7 +57,7 @@ In this section, we're going to walk through the required steps of starting an i
 
   |add_data_window2|
 
-   Add the path: ``/iplant/home/shared/NEON_workshop/``
+   Add the path: ``/iplant/home/shared/ag2pi_workshop``
 
   |add_data_window1|
 

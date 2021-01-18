@@ -736,7 +736,7 @@ Under The Carpentries License:
    <a href="http://swcarpentry.github.io/r-novice-gapminder/LICENSE.html" target="blank">R for Reproducible Scientific Analysis: Licenses</a>
 
 
-.. |R Console| image:: ../img/rstudio.png
+.. |R Console| image:: ./img/rstudio.png
   :width: 750
 
 

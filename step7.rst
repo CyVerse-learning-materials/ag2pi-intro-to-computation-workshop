@@ -88,7 +88,15 @@ Getting Started
 Opening The Shell Via CyVerse
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-##Add content here for opening the shell on CyVerse##
+Follow along with `Tuesday's demo <./step2.html>`_ to start the RStudio environment with the input for this lesson.
+
+For your RStudio instance, set the input folder to ``/iplant/home/shared/ag2pi_workshop``
+
+We will be using the shell inside RStudio for these lessons.
+
+|R Console|
+
+----
 
 When the shell is first opened, you are presented with a **prompt**\ ,
 indicating that the shell is waiting for input.
@@ -3470,3 +3478,6 @@ Under The Carpentries License:
 .. |Github Repo Link|  raw:: html
 
    <a href="https://github.com/rbartelme/ag2pi_workshop" target="blank">Github Repo Link</a>
+
+.. |R Console| image:: ./img/rstudio.png
+    :width: 750
