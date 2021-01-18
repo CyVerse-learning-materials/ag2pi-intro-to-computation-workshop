@@ -90,7 +90,7 @@ As we run out of time for each section, you may need to complete the material se
   * - 1300-1330
     - Launching Jupyter Lab
     - Tyson
-    - `Launching Jupyter Lab <./step3.html>`_
+    - `Launching Jupyter Lab <./step6.html>`_
     -
   * - 1330-1350
     - Data Management
