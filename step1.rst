@@ -79,7 +79,7 @@ CyVerse started out with the project name "iPlant Collaborative", and our data s
 
    You can change the permissions of these files and folders to share them with your collaborators or the public.
 
-**4.** Create a new folder called ``agpi_workshop``
+**4.** Create a new folder called ``ag2pi_workshop``
 
    The new folder should be located:
 
