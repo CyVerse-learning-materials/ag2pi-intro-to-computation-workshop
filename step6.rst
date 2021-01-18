@@ -12,11 +12,9 @@ Jupyter Lab, Desktop Environments, and Text Editors
 
 **Description:**
 
-Earlier in the workshop you launched a VICE image with RStudio. Follow the same process again using our Jupyter Lab Geospatial container instead.
+Earlier in the workshop you launched a VICE image with RStudio. Follow the same process again using our Jupyter Lab SciPy container instead.
 
-We have integrated Project Jupyter's Data Science Jupyter Lab images with geospatial packages.
-
-We have also integrated an all-in-one container which supports a desktop environment, Jupyter, VS Code (or your favorite text editors), and even RStudio. This container represents a 'Workspace' where you can do almost all of your daily data science tasks.
+We have integrated Project Jupyter images with data science packages.
 
 ..
 	#### Comment: short text description goes here ####
@@ -30,16 +28,15 @@ We have also integrated an all-in-one container which supports a desktop environ
 
 **2.** Click one of our quick launch buttons:
 
-   - Jupyter Lab Geospatial: |jupyterlab-geospatial|_
-   - Workspace: |workspace-geospatial-latest|_
+   - Jupyter Lab Geospatial: |jupyterlab-scipy|_
 
    Or, search using the |apps_button| 'Apps' search bar.
 
-   query "jupyter lab geospatial" or "workspace geospatial" and see what comes up.
+   query "jupyter lab scipy" and see what comes up.
 
    Or, click the App button and a new window should open.
 
-   Under "My Apps" section click on the "My Communities" section and "NEON" Group should appear
+   Under "My Apps" section click on the "My Communities" section and "Ag2Pi" Group should appear
 
 **3.** In the App Window you have a few options.
 
@@ -53,7 +50,7 @@ We have also integrated an all-in-one container which supports a desktop environ
 
   |add_data_window3|
 
-   Add the path: ``/iplant/home/shared/NEON_workshop/``
+   Add the path: ``/iplant/home/shared/ag2pi_workshop/``
 
   |add_data_window1|
 
@@ -92,8 +89,6 @@ Watch closely, you'll see a notification at the top of your screen and in the Be
 ----
 
 **Description of output and results**
-
-You should now be ready to run the |NEON Python API tutorial|
 
 Note, there are pre-completed ``.ipynb`` notebooks in the ``/tutorials`` folder which you added to the Instance when it was created. These should be in the working directory under the ``/NEON_workshop`` directory. You can use these for guidance, particularly if you fall behind.
 
