@@ -47,20 +47,11 @@ As we run out of time for each section, you may need to complete the material se
     - Ryan
     - Overview of course materials
     - This website
-  * - 0910-0930
+  * - 0910-1000
     - CyVerse walkthrough
     - Tyson
     - `Discovery Environment Overview <./step1.html>`_
     - `https://de.cyverse.org <https://de.cyverse.org>`_
-  * - 0930-0935
-    - Launching an application
-    - Tyson
-    - `Visual Interactive Computing <./step2.html>`_
-    -
-  * - 0935-1000
-    - Other CyVerse Resources
-    - Tyson
-    - 
     -
   * - 1000-1010
     - Break
@@ -81,7 +72,7 @@ As we run out of time for each section, you may need to complete the material se
     - Launching RStudio
     - Ryan
     - Using the Discovery Environment to Run RStudio
-    -
+    - `Visual Interactive Computing <./step2.html>`_ 
   * - 1250-1300
     - Break
     -
