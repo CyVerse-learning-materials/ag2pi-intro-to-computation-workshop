@@ -52,7 +52,6 @@ As we run out of time for each section, you may need to complete the material se
     - Tyson
     - `Discovery Environment Overview <./step1.html>`_
     - `https://de.cyverse.org <https://de.cyverse.org>`_
-    -
   * - 1000-1010
     - Break
     -
