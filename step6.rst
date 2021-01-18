@@ -161,11 +161,8 @@ Note, there are pre-completed ``.ipynb`` notebooks in the ``/tutorials`` folder 
 .. |add_data_window3| image:: ./img/de/add_data_window3.png
     :width: 400
 
-.. |workspace-geospatial-latest| image:: https://de.cyverse.org/Powered-By-CyVerse-blue.svg
-.. _workspace-geospatial-latest: https://de.cyverse.org/de/?type=quick-launch&quick-launch-id=b19b3b00-0b6f-4c28-9d0f-23c965264309&app-id=580bbc6e-161e-11eb-880c-008cfa5ae621
-
-.. |jupyterlab-geospatial| image:: https://de.cyverse.org/Powered-By-CyVerse-blue.svg
-.. _jupyterlab-geospatial: https://de.cyverse.org/de/?type=quick-launch&quick-launch-id=63afd24c-9acc-4a8c-85ef-58b634a2ebc2&app-id=c940912c-fcea-11ea-b07f-008cfa5ae621
+.. |jupyterlab-scipy| image:: https://de.cyverse.org/Powered-By-CyVerse-blue.svg
+.. _jupyterlab-scipy: https://de.cyverse.org/de/?type=quick-launch&quick-launch-id=91c72a5d-0ce9-484f-a1f1-feba4cab75a5&app-id=bc93504c-d584-11e9-8413-008cfa5ae621
 
 .. |NEON Python API tutorial| raw:: html
 
