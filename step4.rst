@@ -87,31 +87,35 @@ First, we need to initiate a connection to the CyVerse iRODS.
 
       /iplant/home/username:
       C- /iplant/home/username/analyses
-      C- /iplant/home/username/NEON_Downloads
+      C- /iplant/home/username/ag2pi_workshop
 
   You should now see the contents of your personal Data Store
 
 **5.** Upload a single file to the Data Store using ``iput``
 
+  Create a new file in RStudio and give it a name, e.g. ``test.R``
+  
   You need to select the file you want to copy, and the location in the Data Store you want to copy it to.
 
   .. code ::
 
-     iput -KPvf /home/rstudio/neon-shiny-browser/background.R /iplant/home/username/NEON_Downloads/
+     iput -KPvf /home/rstudio/test.R /iplant/home/username/ag2pi_workshop/
 
-This command will take a single file ``background.R`` and copy it from the container to the Data Store folder ``/iplant/home/username/NEON_Downloads/``
+This command will take a single file ``test.R`` and copy it from the container to the Data Store folder ``/iplant/home/username/ag2pi_workshop/``
 
 The flags ``K``, ``P``, ``v``, and ``f`` are described in the help file.
 
 **6.** Upload a folder with recursive sub-folders and files
 
+   Create a new folder in RStudio, and then create a folder inside of it.
+   
    Next, we want to upload an entire directory with many folders and files in it.
 
    .. code ::
 
-      iput -KPbrvf /home/rstudio/NEON_Downloads/NEON_HARV_DP1.30003.001_2019 /iplant/home/<your-user-name>/NEON_Downloads/
+      iput -KPbrvf /home/rstudio/ag2pi_workshop/folder1/ /iplant/home/<your-user-name>/ag2pi_workshop/
 
-  I have added the flags ``b`` for bulk, and ``r`` for recursive to the ``iput`` command. This will upload the entire directory ``NEON_HARV_DP1.30003.001_2019`` to the data store.
+  I have added the flags ``b`` for bulk, and ``r`` for recursive to the ``iput`` command. This will upload the entire directory ``folder1`` to the data store.
 
 **7.** The ``P`` flag for Progressive and ``v`` flag for verbose will echo out the progress of the upload until it completes.
 
@@ -121,12 +125,12 @@ The flags ``K``, ``P``, ``v``, and ``f`` are described in the help file.
 
   .. code ::
 
-    ils /iplant/home/<your-user-name>/NEON_Downloads/
+    ils /iplant/home/<your-user-name>/ag2pi_workshop/
 
     # and then
 
-    ils /iplant/home/<your-user-name>/NEON_Downloads/NEON_HARV_DP1.30003.001_2019
-
+    ils /iplant/home/<your-user-name>/ag2pi_workshop/folder1
+    
   You should be able to see the contents of your directory in the Data Store
 
 **8.** These files are now in your private user space. No one can see them, but if you did want to share them, you can do so by modifying their permissions directly in the Discovery Environment, as shown in `Step 1 <./step1.html>`_, or by using the following commands:
@@ -141,8 +145,8 @@ This example makes your data directory public on the internet as a read-only arc
 
   .. code ::
 
-     ichmod read anonymous /iplant/home/<your-user-name>/NEON_Downloads/
-
+     ichmod read anonymous /iplant/home/<your-user-name>/ag2pi_workshop
+     
 *Downloading with iCommands*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -152,21 +156,21 @@ It is also likely that you're going to download data from the Data Store into yo
 
   .. code ::
 
-     ils /iplant/home/username/NEON_Downloads
+     ils /iplant/home/username/ag2pi_workshop
 
 **10.** Download a file using ``iget``
 
   .. code ::
 
-     iget -KPvf /iplant/home/username/NEON_Downloads/benchmarking.rmd
-
+     iget -KPvf /iplant/home/username/ag2pi_workshop/folder1
+     
   This should download an Rmd file into your local instance (whatever current working directory you're in in terminal)
 
 **11.** Download a directory using ``iget``
 
   .. code ::
 
-     time iget -KPbvrf /iplant/home/username/NEON_Downloads/NEON_HARV_DP1.30003.001_2019/
+     time iget -KPbvrf /iplant/home/username/ag2pi_workshop/folder1
 
   Here we're using the ``time`` flag to tell us how long the download takes
 
@@ -182,28 +186,13 @@ We can use ``wget`` or ``curl`` commands in the terminal to download files this 
 
    .. code ::
 
-      time wget -r -nH --cut-dirs=5 --no-parent -l8 --reject="index.html*" https://data.cyverse.org/dav-anon/iplant/home/username/NEON_Downloads/NEON_HARV_DP1.30003.001_2017/
+      time wget -r -nH --cut-dirs=5 --no-parent -l8 --reject="index.html*" https://data.cyverse.org/dav-anon/iplant/projects/ag2pi_workshop
 
 
   again, we're using the ``time`` function to monitor the download speeds.
 
   We're also using some ``wget`` flags to just get the data and folders back from the Data Store.
 
-
-*Other Services: Downloading with S3*
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Many organizations are hosting data on Amazon Web Services S3, Google Cloud Storage, or Microsoft Azure.
-
-Cloud buckets, like `S3 <https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-linux.html>`_, use HTTPS protocols, just like WebDav.
-
-OpenTopography.org (re)hosts some NEON lidar data, e.g. `NEON D17 Pacific Southwest- California <https://portal.opentopography.org/lidarDataset?opentopoID=OTLAS.092015.32611.1>`_
-
-We can download these using their Point Cloud Bulk Data Download option:
-
-   .. code ::
-
-      aws s3 cp s3://pc-bulk/NEON_D17/ . --recursive --endpoint-url https://opentopography.s3.sdsc.edu --no-sign-request
 
 ----
 
