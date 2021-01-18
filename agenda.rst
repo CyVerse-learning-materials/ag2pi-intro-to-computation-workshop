@@ -60,7 +60,7 @@ As we run out of time for each section, you may need to complete the material se
   * - 0935-1000
     - Other CyVerse Resources
     - Tyson
-    - `CyVerse Resources <./step5.html>`_
+    - 
     -
   * - 1000-1010
     - Break
