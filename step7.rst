@@ -92,9 +92,13 @@ Follow along with `Tuesday's demo <./step2.html>`_ to start the RStudio environm
 
 For your RStudio instance, set the input folder to ``/iplant/home/shared/ag2pi_workshop``
 
-We will be using the shell inside RStudio for these lessons.
+The login screen should look like this:
 
 |R Console|
+
+And we will be using the shell inside RStudio for these lessons.
+
+|R Shell|
 
 ----
 
@@ -226,10 +230,7 @@ which will be constructed in a similar way, but not be exactly identical.
 On the CyVerse app, the filesystem looks like this:
 
 
-.. image:: ../img/filesystem.svg
-   :target: ../img/filesystem.html
-   :alt: The file system is made up of a root directory that contains sub-directories
- titled bin, data, users, and tmp
+|Filesystem|
 
 
  At the top is the **root directory**
@@ -3480,4 +3481,7 @@ Under The Carpentries License:
    <a href="https://github.com/rbartelme/ag2pi_workshop" target="blank">Github Repo Link</a>
 
 .. |R Console| image:: ./img/rstudio.png
-    :width: 750
+    :width: 700
+
+.. |R Shell| image:: ./image/RStudioTerminal.png
+    :width 700

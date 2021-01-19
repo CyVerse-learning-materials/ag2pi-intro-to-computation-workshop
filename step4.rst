@@ -39,7 +39,17 @@ First, we need to initiate a connection to the CyVerse iRODS.
 .. 	#### Comment: Step title should be descriptive (i.e. Cleaning Read data) ###
 
 
-**1.** In the Terminal type in ``iinit``
+**1.** Launch a terminal in a VICE application
+
+	For example `Jupyter Lab <>`_ :
+
+||
+
+	Or `RStudio`_ :
+
+|RStudio Terminal|
+
+**2.** In the Terminal type in ``iinit``
 
    This should echo out a set of information in the terminal:
 
@@ -51,7 +61,7 @@ First, we need to initiate a connection to the CyVerse iRODS.
       Enter the host name (DNS) of the server to connect to:
 
 
-**2.** Enter in the following data for each field:
+**3.** Enter in the following data for each field:
 
   .. code ::
 
@@ -70,7 +80,7 @@ First, we need to initiate a connection to the CyVerse iRODS.
   - irods zone: ``iplant``
   - current iRODS password: ``<your current password>``
 
-**3.** You should now be authenticated to the Data Store.
+**4.** You should now be authenticated to the Data Store.
 
    To test, try typing ``ils``
 
@@ -94,7 +104,7 @@ First, we need to initiate a connection to the CyVerse iRODS.
 **5.** Upload a single file to the Data Store using ``iput``
 
   Create a new file in RStudio and give it a name, e.g. ``test.R``
-  
+
   You need to select the file you want to copy, and the location in the Data Store you want to copy it to.
 
   .. code ::
@@ -108,7 +118,7 @@ The flags ``K``, ``P``, ``v``, and ``f`` are described in the help file.
 **6.** Upload a folder with recursive sub-folders and files
 
    Create a new folder in RStudio, and then create a folder inside of it.
-   
+
    Next, we want to upload an entire directory with many folders and files in it.
 
    .. code ::
@@ -130,7 +140,7 @@ The flags ``K``, ``P``, ``v``, and ``f`` are described in the help file.
     # and then
 
     ils /iplant/home/<your-user-name>/ag2pi_workshop/folder1
-    
+
   You should be able to see the contents of your directory in the Data Store
 
 **8.** These files are now in your private user space. No one can see them, but if you did want to share them, you can do so by modifying their permissions directly in the Discovery Environment, as shown in `Step 1 <./step1.html>`_, or by using the following commands:
@@ -146,7 +156,7 @@ This example makes your data directory public on the internet as a read-only arc
   .. code ::
 
      ichmod read anonymous /iplant/home/<your-user-name>/ag2pi_workshop
-     
+
 *Downloading with iCommands*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -163,7 +173,7 @@ It is also likely that you're going to download data from the Data Store into yo
   .. code ::
 
      iget -KPvf /iplant/home/username/ag2pi_workshop/folder1
-     
+
   This should download an Rmd file into your local instance (whatever current working directory you're in in terminal)
 
 **11.** Download a directory using ``iget``
@@ -248,3 +258,9 @@ We can use ``wget`` or ``curl`` commands in the terminal to download files this 
 
 .. |connect_de| image:: ./img/de/connect_cyverse.svg
     :width: 700
+
+.. |RStudio Terminal| image:: ./img/RStudioTerminal.png
+		:width 700
+
+.. |Jupyter Terminal} image:: ./img/JupyterTerminal.png
+		:width 700

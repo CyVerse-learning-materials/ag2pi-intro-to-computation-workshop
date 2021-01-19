@@ -58,10 +58,10 @@ As we run out of time for each section, you may need to complete the material se
     -
     -
   * - 1010-1100
-    - Hands on with the Data Store
+    - Hands on with RStudio app & the Data Store
     - Ryan
-    - Find the data used in this course
-    - `https://de.cyverse.org <https://de.cyverse.org>`_
+    - Run RStudio and find how to import the course data
+    - `Visual Interactive Computing <./step2.html>`_
   * - 1100-1200
     - Brunch, Early-, Regular-, Late- Lunch Break
     -
@@ -70,8 +70,8 @@ As we run out of time for each section, you may need to complete the material se
   * - 1200-1250
     - Launching RStudio
     - Ryan
-    - Using the Discovery Environment to Run RStudio
-    - `Visual Interactive Computing <./step2.html>`_
+    - (cont.) Running RStudio and importing course data
+    - `https://de.cyverse.org <https://de.cyverse.org>`_
   * - 1250-1300
     - Break
     -
