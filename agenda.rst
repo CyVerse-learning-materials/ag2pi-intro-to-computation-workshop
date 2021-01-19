@@ -61,7 +61,7 @@ As we run out of time for each section, you may need to complete the material se
     - Hands on with the Data Store
     - Ryan
     - Find the data used in this course
-    - `Data Store <https://de.cyverse.org/>`_
+    - `https://de.cyverse.org <https://de.cyverse.org>`_
   * - 1100-1200
     - Brunch, Early-, Regular-, Late- Lunch Break
     -
@@ -71,7 +71,7 @@ As we run out of time for each section, you may need to complete the material se
     - Launching RStudio
     - Ryan
     - Using the Discovery Environment to Run RStudio
-    - `Visual Interactive Computing <./step2.html>`_ 
+    - `Visual Interactive Computing <./step2.html>`_
   * - 1250-1300
     - Break
     -
@@ -171,7 +171,7 @@ As we run out of time for each section, you may need to complete the material se
     - Introduction to R
     - Ryan
     - Navigating & Interacting with RStudio
-    - `Activity <./step8.html>`
+    - `Activity <./step8.html>`_
   * - 0930-1000
     - Data Structures in R
     - Ryan
