@@ -186,7 +186,7 @@ We can use ``wget`` or ``curl`` commands in the terminal to download files this 
 
    .. code ::
 
-      time wget -r -nH --cut-dirs=5 --no-parent -l8 --reject="index.html*" https://data.cyverse.org/dav-anon/iplant/projects/ag2pi_workshop
+      time wget -r -np -R "index.html*" --cut-dirs=3 https://data.cyverse.org/dav-anon/iplant/projects/ag2pi_workshop/
 
 
   again, we're using the ``time`` function to monitor the download speeds.
