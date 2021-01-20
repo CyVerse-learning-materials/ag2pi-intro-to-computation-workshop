@@ -41,11 +41,11 @@ First, we need to initiate a connection to the CyVerse iRODS.
 
 **1.** Launch a terminal in a VICE application
 
-For example `Jupyter Lab <https://de.cyverse.org/de/?type=quick-launch&quick-launch-id=91c72a5d-0ce9-484f-a1f1-feba4cab75a5&app-id=bc93504c-d584-11e9-8413-008cfa5ae621>`_ :
+For example `Jupyter Lab <https://de.cyverse.org/de/?type=quick-launch&quick-launch-id=91c72a5d-0ce9-484f-a1f1-feba4cab75a5&app-id=bc93504c-d584-11e9-8413-008cfa5ae621/>`_ :
 
 |JupyterLabShell|
 
-Or `RStudio <https://de.cyverse.org/de/?type=quick-launch&quick-launch-id=97782f8c-8c6f-4969-8c4e-2dd9d5bf5f96&app-id=a8b21a2c-e6f4-11ea-844a-008cfa5ae621>`_ :
+Or `RStudio <https://de.cyverse.org/de/?type=quick-launch&quick-launch-id=97782f8c-8c6f-4969-8c4e-2dd9d5bf5f96&app-id=a8b21a2c-e6f4-11ea-844a-008cfa5ae621/>`_ :
 
 |RStudioTerminal|
 
