@@ -3483,5 +3483,5 @@ Under The Carpentries License:
 .. |R Console| image:: ./img/rstudio.png
     :width: 700
 
-.. |R Shell| image:: ./image/RStudioTerminal.png
+.. |R Shell| image:: ./img/RStudioTerminal.png
     :width 700

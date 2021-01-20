@@ -43,11 +43,11 @@ First, we need to initiate a connection to the CyVerse iRODS.
 
 	For example `Jupyter Lab <>`_ :
 
-||
+|JupyterLabShell|
 
-	Or `RStudio`_ :
+	Or `RStudio <>`_ :
 
-|RStudio Terminal|
+|RStudioTerminal|
 
 **2.** In the Terminal type in ``iinit``
 
@@ -259,8 +259,8 @@ We can use ``wget`` or ``curl`` commands in the terminal to download files this 
 .. |connect_de| image:: ./img/de/connect_cyverse.svg
     :width: 700
 
-.. |RStudio Terminal| image:: ./img/RStudioTerminal.png
+.. |RStudioTerminal| image:: ./img/RStudioTerminal.png
 		:width 700
 
-.. |Jupyter Terminal} image:: ./img/JupyterTerminal.png
+.. |JupyterLabShell| image:: ./img/JupyterTerminal.png
 		:width 700
