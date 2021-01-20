@@ -303,8 +303,8 @@ Clearing your terminal
 ~~~~~~~~~~~~~~~~~~~~~~
 
  If your screen gets too cluttered, you can clear your terminal using the
- ``clear`` command. You can still access previous commands using <kbd>↑</kbd>
- and <kbd>↓</kbd> to move line-by-line, or by scrolling in your terminal.
+ ``clear`` command. You can still access previous commands using ↑
+ and ↓ to move line-by-line, or by scrolling in your terminal.
 
  Here,
  we can see that our home directory contains only **sub-directories**.
@@ -321,18 +321,17 @@ General syntax of a shell command
 
     $ ls -F /
 
- ``ls`` is the **command**\ , with an **option** ``-F`` and an
- **argument** ``/``.
- We've already encountered options (also called **switches** or **flags**\ ) which
- either start with a single dash (\ ``-``\ ) or two dashes (\ ``--``\ ), and they change the behavior of a command.
- Arguments tell the command what to operate on (e.g. files and directories).
- Sometimes options and arguments are referred to as **parameters**.
- A command can be called with more than one option and more than one argument: but a
- command doesn't always require an argument or an option.
+``ls`` is the **command**, with an **option** ``-F`` and an**argument** ``/``.
+We've already encountered options (also called **switches** or **flags**\ ) which
+either start with a single dash (\ ``-``\ ) or two dashes (\ ``--``\ ), and they change the behavior of a command.
+Arguments tell the command what to operate on (e.g. files and directories).
+Sometimes options and arguments are referred to as **parameters**.
+A command can be called with more than one option and more than one argument: but a
+command doesn't always require an argument or an option.
 
- Each part is separated by spaces: if you omit the space
- between ``ls`` and ``-F`` the shell will look for a command called ``ls-F``\ , which
- doesn't exist. Also, capitalization can be important. For example, ``ls -s`` will display the size of files and directories alongside the names, while ``ls -S`` will sort the files and directories by size, as shown below:
+Each part is separated by spaces: if you omit the space
+between ``ls`` and ``-F`` the shell will look for a command called ``ls-F``\ , which
+doesn't exist. Also, capitalization can be important. For example, ``ls -s`` will display the size of files and directories alongside the names, while ``ls -S`` will sort the files and directories by size, as shown below:
 
 .. code-block::
 
@@ -344,9 +343,9 @@ General syntax of a shell command
     sunspot.txt  animal-counts  pdb        amino-acids.txt  salmon.txt
     planets.txt  elements       morse.txt  animals.txt
 
- Putting all that together, our command above gives us a listing
- of files and directories in the root directory ``/``.
- An example of the output you might get from the above command is given below:
+Putting all that together, our command above gives us a listing
+of files and directories in the root directory ``/``.
+An example of the output you might get from the above command is given below:
 
 .. code-block::
 
@@ -376,10 +375,10 @@ Getting help
 
        $ man ls
 
- **Depending on your environment you might find that only one of these works
- (either ``man`` or ``--help``\ , eg. ``man`` works for macOS and ``--help`` typically works for Git Bash).**
+**Depending on your environment you might find that only one of these works
+(either ``man`` or ``--help``\ , eg. ``man`` works for macOS and ``--help`` typically works for Git Bash).**
 
- We'll describe both ways below.
+We'll describe both ways below.
 
 The ``--help`` option
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -537,17 +536,17 @@ The ``man`` command
 
     $ man ls
 
- This will turn your terminal into a page with a description
- of the ``ls`` command and its options.
+This will turn your terminal into a page with a description
+of the ``ls`` command and its options.
 
- To navigate through the ``man`` pages,
- you may use :raw-html-m2r:`<kbd>↑</kbdand <kbd>↓</kbdto move line-by-line,
- or try <kbd>B</kbdand <kbd>Spacebar</kbdto skip up and down by a full page.
- To search for a character or word in the `man` pages,
- use <kbd>/</kbdfollowed by the character or word you are searching for.
- Sometimes a search will result in multiple hits.  If so, you can move between hits using <kbd>N</kbd(for moving forward) and <kbd>Shift</kbd>`\ +\ :raw-html-m2r:`<kbd>`\ N</kbd(for moving backward).
+To navigate through the ``man`` pages,
+you may use ↑ and ↓ to move line-by-line,
+or try ``B`` and ``Spacebar``Spacebar to skip up and down by a full page.
+To search for a character or word in the `man` pages,
+use ``/`` followed by the character or word you are searching for.
+Sometimes a search will result in multiple hits. If so, you can move between hits using <kbd>N</kbd(for moving forward) and <kbd>Shift</kbd>`\ +\ :raw-html-m2r:`<kbd>`\ N</kbd(for moving backward).
 
- To **quit** the ``man`` pages, press :raw-html-m2r:`<kbd>Q</kbd>`.
+To **quit** the ``man`` pages, press ``Q``.
 
 Manual pages on the web
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -681,12 +680,12 @@ Exploring Other Directories
     $ cd data-shell
     $ cd data
 
- These commands will move us from our home directory into our Desktop directory, then into
- the ``data-shell`` directory, then into the ``data`` directory.  You will notice that ``cd`` doesn't print anything.  This is normal.  Many shell commands will not output anything to the screen when successfully executed.  But if we run ``pwd`` after it, we can see that we are now
- in ``/Users/nelle/Desktop/data-shell/data``.
- If we run ``ls -F`` without arguments now,
- it lists the contents of ``/Users/nelle/Desktop/data-shell/data``\ ,
- because that's where we now are:
+These commands will move us from our home directory into our Desktop directory, then into
+the ``data-shell`` directory, then into the ``data`` directory.  You will notice that ``cd`` doesn't print anything.  This is normal.  Many shell commands will not output anything to the screen when successfully executed.  But if we run ``pwd`` after it, we can see that we are now
+in ``/Users/nelle/Desktop/data-shell/data``.
+If we run ``ls -F`` without arguments now,
+it lists the contents of ``/Users/nelle/Desktop/data-shell/data``\ ,
+because that's where we now are:
 
 .. code-block::
 
@@ -705,9 +704,9 @@ Exploring Other Directories
     amino-acids.txt   elements/     pdb/           salmon.txt
     animals.txt       morse.txt     planets.txt     sunspot.txt
 
- We now know how to go down the directory tree (i.e. how to go into a subdirectory)
- but how do we go up (i.e. how do we leave a directory and go into its parent directory)?
- We might try the following:
+We now know how to go down the directory tree (i.e. how to go into a subdirectory)
+but how do we go up (i.e. how do we leave a directory and go into its parent directory)?
+We might try the following:
 
 .. code-block::
 
@@ -717,26 +716,26 @@ Exploring Other Directories
 
     -bash: cd: data-shell: No such file or directory
 
- But we get an error!  Why is this?
+But we get an error!  Why is this?
 
- With our methods so far,
- ``cd`` can only see sub-directories inside your current directory.  There are
- different ways to see directories above your current location; we'll start
- with the simplest.
+With our methods so far,
+``cd`` can only see sub-directories inside your current directory.  There are
+different ways to see directories above your current location; we'll start
+with the simplest.
 
- There is a shortcut in the shell to move up one directory level
- that looks like this:
+There is a shortcut in the shell to move up one directory level
+that looks like this:
 
 .. code-block::
 
     $ cd ..
 
- ``..`` is a special directory name meaning
- "the directory containing this one",
- or more succinctly,
- the **parent** of the current directory.
- Sure enough,
- if we run ``pwd`` after running ``cd ..``\ , we're back in ``/Users/nelle/Desktop/data-shell``\ :
+``..`` is a special directory name meaning
+"the directory containing this one",
+or more succinctly,
+the **parent** of the current directory.
+Sure enough,
+if we run ``pwd`` after running ``cd ..``\ , we're back in ``/Users/nelle/Desktop/data-shell``\ :
 
 .. code-block::
 
@@ -746,8 +745,8 @@ Exploring Other Directories
 
     /Users/nelle/Desktop/data-shell
 
- The special directory ``..`` doesn't usually show up when we run ``ls``.  If we want
- to display it, we can add the ``-a`` option to ``ls -F``\ :
+The special directory ``..`` doesn't usually show up when we run ``ls``.  If we want
+to display it, we can add the ``-a`` option to ``ls -F``\ :
 
 .. code-block::
 
@@ -758,18 +757,18 @@ Exploring Other Directories
     ./   .bash_profile  data/       north-pacific-gyre/  pizza.cfg  thesis/
     ../  creatures/     molecules/  notes.txt            solar.pdf  writing/
 
- ``-a`` stands for 'show all';
- it forces ``ls`` to show us file and directory names that begin with ``.``\ ,
- such as ``..`` (which, if we're in ``/Users/nelle``\ , refers to the ``/Users`` directory)
- As you can see,
- it also displays another special directory that's just called ``.``\ ,
- which means 'the current working directory'.
- It may seem redundant to have a name for it,
- but we'll see some uses for it soon.
+``-a`` stands for 'show all';
+it forces ``ls`` to show us file and directory names that begin with ``.``\ ,
+such as ``..`` (which, if we're in ``/Users/nelle``\ , refers to the ``/Users`` directory)
+As you can see,
+it also displays another special directory that's just called ``.``\ ,
+which means 'the current working directory'.
+It may seem redundant to have a name for it,
+but we'll see some uses for it soon.
 
- Note that in most command line tools, multiple options can be combined
- with a single ``-`` and no spaces between the options: ``ls -F -a`` is
- equivalent to ``ls -Fa``.
+Note that in most command line tools, multiple options can be combined
+with a single ``-`` and no spaces between the options: ``ls -F -a`` is
+equivalent to ``ls -Fa``.
 
 Other Hidden Files
 ~~~~~~~~~~~~~~~~~~~
@@ -804,7 +803,7 @@ Orthogonality
 
     $ cd
 
- How can you check what happened?  ``pwd`` gives us the answer!
+How can you check what happened?  ``pwd`` gives us the answer!
 
 .. code-block::
 
@@ -814,38 +813,38 @@ Orthogonality
 
     /Users/nelle
 
- It turns out that ``cd`` without an argument will return you to your home directory,
- which is great if you've gotten lost in your own filesystem.
+It turns out that ``cd`` without an argument will return you to your home directory,
+which is great if you've gotten lost in your own filesystem.
 
- Let's try returning to the ``data`` directory from before.  Last time, we used
- three commands, but we can actually string together the list of directories
- to move to ``data`` in one step:
+Let's try returning to the ``data`` directory from before.  Last time, we used
+three commands, but we can actually string together the list of directories
+to move to ``data`` in one step:
 
 .. code-block::
 
     $ cd Desktop/data-shell/data
 
- Check that we've moved to the right place by running ``pwd`` and ``ls -F``
+Check that we've moved to the right place by running ``pwd`` and ``ls -F``
 
- If we want to move up one level from the data directory, we could use ``cd ..``.  But
- there is another way to move to any directory, regardless of your
- current location.
+If we want to move up one level from the data directory, we could use ``cd ..``.  But
+there is another way to move to any directory, regardless of your
+current location.
 
- So far, when specifying directory names, or even a directory path (as above),
- we have been using **relative paths**.  When you use a relative path with a command
- like ``ls`` or ``cd``\ , it tries to find that location  from where we are,
- rather than from the root of the file system.
+So far, when specifying directory names, or even a directory path (as above),
+we have been using **relative paths**.  When you use a relative path with a command
+like ``ls`` or ``cd``\ , it tries to find that location  from where we are,
+rather than from the root of the file system.
 
- However, it is possible to specify the **absolute path** to a directory by
- including its entire path from the root directory, which is indicated by a
- leading slash.  The leading ``/`` tells the computer to follow the path from
- the root of the file system, so it always refers to exactly one directory,
- no matter where we are when we run the command.
+However, it is possible to specify the **absolute path** to a directory by
+including its entire path from the root directory, which is indicated by a
+leading slash.  The leading ``/`` tells the computer to follow the path from
+the root of the file system, so it always refers to exactly one directory,
+no matter where we are when we run the command.
 
- This allows us to move to our ``data-shell`` directory from anywhere on
- the filesystem (including from inside ``data``\ ).  To find the absolute path
- we're looking for, we can use ``pwd`` and then extract the piece we need
- to move to ``data-shell``.
+This allows us to move to our ``data-shell`` directory from anywhere on
+the filesystem (including from inside ``data``\ ).  To find the absolute path
+we're looking for, we can use ``pwd`` and then extract the piece we need
+to move to ``data-shell``.
 
 .. code-block::
 
@@ -859,7 +858,7 @@ Orthogonality
 
     $ cd /Users/nelle/Desktop/data-shell
 
- Run ``pwd`` and ``ls -F`` to ensure that we're in the directory we expect.
+Run ``pwd`` and ``ls -F`` to ensure that we're in the directory we expect.
 
 Two More Shortcuts
 ~~~~~~~~~~~~~~~~~~
@@ -1366,22 +1365,22 @@ Moving files and directories
 
     cd ~/Desktop/data-shell/
 
- In our ``thesis`` directory we have a file ``draft.txt``
- which isn't a particularly informative name,
- so let's change the file's name using ``mv``\ ,
- which is short for 'move':
+In our ``thesis`` directory we have a file ``draft.txt``
+which isn't a particularly informative name,
+so let's change the file's name using ``mv``\ ,
+which is short for 'move':
 
 .. code-block::
 
     $ mv thesis/draft.txt thesis/quotes.txt
 
- The first argument tells ``mv`` what we're 'moving',
- while the second is where it's to go.
- In this case,
- we're moving ``thesis/draft.txt`` to ``thesis/quotes.txt``\ ,
- which has the same effect as renaming the file.
- Sure enough,
- ``ls`` shows us that ``thesis`` now contains one file called ``quotes.txt``\ :
+The first argument tells ``mv`` what we're 'moving',
+while the second is where it's to go.
+In this case,
+we're moving ``thesis/draft.txt`` to ``thesis/quotes.txt``\ ,
+which has the same effect as renaming the file.
+Sure enough,
+``ls`` shows us that ``thesis`` now contains one file called ``quotes.txt``\ :
 
 .. code-block::
 
@@ -1391,36 +1390,34 @@ Moving files and directories
 
     quotes.txt
 
- One has to be careful when specifying the target file name, since ``mv`` will
- silently overwrite any existing file with the same name, which could
- lead to data loss. An additional option, ``mv -i`` (or ``mv --interactive``\ ),
- can be used to make ``mv`` ask you for confirmation before overwriting.
+One has to be careful when specifying the target file name, since ``mv`` will
+silently overwrite any existing file with the same name, which could
+lead to data loss. An additional option, ``mv -i`` (or ``mv --interactive``\ ),
+can be used to make ``mv`` ask you for confirmation before overwriting.
 
- Note that ``mv`` also works on directories.
+Note that ``mv`` also works on directories.
 
- Let's move ``quotes.txt`` into the current working directory.
- We use ``mv`` once again,
- but this time we'll use just the name of a directory as the second argument
- to tell ``mv`` that we want to keep the filename,
- but put the file somewhere new.
- (This is why the command is called 'move'.)
- In this case,
- the directory name we use is the special directory name ``.`` that we mentioned earlier.
+Let's move ``quotes.txt`` into the current working directory.
+We use ``mv`` once again,
+but this time we'll use just the name of a directory as the second argument
+to tell ``mv`` that we want to keep the filename,
+but put the file somewhere new.
+(This is why the command is called 'move'.)
+In this case, the directory name we use is the special directory name ``.`` that we mentioned earlier.
 
 .. code-block::
 
     $ mv thesis/quotes.txt .
 
- The effect is to move the file from the directory it was in to the current working directory.
- ``ls`` now shows us that ``thesis`` is empty:
+The effect is to move the file from the directory it was in to the current working directory.
+``ls`` now shows us that ``thesis`` is empty:
 
 .. code-block::
 
     $ ls thesis
 
- Further,
- ``ls`` with a filename or directory name as an argument only lists that file or directory.
- We can use this to see that ``quotes.txt`` is still in our current directory:
+Further, ``ls`` with a filename or directory name as an argument only lists that file or directory.
+We can use this to see that ``quotes.txt`` is still in our current directory:
 
 .. code-block::
 
@@ -1611,7 +1608,7 @@ The Unix command we'll use for this is ``rm`` (short for 'remove'):
 
     $ rm quotes.txt
 
- We can confirm the file has gone using ``ls``\ :
+We can confirm the file has gone using ``ls``\ :
 
 .. code-block::
 
@@ -1913,9 +1910,9 @@ Organizing Directories and Files
 
     analyzed/  fructose.dat    raw/   sucrose.dat
 
- The ``fructose.dat`` and ``sucrose.dat`` files contain output from her data
- analysis. What command(s) covered in this lesson does she need to run so that the commands below will
- produce the output shown?
+The ``fructose.dat`` and ``sucrose.dat`` files contain output from her data
+analysis. What command(s) covered in this lesson does she need to run so that the commands below will
+produce the output shown?
 
 .. code-block::
 
@@ -2147,8 +2144,8 @@ it some data interactively. From the outside, though, all we see is it
 sitting there: the command doesn't appear to do anything.
 
 If you make this kind of mistake, you can escape out of this state by holding down
-the control key <kbd>Ctrl</kbd> and typing the letter <kbd>C</kbd> once and letting go of the <kbd>Ctrl</kbd> key.
-<kbd>Ctrl + C</kbd>
+the control key ``Ctrl`` and typing the letter ``C``once and letting go of the <kbd>Ctrl</kbd> key.
+``Ctrl + C``
 
 Which of these files contains the fewest lines?
 It's an easy question to answer when there are only six files,
@@ -2462,7 +2459,7 @@ lines. Which command listed below would work?
 
 .. raw:: html
     <details>
-    <summary<a>Solution</a></summary>
+    <summary><a>Solution</a></summary>
 
  Option 4 is the solution.
  The pipe character ``|`` is used to connect the output from one command to
