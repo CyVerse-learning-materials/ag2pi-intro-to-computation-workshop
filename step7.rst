@@ -3484,4 +3484,4 @@ Under The Carpentries License:
     :width: 700
 
 .. |R Shell| image:: ./img/RStudioTerminal.png
-    :width 700
+    :width: 700

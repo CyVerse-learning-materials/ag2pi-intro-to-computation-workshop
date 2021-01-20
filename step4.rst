@@ -260,7 +260,7 @@ We can use ``wget`` or ``curl`` commands in the terminal to download files this 
     :width: 700
 
 .. |RStudioTerminal| image:: ./img/RStudioTerminal.png
-		:width 700
+		:width: 700
 
 .. |JupyterLabShell| image:: ./img/JupyterTerminal.png
-		:width 700
+		:width: 700
