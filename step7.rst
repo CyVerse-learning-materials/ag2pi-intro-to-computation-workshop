@@ -630,25 +630,25 @@ Exploring Other Directories
 
     data-shell/
 
- Your output should be a list of all the files and sub-directories in your
- Desktop directory, including the ``data-shell`` directory you downloaded at
- the `setup for this lesson <{{ page.root }}{% link setup.md %}>`_.
- On many systems,
- the command line Desktop directory is the same as your GUI Desktop.
- Take a look at your Desktop to confirm that your output is accurate.
+Your output should be a list of all the files and sub-directories in your
+Desktop directory, including the ``data-shell`` directory you downloaded at
+the `setup for this lesson <{{ page.root }}{% link setup.md %}>`_.
+On many systems,
+the command line Desktop directory is the same as your GUI Desktop.
+Take a look at your Desktop to confirm that your output is accurate.
 
- As you may now see, using a bash shell is strongly dependent on the idea that
- your files are organized in a hierarchical file system.
- Organizing things hierarchically in this way helps us keep track of our work:
- it's possible to put hundreds of files in our home directory,
- just as it's possible to pile hundreds of printed papers on our desk,
- but it's a self-defeating strategy.
+As you may now see, using a bash shell is strongly dependent on the idea that
+your files are organized in a hierarchical file system.
+Organizing things hierarchically in this way helps us keep track of our work:
+it's possible to put hundreds of files in our home directory,
+just as it's possible to pile hundreds of printed papers on our desk,
+but it's a self-defeating strategy.
 
- Now that we know the ``data-shell`` directory is located in our Desktop directory, we
- can do two things.
+Now that we know the ``data-shell`` directory is located in our Desktop directory, we
+can do two things.
 
- First, we can look at its contents, using the same strategy as before, passing
- a directory name to ``ls``\ :
+First, we can look at its contents, using the same strategy as before, passing
+a directory name to ``ls``\ :
 
 .. code-block::
 
@@ -659,20 +659,20 @@ Exploring Other Directories
     creatures/          molecules/          notes.txt           solar.pdf
     data/               north-pacific-gyre/ pizza.cfg           writing/
 
- Second, we can actually change our location to a different directory, so
- we are no longer located in
- our home directory.
+Second, we can actually change our location to a different directory, so
+we are no longer located in
+our home directory.
 
- The command to change locations is ``cd`` followed by a
- directory name to change our working directory.
- ``cd`` stands for 'change directory',
- which is a bit misleading:
- the command doesn't change the directory,
- it changes the shell's idea of what directory we are in.
- The ``cd`` command is akin to double clicking a folder in a graphical interface to get into a folder.
+The command to change locations is ``cd`` followed by a
+directory name to change our working directory.
+``cd`` stands for 'change directory',
+which is a bit misleading:
+the command doesn't change the directory,
+it changes the shell's idea of what directory we are in.
+The ``cd`` command is akin to double clicking a folder in a graphical interface to get into a folder.
 
- Let's say we want to move to the ``data`` directory we saw above.  We can
- use the following series of commands to get there:
+Let's say we want to move to the ``data`` directory we saw above.  We can
+use the following series of commands to get there:
 
 .. code-block::
 
