@@ -23,8 +23,7 @@ Most importantly for biologists, there is a deep amount of community support for
 **Optional Local Setup**
 ------------------------
 
-**Please note:** we will be running our code inside the CyVerse DE VICE App here: |rstudio-verse-3.6.3|
-
+**Please note:** we will be running our code inside the CyVerse DE VICE App here: |rstudio-verse|_
 *These local installation instructions are for you to explore on your own time.*
 
 1. You can download R & RStudio for your local:
@@ -744,5 +743,6 @@ Under The Carpentries License:
 
    <a href="https://github.com/CyVerse-learning-materials/foss-2019/tree/master/software_essentials/R_Studio.rst" target="blank">Github Repo Link</a>
 
-.. |rstudio-verse-3.6.3| image:: https://de.cyverse.org/Powered-By-CyVerse-blue.svg
-.. _rstudio-verse-3.6.3: https://de.cyverse.org/de/?type=quick-launch&quick-launch-id=97782f8c-8c6f-4969-8c4e-2dd9d5bf5f96&app-id=a8b21a2c-e6f4-11ea-844a-008cfa5ae621
+.. |rstudio-verse| image:: https://de.cyverse.org/Powered-By-CyVerse-blue.svg
+.. _rstudio-verse: https://de.cyverse.org/de/?type=quick-launch&quick-launch-id=97782f8c-8c6f-4969-8c4e-2dd9d5bf5f96&app-id=a8b21a2c-e6f4-11ea-844a-008cfa5ae621
+
