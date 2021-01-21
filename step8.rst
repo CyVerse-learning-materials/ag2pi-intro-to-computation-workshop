@@ -503,7 +503,8 @@ Today we’ll be learning about the ggplot2 package, because it is the most effe
 ggplot2 is built on the grammar of graphics, the idea that any plot can be expressed from the same set of components: a data set, a coordinate system, and a set of geoms – the visual representation of data points.
 The key to understanding ggplot2 is thinking about a figure in layers. This idea may be familiar to you if you have used image editing programs like Photoshop, Illustrator, or Inkscape.
 
-Let’s start off with an example. This will be plotting *Sorghum bicolor* phenotype data.
+The data used in this lesson were collected as part of the `TERRA REF <https://www.terraref.org/>`_ Project.
+Let’s start off with an example. We will plot some *Sorghum bicolor* phenotype data.
 We'll look at how Growing Degree Days (gdd) compares to canopy height:
 
 .. code-block:: R
@@ -511,20 +512,26 @@ We'll look at how Growing Degree Days (gdd) compares to canopy height:
   #load the library
   library("ggplot2")
   #load the dataset
-  mac_season6 <- read.table("~/ag-data/season6_cleaned.txt", sep = "\t",
+  mac_season6 <- read.table("~/input/ag2pi_workshop/ag-data/season6_cleaned.txt", sep = "\t",
     header = TRUE, stringsAsFactors = FALSE)
   #plot the data
   ggplot(data = mac_season6, mapping = aes(x = gdd, y = canopy_height)) +
     geom_point()
 
-However, the ggplot function alone isn't enough to draw a figure:
+
+
+|raw ggd canopy_height|
+
+
+**Note:** the ``ggplot()`` function alone isn't enough to draw a figure.
 
 .. code-block:: R
 
   ggplot(data = mac_season6, mapping = aes(x = gdd, y = canopy_height))
 
-We need to explcitly tell ggplot hwo to visualize the data with a geom layer.
-In the above example we used geom_point, which tells ggplot we want to generate a scatter plot.
+We need to explicitly tell ``ggplot()`` how to visualize the data with a "geom" layer.
+
+In the first example we used ``geom_point()``\ , which tells ``ggplot()`` we want to generate a scatter plot.
 
 **Exercise:**
 
@@ -572,6 +579,8 @@ Now that we have our data in an even smaller subset, let's make a nice looking p
   ggplot(data = s6_figure_data, mapping = aes(x=day_of_year, y=canopy_height, by=cultivar)) +
     geom_point(mapping = aes(color = cultivar), show.legend = TRUE)
 
+|subset scatterplot|
+
 But wait...that looks really sparse with the scatterplot. Let's combine a few different geoms to make something nicer.
 
 .. code-block:: R
@@ -579,6 +588,8 @@ But wait...that looks really sparse with the scatterplot. Let's combine a few di
   ggplot(data = s6_figure_data, mapping = aes(x=day_of_year, y=canopy_height, by=cultivar)) +
     geom_line(mapping = aes(color = cultivar), show.legend = TRUE) +
     geom_point(mapping = aes(color = cultivar))
+
+|subset lineplot|
 
 Now we can report on why PI585961 is so strange compared to the other two cultivars which follow normal growth curves.
 
@@ -662,18 +673,86 @@ so let's convert this summary to a data farme and export the data to discuss the
   # convert from tibble to a data frame
   height_df_summary <- as.data.frame(height_summary)
   # write out dataframe as a csv file, row.names = FALSE gets rid of row numbers
-  write.csv(x = height_df_summary, file = "~/ag-data/height_summary.csv", row.names = FALSE)
+  write.csv(x = height_df_summary, file = "~/input/ag2pi_workshop/ag-data/height_summary.csv", row.names = FALSE)
 
 
-Note: this dataset doesn't actually contain a real error.
-This is from an ongoing project, and there are other variables that we did not visualize today.
+**Note:** this dataset doesn't actually contain a real error.
+There are other variables that we did not visualize today.
 However, this is the power of visualizing data, and the R language gives access to statistical functions for outlier data detection.
+
+Let's write the plot out that we made before and this is what we want for Figure 1 of our paper.
+
+.. code-block:: R
+
+  #replot the data and store it as a variable
+  figure1 <- ggplot(data = s6_figure_data, mapping = aes(x=day_of_year, y=canopy_height, by=cultivar)) +
+              geom_line(mapping = aes(color = cultivar), show.legend = TRUE) +
+              geom_point(mapping = aes(color = cultivar))
+
+  #save the plot as a png file (can also specify PDF)
+  ggsave(filename = "~/input/ag2pi_workshop/ag-data/figure1.png", plot = figure1)
+
+And now we have our plot for our manuscript saved in the ``ag-data`` folder.
+
+----
+
+Revisiting iRODS
+~~~~~~~~~~~~~~~~
+
+Lets open the terminal again to write our files to the CyVerse Data Store, in your own directory.
+
+Configure iRODS with ``iinit``:
+
+.. code-block::
+
+  iinit
+
+The following are the inputs for the iinit fields:
+
+.. code-block::
+
+  Enter the host name (DNS) of the server to connect to: data.cyverse.org
+  Enter the port number: 1247
+  Enter your irods user name: your_cyverse_user_name
+  Enter your irods zone: iplant
+  Those values will be added to your environment file (for use by
+  other iCommands) if the login succeeds.
+
+  Enter your current iRODS password: your_cyverse_password
+
+Now that we've configured iRODS let's see where we are with ``ils``
+
+.. code-block::
+  ipwd
+
+  /iplant/home/your_cyverse_user_name
+
+If for whatever reason you're not in your user directory ``icd`` without an argument will get you back there.
+
+Now we can create a directory, let's call it ``ag2pi_checkout``
+
+.. code-block::
+  imkdir ag2pi_checkout
+
+We can "put" our file from this analysis onto the datastore by doing the following:
+
+..code-block::
+  $ cd ~/input/ag2pi_workshop/ag-data/
+  $ iput -KPvf height_summary.csv ag2pi_checkout
+  $ iput -KPvf figure1.png ag2pi_checkout
+
 
 
 ----
 
 Where to from here?
--------------------
+~~~~~~~~~~~~~~~~~~~
+
+**R specific tips:**
+
+* Look into logic and loops within the `Software Carpentries Control Flow <a href="https://swcarpentry.github.io/r-novice-gapminder/07-control-flow/">`_
+* Generally the `R for Reproducible Scientific Analyses <a href="https://swcarpentry.github.io/r-novice-gapminder/">`_ is a good resource.
+* If you want to try using shell functions inside of R Scripts, look up the functions: ``system()`` and ``system2()``
 
 Some good resources for help coding are:
 
@@ -735,10 +814,20 @@ Under The Carpentries License:
 
    <a href="http://swcarpentry.github.io/r-novice-gapminder/LICENSE.html" target="blank">R for Reproducible Scientific Analysis: Licenses</a>
 
+.. |raw ggd canopy_height| image:: ./img/gdd_vs_canopy_height.png
+    :width: 550
 
 .. |R Console| image:: ./img/rstudio.png
-  :width: 750
+    :width: 750
 
+.. |plot day of year colorized| image:: ./img/rainbow_gdd_doy.png
+    :width: 550
+
+.. || image:: ./img/s6_subset_plot.png
+    :width: 550
+
+.. |subset lineplot| image:: ./img/subset_lines.png
+    :width: 550
 
 .. |Github Repo Link|  raw:: html
 

@@ -2357,8 +2357,8 @@ corresponds to the file ``animals-subset.txt``\ :
 
 .. code-block::
 
-   $ head -n 3 animals.txt animals-subset.txt
-   $ tail -n 2 animals.txt >animals-subset.txt
+   $ head -n 3 animals.txt > animals-subset.txt
+   $ tail -n 2 animals.txt > animals-subset.txt
 
 
 #. The first three lines of ``animals.txt``
@@ -2501,7 +2501,7 @@ What text passes through each of the pipes and the final redirect in the pipelin
 
 .. code-block::
 
-   $ cat animals.txt | head -n 5 | tail -n 3 | sort -r final.txt
+   $ cat animals.txt | head -n 5 | tail -n 3 | sort -r > final.txt
 
 Hint: build the pipeline up one command at a time to test your understanding
 

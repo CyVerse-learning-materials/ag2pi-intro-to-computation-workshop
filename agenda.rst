@@ -169,12 +169,12 @@ As we run out of time for each section, you may need to complete the material se
     - This website
   * - 0910-09:30
     - Introduction to R
-    - Ryan
+    - Tyson
     - Navigating & Interacting with RStudio
     - `Activity <./step8.html>`_
   * - 0930-1000
     - Data Structures in R
-    - Ryan
+    - Tyson
     - R Data Types
     - `Activity <./step8.html#data-structures>`_
   * - 1000-1010
