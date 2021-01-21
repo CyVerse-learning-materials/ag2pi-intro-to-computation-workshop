@@ -2147,7 +2147,7 @@ Our first step toward a solution is to run the command:
 
 .. code-block::
 
-   $ wc -l *.pdb lengths.txt
+   $ wc -l *.pdb > lengths.txt
 
 The greater than symbol, ``>``\ , tells the shell to **redirect** the command's output
 to a file instead of printing it to the screen. (This is why there is no screen output:
@@ -2274,7 +2274,7 @@ we can run another command called ``head`` to get the first few lines in ``sorte
 
 .. code-block::
 
-   $ sort -n lengths.txt sorted-lengths.txt
+   $ sort -n lengths.txt > sorted-lengths.txt
    $ head -n 1 sorted-lengths.txt
 
 .. code-block::
@@ -2296,7 +2296,7 @@ to the same file. For example:
 
 .. code-block::
 
-   $ sort -n lengths.txt lengths.txt
+   $ sort -n lengths.txt > lengths.txt
 
 Doing something like this may give you
 incorrect results and/or delete
@@ -2321,13 +2321,13 @@ Now test the commands below to reveal the difference between the two operators:
 
 .. code-block::
 
-   $ echo hello testfile01.txt
+   $ echo hello > testfile01.txt
 
 and:
 
 .. code-block::
 
-   $ echo hello > testfile02.txt
+   $ echo hello >> testfile02.txt
 
 Hint: Try executing each command twice in a row and then examining the output files.
 
