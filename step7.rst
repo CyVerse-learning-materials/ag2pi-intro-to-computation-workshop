@@ -1638,7 +1638,7 @@ Why would we want this protection when using ``rm``\ ?
 
     $ rm: remove regular file 'thesis_backup/quotations.txt'? y
 
-The ``-i`` option will prompt before (every) removal (use :raw-html-m2r:`<kbd>`\ Y</kbdto confirm deletion or :raw-html-m2r:`<kbd>`\ N</kbdto keep the file).
+The ``-i`` option will prompt before (every) removal (use ``Y`` to confirm deletion or ``N`` to keep the file).
 The Unix shell doesn't have a trash bin, so all the files removed will disappear forever.
 By using the ``-i`` option, we have the chance to check that we are deleting only the files that we want to remove.
 
@@ -2507,7 +2507,7 @@ Hint: build the pipeline up one command at a time to test your understanding
 
 .. raw:: html
      <details>
-     <summary><a>Soltuion</a></summary>
+     <summary><a>Solution</a></summary>
 
 The ``head`` command extracts the first 5 lines from ``animals.txt``.
 Then, the last 3 lines are extracted from the previous 5 by using the ``tail`` command.
