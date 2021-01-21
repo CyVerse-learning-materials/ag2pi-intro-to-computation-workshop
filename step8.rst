@@ -10,30 +10,31 @@
 **Introduction to R & RStudio**
 ===============================
 
-**Why Learn R? RStudio? What's that?**
---------------------------------------
+**Why Learn R? What is RStudio? 
+-------------------------------
 
-R is a statistical programming language with many data science features.
+|R|_ is a statistical programming language with many data science features.
+
 Often, if there is a new statistical method, it is published as a tool for R users.
-Learning R, or any programming language, can help you if you decide to learn more languages in the future.
 
-Most importantly for biologists, there is a deep amount of community support for scientific applications.
+Learning R can help you if you decide to learn more languages in the future.
+
+Most importantly for biologists, there is community support for scientific applications.
 
 
 **Optional Local Setup**
 ------------------------
 
-**Please note:** we will be running our code inside the CyVerse DE VICE App here: |rstudio-verse-3.6.3|
-
+**Please note:** we will be running our code inside the CyVerse DE VICE App again: |rstudio-verse|_
 *These local installation instructions are for you to explore on your own time.*
 
 1. You can download R & RStudio for your local:
 
-   - `Download R <https://cran.r-project.org/>`_
+   - Download |R|_
 
-   - `Download R Studio <https://www.rstudio.com/products/rstudio/download/#download>`_
-
-2. Move to the Applications folder.
+   - Download |R Studio|_ 
+   
+2. Follow installation instructions for your operating system.
 
 3. Open RStudio.
 
@@ -46,7 +47,7 @@ Go to Session -> Set Working Directory to set where you will pull data files fro
 **Introduction**
 ----------------
 
-We will learn how to:
+You will learn how to:
 - navigate & interact with R Studio
 	- UI of R Studio
 	- how to use "help"
@@ -833,5 +834,14 @@ Under The Carpentries License:
 
    <a href="https://github.com/CyVerse-learning-materials/foss-2019/tree/master/software_essentials/R_Studio.rst" target="blank">Github Repo Link</a>
 
-.. |rstudio-verse-3.6.3| image:: https://de.cyverse.org/Powered-By-CyVerse-blue.svg
-.. _rstudio-verse-3.6.3: https://de.cyverse.org/de/?type=quick-launch&quick-launch-id=97782f8c-8c6f-4969-8c4e-2dd9d5bf5f96&app-id=a8b21a2c-e6f4-11ea-844a-008cfa5ae621
+.. |R| raw:: html
+
+   <a href="https://cran.r-project.org/" target="blank">R</a>
+  
+.. |RStudio| raw:: html
+
+   <a href="https://www.rstudio.com/products/rstudio/download/#download" target="blank>RStudio</a>
+
+.. |rstudio-verse| image:: https://de.cyverse.org/Powered-By-CyVerse-blue.svg
+.. _rstudio-verse: https://de.cyverse.org/de/?type=quick-launch&quick-launch-id=97782f8c-8c6f-4969-8c4e-2dd9d5bf5f96&app-id=a8b21a2c-e6f4-11ea-844a-008cfa5ae621
+
