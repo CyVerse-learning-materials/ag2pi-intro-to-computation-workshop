@@ -124,8 +124,7 @@ This command will list the contents of the current directory:
 
 .. code-block::
 
-   Desktop     Downloads   Movies      Pictures
-   Documents   Library     Music       Public
+   input  kitematic
 
 Command not found
 ~~~~~~~~~~~~~~~~~~
@@ -141,7 +140,7 @@ will print an error message such as:
 
    ks: command not found
 
- This might happen if the command was mis-typed or if the program corresponding to that command is not installed.
+This might happen if the command was mis-typed or if the program corresponding to that command is not installed.
 
 ----
 
@@ -204,10 +203,10 @@ a command is important. ``pwd`` shows you where you are:
 
 .. code-block::
 
-    /Users/JupyterLab/
+    /home/rstudio
 
  Here,
- the computer's response is ``/Users/JupyterLab``\ ,
+ the computer's response is ``/home/rstudio``\ ,
  which is the application's **home directory**\ :
 
 Home Directory Variation
@@ -227,29 +226,29 @@ sake of this example, we'll be illustrating the filesystem inside our CyVerse ap
 After this illustration, you'll be learning commands to explore your own filesystem,
 which will be constructed in a similar way, but not be exactly identical.
 
-On the CyVerse app, the filesystem looks like this:
+On the CyVerse app, the filesystem is quite complex.
 
+An example filesystem diagram might look like this:
 
-|Filesystem|
+|Example Filesystem|
 
+At the top is the **root directory**
+that holds everything else.
+We refer to it using a slash character, ``/``\ , on its own;
+this is the leading slash in ``/home/rstudio``.
 
- At the top is the **root directory**
- that holds everything else.
- We refer to it using a slash character, ``/``\ , on its own;
- this is the leading slash in ``/Users/JupyterLab``.
+Inside that directory are several other directories:
+``bin`` (which is where some built-in programs are stored),
+``data`` (for miscellaneous data files),
+``Users`` (where users' personal directories are located),
+``tmp`` (for temporary files that don't need to be stored long-term),
+and so on.
 
- Inside that directory are several other directories:
- ``bin`` (which is where some built-in programs are stored),
- ``data`` (for miscellaneous data files),
- ``Users`` (where users' personal directories are located),
- ``tmp`` (for temporary files that don't need to be stored long-term),
- and so on.
-
- We know that our current working directory ``/Users/JupyterLab`` is stored inside ``/Users``
- because ``/Users`` is the first part of its name.
- Similarly,
- we know that ``/Users`` is stored inside the root directory ``/``
- because its name begins with ``/``.
+We know that our current working directory ``/home/rstudio`` is stored inside ``/home``
+because ``/home`` is the first part of its name.
+Similarly,
+we know that ``/home`` is stored inside the root directory ``/``
+because its name begins with ``/``.
 
 Slashes
 ~~~~~~~
@@ -268,11 +267,10 @@ own filesystem.  We can see what's in our home directory by running ``ls``\ :
 
 .. code-block::
 
-    Applications Documents    Library      Music        Public
-    Desktop      Downloads    Movies       Pictures
+    /home/rstudio
 
- (Again, your results may be slightly different depending on your operating
- system and how you have customized your filesystem.)
+(Again, your results may be slightly different running these commands on a different computer,
+depending on your operating system and how you have customized your filesystem.)
 
  ``ls`` prints the names of the files and directories in the current directory.
  We can make its output more comprehensible by using the ``-F`` **option**
@@ -296,8 +294,7 @@ own filesystem.  We can see what's in our home directory by running ``ls``\ :
 
   .. code-block::
 
-     Applications/ Documents/    Library/      Music/        Public/
-     Desktop/      Downloads/    Movies/       Pictures/
+     input/  kitematic/
 
 Clearing your terminal
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -321,7 +318,7 @@ General syntax of a shell command
 
     $ ls -F /
 
-``ls`` is the **command**, with an **option** ``-F`` and an**argument** ``/``.
+``ls`` is the **command**\, with an **option** ``-F`` and an **argument** ``/``.
 We've already encountered options (also called **switches** or **flags**\ ) which
 either start with a single dash (\ ``-``\ ) or two dashes (\ ``--``\ ), and they change the behavior of a command.
 Arguments tell the command what to operate on (e.g. files and directories).
@@ -335,17 +332,17 @@ doesn't exist. Also, capitalization can be important. For example, ``ls -s`` wil
 
 .. code-block::
 
-    $ ls -s Desktop/data-shell/data
-    total 116
-     4 amino-acids.txt   4 animals.txt   4 morse.txt  12 planets.txt  76 sunspot.txt
-     4 animal-counts     4 elements      4 pdb         4 salmon.txt
-    $ ls -S Desktop/data-shell/data
-    sunspot.txt  animal-counts  pdb        amino-acids.txt  salmon.txt
-    planets.txt  elements       morse.txt  animals.txt
+    $ ls -s input/ag2pi_workshop/data
+    total 124
+    4 amino-acids.txt   4 animals.txt    4 elements       4 morse.txt  12 planets.txt  76 sunspot.txt
+    0 animal-counts     4 basilisk.dat   4 minotaur.dat   4 pdb         4 salmon.txt    4 unicorn.dat
+    $ ls -S input/ag2pi_workshop/data
+    sunspot.txt  elements  basilisk.dat  minotaur.dat  amino-acids.txt  salmon.txt
+    planets.txt  pdb       unicorn.dat   morse.txt     animals.txt      animal-counts
 
 Putting all that together, our command above gives us a listing
 of files and directories in the root directory ``/``.
-An example of the output you might get from the above command is given below:
+An example of the output you might get from the RStudio app on CyVerse with the above command is given below:
 
 .. code-block::
 
@@ -353,9 +350,10 @@ An example of the output you might get from the above command is given below:
 
 .. code-block::
 
-    Applications/         System/
-    Library/              Users/
-    Network/              Volumes/
+    bin/   home/                                       lib32/    mnt/             root/  sys/
+    boot/  init*                                       lib64/    nginx.conf.tmpl  run/   tmp/
+    dev/   irods-icommands-4.1.10-ubuntu14-x86_64.deb  libexec/  opt/             sbin/  usr/
+    etc/   lib/                                        media/    proc/            srv/   var/
 
 Getting help
 ^^^^^^^^^^^^
@@ -616,25 +614,23 @@ Exploring Other Directories
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
  Not only can we use ``ls`` on the current working directory, but we can use it to list the contents of a different directory.  Let's take a
- look at our ``Desktop`` directory by running ``ls -F Desktop``\ ,
+ look at our ``ag2pi_workshop`` directory by running ``ls -F input/ag2pi_workshop``\ ,
  i.e.,
- the command ``ls`` with the ``-F`` **option** and the **argument**  ``Desktop``.
- The argument ``Desktop`` tells ``ls`` that
+ the command ``ls`` with the ``-F`` **option** and the **argument**  ``input/ag2pi_workshop``.
+ The argument ``input/ag2pi_workshop`` tells ``ls`` that
  we want a listing of something other than our current working directory:
 
 .. code-block::
 
-    $ ls -F Desktop
+    $ ls -F input/ag2pi_workshop
 
 .. code-block::
 
-    data-shell/
+    ag-data/  creatures/  data/  north-pacific-gyre/  notes.txt  pizza.cfg  solar.pdf  writing/
 
-Your output should be a list of all the files and sub-directories in your
-Desktop directory, including the ``data-shell`` directory you downloaded at
-the `setup for this lesson <{{ page.root }}{% link setup.md %}>`_.
-On many systems,
-the command line Desktop directory is the same as your GUI Desktop.
+Your output should be a list of all the files and sub-directories in the
+ag2pi_workshop directory.
+On many systems, the command line Desktop directory is the same as your GUI Desktop.
 Take a look at your Desktop to confirm that your output is accurate.
 
 As you may now see, using a bash shell is strongly dependent on the idea that
@@ -644,7 +640,7 @@ it's possible to put hundreds of files in our home directory,
 just as it's possible to pile hundreds of printed papers on our desk,
 but it's a self-defeating strategy.
 
-Now that we know the ``data-shell`` directory is located in our Desktop directory, we
+Now that we know the ``ag2pi_workshop`` directory is located in our ``input`` directory, we
 can do two things.
 
 First, we can look at its contents, using the same strategy as before, passing
@@ -652,12 +648,11 @@ a directory name to ``ls``\ :
 
 .. code-block::
 
-    $ ls -F Desktop/data-shell
+    $ ls -F input/ag2pi_workshop
 
 .. code-block::
 
-    creatures/          molecules/          notes.txt           solar.pdf
-    data/               north-pacific-gyre/ pizza.cfg           writing/
+  ag-data/  creatures/  data/  north-pacific-gyre/  notes.txt  pizza.cfg  solar.pdf  writing/
 
 Second, we can actually change our location to a different directory, so
 we are no longer located in
@@ -676,15 +671,15 @@ use the following series of commands to get there:
 
 .. code-block::
 
-    $ cd Desktop
-    $ cd data-shell
+    $ cd input
+    $ cd ag2pi_workshop
     $ cd data
 
-These commands will move us from our home directory into our Desktop directory, then into
-the ``data-shell`` directory, then into the ``data`` directory.  You will notice that ``cd`` doesn't print anything.  This is normal.  Many shell commands will not output anything to the screen when successfully executed.  But if we run ``pwd`` after it, we can see that we are now
-in ``/Users/nelle/Desktop/data-shell/data``.
+These commands will move us from our home directory into our ``input`` directory, then into
+the ``ag2pi_workshop`` directory, then into the ``data`` directory.  You will notice that ``cd`` doesn't print anything.  This is normal.  Many shell commands will not output anything to the screen when successfully executed.  But if we run ``pwd`` after it, we can see that we are now
+in ``/home/rstudio/input/ag2pi_workshop/data``.
 If we run ``ls -F`` without arguments now,
-it lists the contents of ``/Users/nelle/Desktop/data-shell/data``\ ,
+it lists the contents of ``/home/rstudio/input/ag2pi_workshop/data``\ ,
 because that's where we now are:
 
 .. code-block::
@@ -693,7 +688,7 @@ because that's where we now are:
 
 .. code-block::
 
-    /Users/nelle/Desktop/data-shell/data
+    /home/rstudio/input/ag2pi_workshop/data
 
 .. code-block::
 
@@ -701,8 +696,8 @@ because that's where we now are:
 
 .. code-block::
 
-    amino-acids.txt   elements/     pdb/           salmon.txt
-    animals.txt       morse.txt     planets.txt     sunspot.txt
+  amino-acids.txt  animals.txt   elements/     morse.txt  planets.txt  sunspot.txt
+  animal-counts/   basilisk.dat  minotaur.dat  pdb/       salmon.txt   unicorn.dat
 
 We now know how to go down the directory tree (i.e. how to go into a subdirectory)
 but how do we go up (i.e. how do we leave a directory and go into its parent directory)?
@@ -710,11 +705,11 @@ We might try the following:
 
 .. code-block::
 
-    $ cd data-shell
+    $ cd ag2pi_workshop
 
 .. code-block::
 
-    -bash: cd: data-shell: No such file or directory
+    -bash: cd: ag2pi_workshop: No such file or directory
 
 But we get an error!  Why is this?
 
@@ -735,7 +730,7 @@ that looks like this:
 or more succinctly,
 the **parent** of the current directory.
 Sure enough,
-if we run ``pwd`` after running ``cd ..``\ , we're back in ``/Users/nelle/Desktop/data-shell``\ :
+if we run ``pwd`` after running ``cd ..``\ , we're back in ``/home/rstudio/input/ag2pi_workshop``\ :
 
 .. code-block::
 
@@ -743,7 +738,7 @@ if we run ``pwd`` after running ``cd ..``\ , we're back in ``/Users/nelle/Deskto
 
 .. code-block::
 
-    /Users/nelle/Desktop/data-shell
+    /home/rstudio/input/ag2pi_workshop
 
 The special directory ``..`` doesn't usually show up when we run ``ls``.  If we want
 to display it, we can add the ``-a`` option to ``ls -F``\ :
@@ -754,12 +749,11 @@ to display it, we can add the ``-a`` option to ``ls -F``\ :
 
 .. code-block::
 
-    ./   .bash_profile  data/       north-pacific-gyre/  pizza.cfg  thesis/
-    ../  creatures/     molecules/  notes.txt            solar.pdf  writing/
+    ./  ../  ag-data/  creatures/  data/  north-pacific-gyre/  notes.txt  pizza.cfg  solar.pdf  writing/
 
 ``-a`` stands for 'show all';
 it forces ``ls`` to show us file and directory names that begin with ``.``\ ,
-such as ``..`` (which, if we're in ``/Users/nelle``\ , refers to the ``/Users`` directory)
+such as ``..`` (which, if we're in ``/home/rstudio``\ , refers to the ``/home`` directory)
 As you can see,
 it also displays another special directory that's just called ``.``\ ,
 which means 'the current working directory'.
@@ -787,8 +781,8 @@ Orthogonality
  The special names ``.`` and ``..`` don't belong to ``cd``\ ;
  they are interpreted the same way by every program.
  For example,
- if we are in ``/Users/nelle/data``\ ,
- the command ``ls ..`` will give us a listing of ``/Users/nelle``.
+ if we are in ``/home/rstudio/input/ag2pi_workshop``\ ,
+ the command ``ls ..`` will give us a listing of ``/home/rstudio/input``.
  When the meanings of the parts are the same no matter how they're combined,
  programmers say they are **orthogonal**\ :
  Orthogonal systems tend to be easier for people to learn
@@ -811,7 +805,7 @@ How can you check what happened?  ``pwd`` gives us the answer!
 
 .. code-block::
 
-    /Users/nelle
+    /home/rstudio
 
 It turns out that ``cd`` without an argument will return you to your home directory,
 which is great if you've gotten lost in your own filesystem.
@@ -822,7 +816,7 @@ to move to ``data`` in one step:
 
 .. code-block::
 
-    $ cd Desktop/data-shell/data
+    $ cd input/ag2pi_workshop/data
 
 Check that we've moved to the right place by running ``pwd`` and ``ls -F``
 
@@ -841,10 +835,10 @@ leading slash.  The leading ``/`` tells the computer to follow the path from
 the root of the file system, so it always refers to exactly one directory,
 no matter where we are when we run the command.
 
-This allows us to move to our ``data-shell`` directory from anywhere on
+This allows us to move to our ``ag2pi_workshop`` directory from anywhere on
 the filesystem (including from inside ``data``\ ).  To find the absolute path
 we're looking for, we can use ``pwd`` and then extract the piece we need
-to move to ``data-shell``.
+to move to ``ag2pi_workshop``.
 
 .. code-block::
 
@@ -852,11 +846,11 @@ to move to ``data-shell``.
 
 .. code-block::
 
-    /Users/nelle/Desktop/data-shell/data
+    /home/rstudio/input/ag2pi_workshop
 
 .. code-block::
 
-    $ cd /Users/nelle/Desktop/data-shell
+    $ cd /home/rstudio/input/ag2pi_workshop
 
 Run ``pwd`` and ``ls -F`` to ensure that we're in the directory we expect.
 
@@ -926,9 +920,7 @@ Relative Path Resolution
 #. ``original/ pnas_final/ pnas_sub/``
 
 
-.. |Static image| image:: ./img/filesystem-challenge.svg
-      :width: 500
-      :height: 100
+|filesystem challenge|
 
 
 .. raw:: html
@@ -941,6 +933,8 @@ Relative Path Resolution
      but with ``..`` we asked for one level further up.
 #. No: see previous explanation.
 #. Yes: ``../backup/`` refers to ``/Users/backup/``.
+
+|filesystem challenge|
 
 .. raw:: html
   </details><br><br>
@@ -1023,37 +1017,37 @@ Sorting Output
  she will call her files ``NENE01729A.txt``\ , ``NENE01812A.txt``\ , and so on.
  All 1520 files will go into the same directory.
 
- Now in her current directory ``data-shell``\ ,
+ Now in her current directory ``ag2pi_workshop``\ ,
  Nelle can see what files she has using the command:
 
 .. code-block::
 
     $ ls north-pacific-gyre/2012-07-03/
 
- This is a lot to type,
- but she can let the shell do most of the work through what is called **tab completion**.
- If she types:
+This is a lot to type,
+but she can let the shell do most of the work through what is called **tab completion**.
+If she types:
 
 .. code-block::
 
     $ ls nor
 
- and then presses :raw-html-m2r:`<kbd>`\ Tab</kbd(the tab key on her keyboard),
- the shell automatically completes the directory name for her:
+and then presses ``Tab`` (the tab key on her keyboard),
+The shell automatically completes the directory name for her:
 
 .. code-block::
 
     $ ls north-pacific-gyre/
 
- If she presses :raw-html-m2r:`<kbd>`\ Tab</kbdagain,
- Bash will add ``2012-07-03/`` to the command,
- since it's the only possible completion.
- Pressing :raw-html-m2r:`<kbd>`\ Tab</kbdagain does nothing,
- since there are 19 possibilities;
- pressing :raw-html-m2r:`<kbd>`\ Tab</kbdtwice brings up a list of all the files,
- and so on.
- This is called **tab completion**\ ,
- and we will see it in many other tools as we go on.
+If she presses ``Tab`` again,
+Bash will add ``2012-07-03/`` to the command,
+since it's the only possible completion.
+Pressing ``Tab`` again does nothing,
+since there are 19 possibilities;
+pressing ``Tab`` twice brings up a list of all the files,
+and so on.
+This is called **tab completion**\ ,
+and we will see it in many other tools as we go on.
 
 ----
 
@@ -1095,7 +1089,7 @@ Creating Directories
 Step one: see where we are and what we already have
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
- Let's go back to our ``data-shell`` directory on the Desktop
+ Let's go back to our ``ag2pi_workshop`` directory in the ``input`` directory
  and use ``ls -F`` to see what it contains:
 
 .. code-block::
@@ -1104,7 +1098,7 @@ Step one: see where we are and what we already have
 
 .. code-block::
 
-    /Users/nelle/Desktop/data-shell
+    /home/rstudio/input/ag2pi_workshop
 
 .. code-block::
 
@@ -1112,7 +1106,7 @@ Step one: see where we are and what we already have
 
 .. code-block::
 
-    creatures/  data/  molecules/  north-pacific-gyre/  notes.txt  pizza.cfg  solar.pdf  writing/
+    ag-data/  creatures/  data/  north-pacific-gyre/  notes.txt  pizza.cfg  solar.pdf  writing/
 
 Step two: Create a directory
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1242,27 +1236,25 @@ Which Editor?
  another directory the first time you 'Save As...'
 
  Let's type in a few lines of text.
- Once we're happy with our text, we can press :raw-html-m2r:`<kbd>Ctrl</kbd>`\ +\ :raw-html-m2r:`<kbd>O</kbd>`
- (press the :raw-html-m2r:`<kbd>`\ Ctrl</kbdor :raw-html-m2r:`<kbd>`\ Control</kbdkey and, while
- holding it down, press the :raw-html-m2r:`<kbd>`\ O</kbdkey) to write our data to disk
+ Once we're happy with our text, we can press ``Ctrl+O``
+ (press the ``Control`` key and, while
+ holding it down, press the ``O``\ ) to write our data to disk
  (we'll be asked what file we want to save this to:
- press :raw-html-m2r:`<kbd>`\ Return</kbdto accept the suggested default of ``draft.txt``\ ).
+ press ``Return`` to accept the suggested default of ``draft.txt``\ ).
 
 
-.. raw:: html
-
-   <img alt="Nano in Action" src="../img/nano.png"></div>
+|nano|
 
 
- Once our file is saved, we can use <kbd>Ctrl+X</kbd> to quit the editor and return to the shell.
+ Once our file is saved, we can use ``Ctrl+X`` to quit the editor and return to the shell.
 
 Control, Ctrl, or ^ Key
 -----------------------
 
  The Control key is also called the 'Ctrl' key. There are various ways
  in which using the Control key may be described. For example, you may
- see an instruction to press the <kbd>Control</kbd> key and, while holding it down,
- press the <kbd>X</kbd> key, described as any of:
+ see an instruction to press the ``Control`` key and, while holding it down,
+ press the ``X`` key, described as any of:
 
 
 * ``Control-X``
@@ -1359,11 +1351,11 @@ What's In A Name?
 Moving files and directories
 ----------------------------
 
- Returning to the ``data-shell`` directory,
+ Returning to the ``ag2pi_workshop`` directory,
 
 .. code-block::
 
-    cd ~/Desktop/data-shell/
+    cd ~/input/ag2pi_workshop
 
 In our ``thesis`` directory we have a file ``draft.txt``
 which isn't a particularly informative name,
@@ -1542,7 +1534,7 @@ correct the mistake, which of the following commands could you use to do so?
 Moving and Copying
 ~~~~~~~~~~~~~~~~~~
 
- What is the output of the closing ``ls`` command in the sequence shown below?
+What is the output of the closing ``ls`` command in the sequence shown below?
 
 .. code-block::
 
@@ -1600,7 +1592,7 @@ So, the only thing that will show using ls (in ``/Users/jamie/data``\ ) is the r
 Removing files and directories
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Returning to the ``data-shell`` directory,
+Returning to the ``ag2pi_workshop`` directory,
 let's tidy up this directory by removing the ``quotes.txt`` file we created.
 The Unix command we'll use for this is ``rm`` (short for 'remove'):
 
@@ -1622,6 +1614,7 @@ Deleting Is Forever
 -------------------
 
 *`rm` is a powerful command.*
+
 The Unix shell doesn't have a trash bin that we can recover deleted
 files from (though most graphical interfaces to Unix do).  Instead,
 when we delete files, they are unlinked from the file system so that
@@ -1633,8 +1626,8 @@ file's disk space right away.
 Using ``rm`` Safely
 ~~~~~~~~~~~~~~~~~~~
 
- What happens when we execute ``rm -i thesis_backup/quotations.txt``\ ?
- Why would we want this protection when using ``rm``\ ?
+What happens when we execute ``rm -i thesis_backup/quotations.txt``\ ?
+Why would we want this protection when using ``rm``\ ?
 
  .. raw:: html
 
@@ -1684,7 +1677,7 @@ Oftentimes one needs to copy or move several files at once. This can be done by 
 Copy with Multiple Filenames
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-For this exercise, you can test the commands in the ``data-shell/data`` directory.
+For this exercise, you can test the commands in the ``ag2pi_workshop/data`` directory.
 
 In the example below, what does ``cp`` do when given several filenames and a directory name?
 
@@ -1733,7 +1726,7 @@ Wildcards
 ---------
 
  ``*`` is a **wildcard**\ , which matches zero or more  characters.
- Let's consider the ``data-shell/molecules`` directory:
+ Let's consider the ``ag2pi_workshop/molecules`` directory:
  ``*.pdb`` matches ``ethane.pdb``\ , ``propane.pdb``\ , and every
  file that ends with '.pdb'. On the other hand, ``p*.pdb`` only matches
  ``pentane.pdb`` and ``propane.pdb``\ , because the 'p' at the front only
@@ -2060,7 +2053,7 @@ Pipes and Filters
 Now that we know a few basic commands,
 we can finally look at the shell's most powerful feature:
 the ease with which it lets us combine existing programs in new ways.
-We'll start with the directory called ``data-shell/molecules``
+We'll start with the directory called ``ag2pi_workshop/molecules``
 that contains six files describing some simple organic molecules.
 The ``.pdb`` extension indicates that these files are in Protein Data Bank format,
 a simple text format that specifies the type and position of each atom in the molecule.
@@ -2144,7 +2137,7 @@ it some data interactively. From the outside, though, all we see is it
 sitting there: the command doesn't appear to do anything.
 
 If you make this kind of mistake, you can escape out of this state by holding down
-the control key ``Ctrl`` and typing the letter ``C``once and letting go of the <kbd>Ctrl</kbd> key.
+the control key ``Ctrl`` and typing the letter ``C``once and letting go of the ``Ctrl`` key.
 ``Ctrl + C``
 
 Which of these files contains the fewest lines?
@@ -2314,7 +2307,7 @@ What Does ``>>`` Mean?
 
 We have seen the use of ``>``, but there is a similar operator ``>>`` which works slightly differently.
 We'll learn about the differences between these two operators by printing some strings.
-We can use the ``echo`` command to print strings e.g.
+We can use the ``echo`` command to print strings of text e.g.
 
 .. code-block::
 
@@ -2334,7 +2327,7 @@ and:
 
 .. code-block::
 
-   $ echo hello >testfile02.txt
+   $ echo hello > testfile02.txt
 
 Hint: Try executing each command twice in a row and then examining the output files.
 
@@ -2358,7 +2351,7 @@ Appending Data
 We have already met the ``head`` command, which prints lines from the start of a file.
 ``tail`` is similar, but prints lines from the end of a file instead.
 
-Consider the file ``data-shell/data/animals.txt``.
+Consider the file ``ag2pi_workshop/data/animals.txt``.
 After these commands, select the answer that
 corresponds to the file ``animals-subset.txt``\ :
 
@@ -2440,9 +2433,7 @@ the calculation is 'head of sort of line count of ``*.pdb``\ '.
 The redirection and pipes used in the last few commands are illustrated below:
 
 
-.. image:: ../img/redirects-and-pipes.svg
-   :target: ../img/redirects-and-pipes.html
-   :alt: Redirects and Pipes
+|Redirects and Pipes|
 
 
 Piping Commands Together
@@ -2465,7 +2456,7 @@ lines. Which command listed below would work?
  The pipe character ``|`` is used to connect the output from one command to
  the input of another.
  ``>`` is used to redirect standard output to a file.
- Try it in the ``data-shell/molecules`` directory!
+ Try it in the ``ag2pi_workshop/molecules`` directory!
 
 .. raw:: html
     </details><br><br>
@@ -2493,7 +2484,7 @@ so that you and other people can put those programs into pipes to multiply their
 Pipe Reading Comprehension
 --------------------------
 
-A file called ``animals.txt`` (in the ``data-shell/data`` folder) contains the following data:
+A file called ``animals.txt`` (in the ``ag2pi_workshop/data`` folder) contains the following data:
 
 .. code-block::
 
@@ -2544,7 +2535,7 @@ For the file ``animals.txt`` from the previous exercise, consider the following 
    $ cut -d , -f 2 animals.txt
 
 The ``cut`` command is used to remove or 'cut out' certain sections of each line in the file,
-and ``cut`` expects the lines to be separated into columns by a :raw-html-m2r:`<kbd>`\ Tab</kbdcharacter.
+and ``cut`` expects the lines to be separated into columns by a ``Tab`` character.
 A character used in this way is a called a **delimiter**.
 In the example above we use the ``-d`` option to specify the comma as our delimiter character.
 We have also used the ``-f`` option to specify that we want to extract the second field (column).
@@ -2592,7 +2583,7 @@ The file ``animals.txt`` contains 8 lines of data formatted as follows:
 
 The ``uniq`` command has a ``-c`` option which gives a count of the
 number of times a line occurs in its input.  Assuming your current
-directory is ``data-shell/data/``\ , what command would you use to produce
+directory is ``ag2pi_workshop/data/``\ , what command would you use to produce
 a table that shows the total count of each type of animal in the file?
 
 
@@ -2608,7 +2599,7 @@ a table that shows the total count of each type of animal in the file?
 
 Option 4. is the correct answer.
 If you have difficulty understanding why, try running the commands, or sub-sections of
-the pipelines (make sure you are in the ``data-shell/data`` directory).
+the pipelines (make sure you are in the ``ag2pi_workshop/data`` directory).
 
 .. raw:: html
    </details><br><br>
@@ -2702,7 +2693,7 @@ Wildcard Expressions
 
 Wildcard expressions can be very complex, but you can sometimes write
 them in ways that only use simple syntax, at the expense of being a bit more verbose.
-Consider the directory ``data-shell/north-pacific-gyre/2012-07-03`` :
+Consider the directory ``ag2pi_workshop/north-pacific-gyre/2012-07-03`` :
 the wildcard expression ``*[AB].txt``
 matches all files ending in ``A.txt`` or ``B.txt``. Imagine you forgot about
 this.
@@ -2817,7 +2808,7 @@ we're going to be working in the writing subdirectory:
 .. code-block::
 
    $ cd
-   $ cd Desktop/data-shell/writing
+   $ cd input/ag2pi_workshop/writing
    $ cat haiku.txt
 
 .. code-block::
@@ -2969,7 +2960,7 @@ the lines that do not contain the word 'the'.
 If we use the ``-r`` (recursive) option,
 ``grep`` can search for a pattern recursively through a set of files in subdirectories.
 
-Let's search recursively for ``Yesterday`` in the ``data-shell/writing`` directory:
+Let's search recursively for ``Yesterday`` in the ``ag2pi_workshop/writing`` directory:
 
 .. code-block::
 
@@ -3102,7 +3093,7 @@ Put these commands and pipes in the right order to achieve this:
 Hint: use ``man grep`` to look for how to grep text recursively in a directory
 and ``man cut`` to select more than one field in a line.
 
-An example of such a file is provided in ``data-shell/data/animal-counts/animals.txt``
+An example of such a file is provided in ``ag2pi_workshop/data/animal-counts/animals.txt``
 
 .. raw:: html
     <details>
@@ -3121,70 +3112,13 @@ An example of such a file is provided in ``data-shell/data/animal-counts/animals
 .. raw:: html
    </details><br><br>
 
-Little Women
-------------
-
-You and your friend, having just finished reading *Little Women* by
-Louisa May Alcott, are in an argument.  Of the four sisters in the
-book, Jo, Meg, Beth, and Amy, your friend thinks that Jo was the
-most mentioned.  You, however, are certain it was Amy.  Luckily, you
-have a file ``LittleWomen.txt`` containing the full text of the novel
-(\ ``data-shell/writing/data/LittleWomen.txt``\ ).
-Using a ``for`` loop, how would you tabulate the number of times each
-of the four sisters is mentioned?
-
-Hint: one solution might employ
-the commands ``grep`` and ``wc`` and a ``|``\ , while another might utilize
-``grep`` options.
-There is often more than one way to solve a programming task, so a
-particular solution is usually chosen based on a combination of
-yielding the correct result, elegance, readability, and speed.
-
-.. raw:: html
-    <details>
-    <summary><a>Solutions</a></summary>
-
-.. code-block::
-
-    for sis in Jo Meg Beth Amy
-    do
-       echo $sis:
-       grep -ow $sis LittleWomen.txt | wc -l
-    done
-
- Alternative, slightly inferior solution:
-
-.. code-block::
-
-    for sis in Jo Meg Beth Amy
-    do
-       echo $sis:
-       grep -ocw $sis LittleWomen.txt
-    done
-
-This solution is inferior because ``grep -c`` only reports the number of lines matched.
-The total number of matches reported by this method will be lower if there is more
-than one match per line.
-
-.. raw:: html
-  </details><br><br>
-
-Perceptive observers may have noticed that character names sometimes appear in all-uppercase
-in chapter titles (e.g. 'MEG GOES TO VANITY FAIR').
-If you wanted to count these as well, you could add the ``-i`` option for case-insensitivity
-(though in this case, it doesn't affect the answer to which sister is mentioned most frequently).
-
 While ``grep`` finds lines in files,
 the ``find`` command finds files themselves.
 Again,
 it has a lot of options;
 to show how the simplest ones work, we'll use the directory tree shown below.
 
-
-.. image:: ../img/find-file-tree.svg
-   :target: ../img/find-file-tree.html
-   :alt: File Tree for Find Example
-
+|Find File Tree|
 
 Nelle's ``writing`` directory contains one file called ``haiku.txt`` and three subdirectories:
 ``thesis`` (which contains a sadly empty file, ``empty-draft.md``\ );
@@ -3193,7 +3127,7 @@ and a ``tools`` directory that contains the programs ``format`` and ``stats``\ ,
 and a subdirectory called ``old``\ , with a file ``oldtool``.
 
 For our first command,
-let's run ``find .`` (remember to run this command from the ``data-shell/writing`` folder).
+let's run ``find .`` (remember to run this command from the ``ag2pi_workshop/writing`` folder).
 
 .. code-block::
 
@@ -3366,7 +3300,7 @@ which do *not* match the pattern are printed. Given that, which of
 the following commands will find all files in ``/data`` whose names
 end in ``s.txt`` but whose names also do *not* contain the string ``net``\ ?
 (For example, ``animals.txt`` or ``amino-acids.txt`` but not ``planets.txt``.)
-Once you have thought about your answer, you can test the commands in the ``data-shell``
+Once you have thought about your answer, you can test the commands in the ``ag2pi_workshop``
 directory.
 
 
@@ -3481,4 +3415,19 @@ Under The Carpentries License:
     :width: 700
 
 .. |R Shell| image:: ./img/RStudioTerminal.png
+    :width: 700
+
+.. |Example Filesystem| image:: ./img/example_filesystem.png
+    :width: 500
+
+.. |nano| image:: ./img/nano.png
+    :width: 700
+
+.. |filesystem challenge| image:: ./img/filesystem-challenge.png
+    :width: 500
+
+.. |Redirects and Pipes| image:: ./img/redirects_pipes.png
+    :width: 700
+
+.. |Find File Tree| image:: ./img/find-file-tree.png
     :width: 700
