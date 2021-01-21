@@ -665,9 +665,9 @@ so let's convert this summary to a data farme and export the data to discuss the
   write.csv(x = height_df_summary, file = "~/ag-data/height_summary.csv", row.names = FALSE)
 
 
-Caveat, this dataset doesn't actually contain a real error.
+Note: this dataset doesn't actually contain a real error.
 This is from an ongoing project, and there are other variables that we did not visualize today.
-However, this is the power of visualizing data, and learning the R language gives you access to a lot of statistical functions.
+However, this is the power of visualizing data, and the R language gives access to statistical functions for outlier data detection.
 
 
 ----

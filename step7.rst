@@ -542,7 +542,7 @@ you may use ↑ and ↓ to move line-by-line,
 or try ``B`` and ``Spacebar``Spacebar to skip up and down by a full page.
 To search for a character or word in the `man` pages,
 use ``/`` followed by the character or word you are searching for.
-Sometimes a search will result in multiple hits. If so, you can move between hits using <kbd>N</kbd(for moving forward) and <kbd>Shift</kbd>`\ +\ :raw-html-m2r:`<kbd>`\ N</kbd(for moving backward).
+Sometimes a search will result in multiple hits. If so, you can move between hits using ``N`` (for moving forward) and ``Shift`` + ``N`` (for moving backward).
 
 To **quit** the ``man`` pages, press ``Q``.
 
