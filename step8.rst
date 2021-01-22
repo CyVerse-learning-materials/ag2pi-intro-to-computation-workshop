@@ -24,7 +24,7 @@ Most importantly for biologists, there is community support for scientific appli
 **Optional Local Setup**
 ------------------------
 
-**Please note:** we will be running our code inside the CyVerse DE VICE App again: |rstudio-verse|
+**Please note:** we will be running our code inside the CyVerse DE VICE App again: |rstudio-verse|_
 *These local installation instructions are for you to explore on your own time.*
 
 1. You can download R & RStudio for your local:
