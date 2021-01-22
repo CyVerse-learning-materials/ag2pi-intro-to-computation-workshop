@@ -10,7 +10,7 @@
 ===============================
 
 **Why Learn R? What is RStudio?**
--------------------------------
+---------------------------------
 
 |R| is a statistical programming language with many data science features.
 
@@ -228,24 +228,28 @@ Character - text that cannot have calculations done on them
 	e.g., "a", "xyz"
 
 .. code-block:: R
-	as.character()
+
+  as.character()
 
 Numeric - numerical values include decimals and can have calculations performed on them
 	e.g., 1, 1.5
 
 .. code-block:: R
-	as.numeric()
+
+  as.numeric()
 
 Integer - whole numbers only, and can also have calculations performed on them
 	e.g., 2L (L stores it as an integer)
 
 .. code-block:: R
-	as.integer()
+
+  as.integer()
 
 Logical - TRUE or FALSE
 
 .. code-block:: R
-	as.factor()
+
+  as.factor()
 	#creates groupings within dataset
 
 **Exercise:**
@@ -320,7 +324,8 @@ Try adding two to every numer in the vector "x".
 What happens what you add a character to a vector?
 
 .. code-block:: R
-	d <- c(d, "a")
+
+  d <- c(d, "a")
 	str(d)
 
 **ATOMIC VECTORS** are vectors which cannot be simplified anymore, and therefore "$" cannot be used on them. Yes, this error happens a lot. Yes, it is frustrating. Good luck.
@@ -348,13 +353,15 @@ You can combine dataframes:
 How do you name the column with the numbers 1-26?
 
 .. code-block:: R
-	hi <- data.frame(numbers = 1:26, letters, c("hey", "you"))
+
+  hi <- data.frame(numbers = 1:26, letters, c("hey", "you"))
 
 What are the column headers?
 What happens when you do the following?
 
 .. code-block:: R
-	hola <- data.frame(1:26, letters, words = "hey", "you")
+
+  hola <- data.frame(1:26, letters, words = "hey", "you")
 
 Adding columns and rows using cbind() and rbind()
 
@@ -373,7 +380,7 @@ Calling columns:
 
 Subsetting:
 
-.. code-black:: R
+.. code-block:: R
 
 	hello[1:5, 2]
 	hello$letters[1:5]
@@ -458,7 +465,8 @@ Subsetting Data
 	2. What are the outputs?
 
 .. code-block:: R
-	p <- subset(cats, cats$weight <= 3)
+
+  p <- subset(cats, cats$weight <= 3)
 	p
 
 	q <- cats[cats$weight <= 3,]
@@ -723,8 +731,8 @@ The following are the inputs for the iinit fields:
 Now that we've configured iRODS let's see where we are with ``ils``
 
 .. code-block::
-  ipwd
 
+  ipwd
   /iplant/home/your_cyverse_user_name
 
 If for whatever reason you're not in your user directory ``icd`` without an argument will get you back there.
@@ -732,11 +740,13 @@ If for whatever reason you're not in your user directory ``icd`` without an argu
 Now we can create a directory, let's call it ``ag2pi_checkout``
 
 .. code-block::
+
   imkdir ag2pi_checkout
 
 We can "put" our file from this analysis onto the datastore by doing the following:
 
 ..code-block::
+
   cd ~/input/ag2pi_workshop/ag-data/
   iput -KPvf height_summary.csv ag2pi_checkout
   iput -KPvf figure1.png ag2pi_checkout
@@ -788,7 +798,7 @@ Under The Carpentries License:
 
 .. |Control Flow| raw:: html
 
-  <a href="<a href="https://swcarpentry.github.io/r-novice-gapminder/07-control-flow/" target="blank">Software Carpentries Control Flow</a>
+  <a href="https://swcarpentry.github.io/r-novice-gapminder/07-control-flow/" target="blank">Software Carpentries Control Flow</a>
 
 .. |R Repro| raw:: html
 
