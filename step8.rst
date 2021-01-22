@@ -841,7 +841,7 @@ Under The Carpentries License:
 .. |plot day of year colorized| image:: ./img/rainbow_gdd_doy.png
     :width: 550
 
-.. || image:: ./img/s6_subset_plot.png
+.. |subset scatterplot| image:: ./img/s6_subset_plot.png
     :width: 550
 
 .. |subset lineplot| image:: ./img/subset_lines.png
