@@ -33,7 +33,6 @@ Most importantly for biologists, there is community support for scientific appli
    - Download |R|
    - Download |RStudio|
 
-
 2. Follow installation instructions for your operating system.
 
 3. Open RStudio.
@@ -860,7 +859,7 @@ Under The Carpentries License:
 
 .. |RStudio| raw:: html
 
-   <a href="https://www.rstudio.com/products/rstudio/download/#download" target="blank>RStudio</a>
+   <a href="https://www.rstudio.com/products/rstudio/download/#download" target="blank">RStudio</a>
 
 .. |rstudio-verse| image:: https://de.cyverse.org/Powered-By-CyVerse-blue.svg
 .. _rstudio-verse: https://de.cyverse.org/de/?type=quick-launch&quick-launch-id=97782f8c-8c6f-4969-8c4e-2dd9d5bf5f96&app-id=a8b21a2c-e6f4-11ea-844a-008cfa5ae621
