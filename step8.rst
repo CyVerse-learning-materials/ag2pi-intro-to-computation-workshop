@@ -41,8 +41,10 @@ Most importantly for biologists, there is community support for scientific appli
 Go to Session -> Set Working Directory to set where you will pull data files from and/or save your code.
 
 .. code-block:: R
+
 	setwd(path)
 	getwd() #see what working directory you're in
+
 
 **Introduction**
 ----------------
