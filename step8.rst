@@ -197,29 +197,6 @@ To use the package after it's been loaded:
 		#can overwrite masked functions using "::" (e.g., package::function)
 	library("package") #will give an error if in conflict with other packages or has missing dependencies
 
-Loading Data
-~~~~~~~~~~~~
-
-There are many ways to load data in the R environment depending on the document type you have.
-
-.. code-block:: R
-
-	#General reading
-	read.table("dataFile.txt", sep = "\t")
-
-**Exercise:**
-
-	1. What are the arguments for read.table?
-	2. What arguments would you use to upload a .csv file using ``read.table()``?
-
-.. code-block:: R
-
-	#.csv files
-	read.csv()
-
-	#reading in from an online source or path to the directory if you're not in the right working directory
-	read.table(path/to/file)
-
 **Data Structures**
 -------------------
 
@@ -497,12 +474,36 @@ Subsetting Data
 
 Here we will learn:
 
--How to plot using ggplot2
--How to subset data with dplyr
--Basic data summaries
--Writing Files from an Analysis
--Generating plots for publications
+- Loading data into R
+- How to plot using ggplot2
+- How to subset data with dplyr
+- Basic data summaries
+- Writing Files from an Analysis
+- Generating plots for publications
 
+
+Loading Data
+~~~~~~~~~~~~
+
+There are many ways to load data in the R environment depending on the document type you have.
+
+.. code-block:: R
+
+	#General reading
+	read.table("dataFile.txt", sep = "\t")
+
+**Exercise:**
+
+	1. What are the arguments for read.table?
+	2. What arguments would you use to upload a .csv file using ``read.table()``?
+
+.. code-block:: R
+
+	#.csv files
+	read.csv()
+
+	#reading in from an online source or path to the directory if you're not in the right working directory
+	read.table(path/to/file)
 
 Publication Quality Figures with ggplot2
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
