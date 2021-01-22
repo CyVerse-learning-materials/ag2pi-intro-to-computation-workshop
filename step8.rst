@@ -737,9 +737,9 @@ Now we can create a directory, let's call it ``ag2pi_checkout``
 We can "put" our file from this analysis onto the datastore by doing the following:
 
 ..code-block::
-  $ cd ~/input/ag2pi_workshop/ag-data/
-  $ iput -KPvf height_summary.csv ag2pi_checkout
-  $ iput -KPvf figure1.png ag2pi_checkout
+  cd ~/input/ag2pi_workshop/ag-data/
+  iput -KPvf height_summary.csv ag2pi_checkout
+  iput -KPvf figure1.png ag2pi_checkout
 
 
 
@@ -750,8 +750,8 @@ Where to from here?
 
 **R specific tips:**
 
-* Look into logic and loops within the `Software Carpentries Control Flow <a href="https://swcarpentry.github.io/r-novice-gapminder/07-control-flow/">`_
-* Generally the `R for Reproducible Scientific Analyses <a href="https://swcarpentry.github.io/r-novice-gapminder/">`_ is a good resource.
+* Look into logic and loops within the |Control Flow| exercise.
+* Generally the |R Repro| is a good resource.
 * If you want to try using shell functions inside of R Scripts, look up the functions: ``system()`` and ``system2()``
 
 Some good resources for help coding are:
@@ -786,25 +786,33 @@ Under The Carpentries License:
 - Send feedback: `Tutorials@CyVerse.org <Tutorials@CyVerse.org>`_
 --------------
 
-.. |Medium| raw:: html_theme
+.. |Control Flow| raw:: html
 
-  <a href="https://www.medium.com/">Medium</a>
+  <a href="<a href="https://swcarpentry.github.io/r-novice-gapminder/07-control-flow/" target="blank">Software Carpentries Control Flow</a>
+
+.. |R Repro| raw:: html
+
+  <a href="https://swcarpentry.github.io/r-novice-gapminder/" target="blank">R for Reproducible Scientific Analyses</a>
+
+.. |Medium| raw:: html
+
+  <a href="https://www.medium.com/" target="blank">Medium</a>
 
 .. |Stack Overflow| raw:: html
 
-  <a href="https://www.stackoverflow.com/">StackOverflow</a>
+  <a href="https://www.stackoverflow.com/" target="blank">StackOverflow</a>
 
 .. |The Carpentries| raw:: html
 
-  <a href="https://carpentries.org/">The Carpentries</a>
+  <a href="https://carpentries.org/" target="blank">The Carpentries</a>
 
 .. |CyVerse FOSS| raw:: html
 
-  <a href="https://cyverse.org/fossonline">CyVerse FOSS Online</a>
+  <a href="https://cyverse.org/fossonline" target="blank">CyVerse FOSS Online</a>
 
 .. |RStudio Community| raw:: html
 
-  <a href="https://community.rstudio.com/">RStudio Community</a>
+  <a href="https://community.rstudio.com/" target="blank">RStudio Community</a>
 
 .. |R Novice Gapminder| raw:: html
 
