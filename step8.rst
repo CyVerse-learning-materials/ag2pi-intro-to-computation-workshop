@@ -10,10 +10,10 @@
 **Introduction to R & RStudio**
 ===============================
 
-**Why Learn R? What is RStudio? 
+**Why Learn R? What is RStudio?**
 -------------------------------
 
-|R|_ is a statistical programming language with many data science features.
+|R| is a statistical programming language with many data science features.
 
 Often, if there is a new statistical method, it is published as a tool for R users.
 
@@ -25,15 +25,15 @@ Most importantly for biologists, there is community support for scientific appli
 **Optional Local Setup**
 ------------------------
 
-**Please note:** we will be running our code inside the CyVerse DE VICE App again: |rstudio-verse|_
+**Please note:** we will be running our code inside the CyVerse DE VICE App again: |rstudio-verse|
 *These local installation instructions are for you to explore on your own time.*
 
 1. You can download R & RStudio for your local:
 
-   - Download |R|_
+   - Download |R|
 
-   - Download |R Studio|_ 
-   
+   - Download |R Studio|
+
 2. Follow installation instructions for your operating system.
 
 3. Open RStudio.
@@ -837,11 +837,10 @@ Under The Carpentries License:
 .. |R| raw:: html
 
    <a href="https://cran.r-project.org/" target="blank">R</a>
-  
+
 .. |RStudio| raw:: html
 
    <a href="https://www.rstudio.com/products/rstudio/download/#download" target="blank>RStudio</a>
 
 .. |rstudio-verse| image:: https://de.cyverse.org/Powered-By-CyVerse-blue.svg
 .. _rstudio-verse: https://de.cyverse.org/de/?type=quick-launch&quick-launch-id=97782f8c-8c6f-4969-8c4e-2dd9d5bf5f96&app-id=a8b21a2c-e6f4-11ea-844a-008cfa5ae621
-
