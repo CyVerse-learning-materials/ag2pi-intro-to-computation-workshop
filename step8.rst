@@ -31,7 +31,7 @@ Most importantly for biologists, there is community support for scientific appli
 
    - Download |R|
 
-   - Download |R Studio|
+   - Download |RStudio|
 
 2. Follow installation instructions for your operating system.
 
